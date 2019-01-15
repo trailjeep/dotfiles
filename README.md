@@ -1,11 +1,15 @@
 # dotfiles
+
 Just my dotfiles.
+
 Reference: [Managing your dotfiles with GNU Stow](http://codys.club/blog/2015/07/07/managing-your-dotfiles-with-gnu-stow/)
 
-Dependencies:
+## Dependencies
+
 GNU Stow: `$ pacman -S stow`
 
-Usage:
+## Usage
+
 1. Verify conf files don't already exist in `~`
    a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG`
 2. Symlink all conf files in a dir (ex. bash): `$ stow bash`
