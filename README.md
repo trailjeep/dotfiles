@@ -6,10 +6,12 @@ Reference: [Managing your dotfiles with GNU Stow](http://codys.club/blog/2015/07
 
 ## Dependencies
 
-GNU Stow: `$ pacman -S stow`
+GNU Stow: `$ sudo pacman -S stow`
 
 ## Usage
 
 1. Verify conf files don't already exist in `~`
+
    a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG`
+
 2. Symlink all conf files in a dir (ex. bash): `$ stow bash`
