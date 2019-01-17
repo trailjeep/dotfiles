@@ -1,0 +1,7 @@
+[user]
+	email = trailjeep@gmail.com
+	name = trailjeep
+[color]
+	ui = true
+[core]
+	editor = vim
