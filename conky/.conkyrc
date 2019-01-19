@@ -1,0 +1,43 @@
+conky.config = {
+	background=true,
+	update_interval=3,
+	double_buffer=true,
+	no_buffers=true,
+	imlib_cache_size=10,
+	draw_shades=false,
+	draw_outline=false,
+	draw_borders=false,
+	gap_x=20,
+	gap_y=40,
+	alignment="top_left",
+	minimum_height=400,
+	minimum_width=0,
+	own_window=true,
+	own_window_type="dock",
+	own_window_transparent=true,
+	own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+	own_window_argb_visual=true,
+	own_window_argb_value=0,
+	use_xft=true,
+	xftalpha=1,
+	font="Droid Sans:size=10",
+	text_buffer_size=256,
+	override_utf8_locale=true,
+	default_color='FFFFFF',
+	color0='FFB000',
+	color1='FFFFFF',
+}
+
+
+
+conky.text = [[
+${font Digital\-7:weight=Normal:size=100}${color0}\
+${alignc}${time %I:%M%p}\
+${voffset -30}
+${font Product Sans:weight=Normal:size=20}${color0}\
+${alignc}${time %A, %F}\
+${voffset -0}
+${font Product Sans:weight=Normal:size=15}${color0}\
+${alignc}${downspeedf wlp0s29u1u5} KB/s    ${upspeedf wlp0s29u1u5} KB/s\
+${voffset -25}
+]]
