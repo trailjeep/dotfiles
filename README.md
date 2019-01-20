@@ -17,5 +17,7 @@ GNU Stow: `$ sudo pacman -S stow`
 2. Symlink all conf files in a dir (ex. bash):
 
    a. `cd ~/dotfiles`
+
    b. home conf files: `$ stow bash`
+
    c. system conf files: `$ sudo stow -t / pamac` 
