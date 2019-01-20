@@ -11,7 +11,8 @@ GNU Stow: `$ sudo pacman -S stow`
 ## Usage
 
 1. Verify conf files don't already exist in `~`
-
    a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG`
-
-2. Symlink all conf files in a dir (ex. bash): `$ stow bash`
+2. Symlink all conf files in a dir (ex. bash):
+   a. `cd ~/dotfiles`
+   b. home conf files: `$ stow bash`
+   c. system conf files: `$ sudo stow -t / pamac` 
