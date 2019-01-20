@@ -14,7 +14,7 @@ GNU Stow: `$ sudo pacman -S stow`
 
    a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG`
 
-2. Symlink all conf files in a dir (ex. bash):
+2. Symlink all conf files in a dir:
 
    a. `cd ~/dotfiles`
 
