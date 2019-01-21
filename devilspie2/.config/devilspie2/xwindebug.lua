@@ -1,0 +1,11 @@
+-- Dual monitor each 1920x1080 screen1=0,0 screen2=1921x0
+debug_print("Window Name: "..get_window_name())
+debug_print("Application Name: "..get_application_name())
+debug_print("Window Geometry: "..get_window_geometry())
+debug_print("Window Type: "..get_window_type())
+debug_print("Window Class Instance: "..get_class_instance_name())
+debug_print("Window Role: "..get_window_role())
+debug_print("Window ID: "..get_window_xid())
+debug_print("Window Class: "..get_window_class())
+debug_print("Position(X,Y),Size(X,Y):"..xywh())
+debug_print("----------------------------------------")
