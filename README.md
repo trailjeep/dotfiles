@@ -18,6 +18,6 @@ GNU Stow: `$ sudo pacman -S stow`
 
    a. `cd ~/dotfiles`
 
-   b. home conf files: `$ stow bash`
+   b. home conf files: `$ stow utils`
 
    c. system conf files: `$ sudo stow -t / system` 
