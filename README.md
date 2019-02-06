@@ -20,4 +20,4 @@ GNU Stow: `$ sudo pacman -S stow`
 
    b. home conf files: `$ stow bash`
 
-   c. system conf files: `$ sudo stow -t / pamac` 
+   c. system conf files: `$ sudo stow -t / system` 
