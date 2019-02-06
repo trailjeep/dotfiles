@@ -14,10 +14,14 @@ GNU Stow: `$ sudo pacman -S stow`
 
    a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG`
 
+   b. look into `--adopt`
+
 2. Symlink all conf files in a dir:
 
-   a. `cd ~/dotfiles`
+   a. `cd ~/dotfiles` (not necessary if `$ export STOW_DIR="$HOME/dotfiles"`)
 
-   b. home conf files: `$ stow utils`
+   b. utility conf files: `$ stow utils`
 
-   c. system conf files: `$ sudo stow -t / system` 
+   c. system conf files: `$ sudo stow -t / system`
+   
+   d. bash & vim for root user `$ sudo stow --ignore='.config' --ignore='.gitconfig' -t /root utils`
