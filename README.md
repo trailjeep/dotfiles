@@ -11,10 +11,7 @@ GNU Stow: `$ sudo pacman -S stow`
 ## Usage
 
 1. Verify conf files don't already exist.
-
-   a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG`
-
-   b. look into `--adopt`
+   a. if they do `$ mv ~/.bashrc ~/.bashrc.ORG` (look into `--adopt`)
 
 2. Symlink all conf files in a dir:
 
