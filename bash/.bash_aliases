@@ -191,6 +191,9 @@ alias pmfs='pacman -Fs'  # find pkg providing file
 # yay
 alias yay='yay --sudoloop' # chrome always times out
 
+# stow verbose
+alias stow='stow -v'
+
 # pip always install --user
 alias pip='echo "ALWAYS use: \"\pip install --user\""'
 
