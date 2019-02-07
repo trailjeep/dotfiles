@@ -15,7 +15,6 @@ GNU Stow: `$ sudo pacman -S stow`
 - autostart: 
 - bin: home dir scripts
 - deepin: apps specific to Deepin DE
-- face: user avatar
 - games: games common to all DE's
 - gtk-based: apps common to GTK+ based DE's
 - system: system conf files
