@@ -11,7 +11,7 @@ GNU Stow: `$ sudo pacman -S stow`
 ## Config
 ### Directories
 
-```bash
+```
 ~
 └── dotfiles
     ├── apps: apps common to all DE's
