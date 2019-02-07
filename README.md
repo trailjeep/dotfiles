@@ -11,15 +11,19 @@ GNU Stow: `$ sudo pacman -S stow`
 ## Config
 ### Directories
 
-- apps: apps common to all DE's
-- autostart: 
-- bin: home dir scripts
-- deepin: apps specific to Deepin DE
-- games: games common to all DE's
-- gtk-based: apps common to GTK+ based DE's
-- system: system conf files
-- systemd: stub for user unit files - may not work w/stow as systemd symlinks the symlinks?
-- utils: utilities common to all DE's
+```bash
+~
+└── dotfiles
+    ├── apps: apps common to all DE's
+    ├── autostart: 
+    ├── bin: home dir scripts
+    ├── deepin: apps specific to Deepin DE
+    ├── games: games common to all DE's
+    ├── gtk-based: apps common to GTK+ based DE's
+    ├── system: system conf files
+    ├── systemd: stub for user unit files - may not work w/stow as systemd symlinks the symlinks?
+    └── utils: utilities common to all DE's
+```
 
 ## Usage
 
