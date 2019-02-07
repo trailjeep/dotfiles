@@ -194,6 +194,7 @@ alias yay='yay --sudoloop' # chrome always times out
 
 # search dconf values and keys
 alias dcs='dconf dump / | grep -i'
+alias gss='gsettings list-recursively | grep -i'
 
 # stow verbose
 alias stow='stow -v'
