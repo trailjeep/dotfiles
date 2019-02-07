@@ -192,6 +192,9 @@ alias pmfs='pacman -Fs'  # find pkg providing file
 # yay
 alias yay='yay --sudoloop' # chrome always times out
 
+# search dconf values and keys
+alias dcs='dconf dump / | grep -i'
+
 # stow verbose
 alias stow='stow -v'
 
