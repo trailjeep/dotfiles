@@ -11,6 +11,8 @@ Recent Files[$e]=166298-ebola_yakuake.tar.gz,file:$HOME/Downloads/166298-ebola_y
 Recent URLs[$e]=file:$HOME/Downloads/
 
 [Window]
+KeepOpen=true
 Screen=1
 ShowTabBar=false
+ToggleToFocus=true
 Width=90
