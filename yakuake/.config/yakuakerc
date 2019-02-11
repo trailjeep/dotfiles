@@ -2,6 +2,9 @@
 Skin=ebola_yakuake
 Translucency=true
 
+[Behavior]
+FocusFollowsMouse=true
+
 [DownloadDialog Settings]
 Height 1080=490
 Width 1920=700
