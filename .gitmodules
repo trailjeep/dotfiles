@@ -1,0 +1,3 @@
+[submodule "SUBMODULES/LS_COLORS"]
+	path = SUBMODULES/LS_COLORS
+	url = https://github.com/trapd00r/LS_COLORS
