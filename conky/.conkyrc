@@ -8,7 +8,7 @@ conky.config = {
 	draw_outline=false,
 	draw_borders=false,
 	gap_x=20,
-	gap_y=60,
+	gap_y=10,
 	alignment="top_left",
 	minimum_height=400,
 	minimum_width=0,
@@ -20,24 +20,20 @@ conky.config = {
 	own_window_argb_value=0,
 	use_xft=true,
 	xftalpha=1,
-	font="Droid Sans:size=10",
+	font="Hack:size=15",
 	text_buffer_size=256,
 	override_utf8_locale=true,
 	default_color='FFFFFF',
 	color0='FFB000',
-	color1='FFFFFF',
+	color1='33FF00',
 }
 
-
-
 conky.text = [[
-${font Digital\-7:weight=Normal:size=100}${color0}\
-${alignc}${time %I:%M%p}\
-${voffset -30}
-${font Product Sans:weight=Normal:size=20}${color0}\
-${alignc}${time %A, %F}\
-${voffset -0}
-${font Product Sans:weight=Normal:size=15}${color0}\
-${alignc}${downspeedf wlp0s29u1u5} KB/s    ${upspeedf wlp0s29u1u5} KB/s\
+${voffset 0}
+${font}${color1}${time %A}${alignr}${time %F}\
+${voffset 0}
+${font Digital\-7:weight=Normal:size=100}${color0}${alignr}${time %I:%M%p}\
+${voffset -45}
+${font Hack:weight=Normal:size=15}${color1}${wireless_essid wlp0s29u1u5}: ${alignr 20}${font Font Awesome 5:size=15}↓${font Hack:weight=Normal:size=15}${downspeedf wlp0s29u1u5} KB/s${alignr}${font Font Awesome 5:size=15}↑${font Hack:weight=Normal:size=15}${upspeedf wlp0s29u1u5} KB/s\
 ${voffset -25}
 ]]

@@ -21,6 +21,7 @@ shopt -s histappend
 shopt -s nocaseglob
 shopt -s nullglob
 shopt -s expand_aliases
+shopt -s globstar
 
 #=================================================
 # Variables
@@ -46,6 +47,16 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export PATH="$HOME/.local/bin/:/usr/lib/ccache/bin/:$PATH"
 export STOW_DIR="$HOME/dotfiles"
  
+# highlighting inside manpages and elsewhere
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+
 # directories
 www='/var/www/html'
 wiki='/var/www/html/wiki.sacco.me/dokuwiki'

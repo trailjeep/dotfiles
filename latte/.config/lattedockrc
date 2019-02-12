@@ -1,3 +1,7 @@
+[PlasmaRunnerManager]
+LaunchCounts=1 services_desktop-webmail-config.desktop
+pluginWhiteList=services,bookmarks,baloosearch
+
 [ScreenConnectors]
 10=VGA1
 11=HDMI1
