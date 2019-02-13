@@ -8,7 +8,7 @@ conky.config = {
 	draw_outline=false,
 	draw_borders=false,
 	gap_x=20,
-	gap_y=10,
+	gap_y=20,
 	alignment="top_left",
 	minimum_height=400,
 	minimum_width=0,
@@ -20,21 +20,25 @@ conky.config = {
 	own_window_argb_value=0,
 	use_xft=true,
 	xftalpha=1,
-	font="Hack:size=15",
+	font="Hack:size=12",
 	text_buffer_size=256,
 	override_utf8_locale=true,
-	default_color='FFFFFF',
+	default_color='grey',
 	color0='FFB000',
 	color1='33FF00',
+	color2='darkgrey',
 }
 
 conky.text = [[
+${font FontAwesome:size=12} ${font}${color}${time %A},${alignr}${time %F}
+${voffset -25}
+${font}${color2}${hr}
+${voffset -20}
+${font Digital\-7:weight=Normal:size=100}${color0}${alignc}${time %I:%M%P}\
+${voffset -55}
+${font}${color2}${hr}
+${voffset -15}
+${font FontAwesome:size=12} ${font}${color}${wireless_essid wlp0s29u1u5}(${font FontAwesome:size=12} ${font}${wireless_link_qual_perc wlp0s29u1u5}%): ${alignr 18}${font FontAwesome:size=12} ${font}${downspeedf wlp0s29u1u5} KB/s${alignr}${font FontAwesome:size=12} ${font}${upspeedf wlp0s29u1u5} KB/s\
 ${voffset 0}
-${font}${color1}${time %A}${alignr}${time %F}\
-${voffset 0}
-${font Digital\-7:weight=Normal:size=100}${color0}${alignr}${time %I:%M%p}\
-${voffset -45}
-${font Hack:weight=Normal:size=15}${color1}${wireless_essid wlp0s29u1u5}(${wireless_link_qual_perc wlp0s29u1u5}%): ${alignr 18}${font FontAwesome:size=15} ${font Hack:weight=Normal:size=15}${downspeedf wlp0s29u1u5} KB/s${alignr}${font FontAwesome:size=15} ${font Hack:weight=Normal:size=15}${upspeedf wlp0s29u1u5} KB/s\
-${voffset 0}
-${font Hack:weight=Normal:size=15}${color1}Sacco.me:${alignr}${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${execi 300 host -t A sacco.me | cut -d" " -f4}${else}Down${endif}
+${font FontAwesome:size=12} ${font}${color}Sacco.me:${alignr}${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${font FontAwesome:size=12} ${font}${execi 300 host -t A sacco.me | cut -d" " -f4}${else}${color red}${font FontAwesome:size=12} ${font}Down${endif}
 ]]
