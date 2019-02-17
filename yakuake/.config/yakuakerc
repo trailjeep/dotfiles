@@ -5,9 +5,15 @@ Translucency=true
 [Behavior]
 FocusFollowsMouse=true
 
+[Desktop Entry]
+DefaultProfile=Jeff.profile
+
 [DownloadDialog Settings]
 Height 1080=490
 Width 1920=700
+
+[Favorite Profiles]
+Favorites=Jeff.profile
 
 [KFileDialog Settings]
 Recent Files[$e]=166298-ebola_yakuake.tar.gz,file:$HOME/Downloads/166298-ebola_yakuake.tar.gz,file:$HOME/Downloads/142441-onepixeltitle.zip

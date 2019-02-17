@@ -44,7 +44,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-export PATH="$HOME/.local/bin/:/usr/lib/ccache/bin/:$PATH"
+export PATH="$HOME/bin/:/usr/lib/ccache/bin/:$PATH"
 export STOW_DIR="$HOME/dotfiles"
  
 # highlighting inside manpages and elsewhere
@@ -234,6 +234,9 @@ alias vi='vim'
 # clear screen
 alias cls='clear;uname -a;echo;lsb_release -ds;echo;date "+[ %F %A %r %Z ]";echo;fortune;echo'
 
+# ANSI colors
+alias ansi-colors='for attr in $(seq 0 1); do for fg in $(seq 30 37); do for bg in $(seq 40 47); do printf "\033[$attr;${bg};${fg}m$attr;$fg;$bg\033[m "; done; echo; done; done'
+
 alias md='mkdir'
 alias distro='lsb_release -a'
 
@@ -325,11 +328,11 @@ extract () {
 }
 
 # yakuake b/g blur
-if [ "$DISPLAY"x != x -a -x /usr/bin/xdotool ]; then
-  yakuake=$(xdotool search --class yakuake)
-  konsole=$(xdotool search --class konsole)
-  terms="$yakuake $konsole"
-  for id in $terms; do
-    xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $id
-  done
-fi
+ if [ "$DISPLAY"x != x -a -x /usr/bin/xdotool ]; then
+   yakuake=$(xdotool search --class yakuake)
+#   konsole=$(xdotool search --class konsole)
+   terms="$yakuake"
+   for id in $terms; do
+     xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $id
+   done
+ fi
