@@ -8,23 +8,6 @@ Reference: [Managing your dotfiles with GNU Stow](http://codys.club/blog/2015/07
 
 GNU Stow: `$ sudo pacman -S stow`
 
-## Config
-### Directories
-
-```
-~
-└── dotfiles
-    ├── apps: apps common to all DE's
-    ├── autostart: 
-    ├── bin: home dir scripts
-    ├── deepin: apps specific to Deepin DE
-    ├── games: games common to all DE's
-    ├── gtk-based: apps common to GTK+ based DE's
-    ├── system: system conf files
-    ├── systemd: stub for user unit files - may not work w/stow as systemd symlinks the symlinks?
-    └── utils: utilities common to all DE's
-```
-
 ## Usage
 
 1. Verify conf files don't already exist.
