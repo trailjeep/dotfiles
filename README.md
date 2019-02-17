@@ -18,8 +18,7 @@ GNU Stow: `$ sudo pacman -S stow`
 
    a. `cd ~/dotfiles` (not necessary if `$ export STOW_DIR="$HOME/dotfiles"`)
 
-   b. utility conf files: `$ stow utils`
+   b. User: example BASH config: `$ stow bash`
 
-   c. system conf files: `$ sudo stow -t / system`
+   c. System: example Pacman config: `$ sudo stow -t / pacman`
    
-   d. bash & vim for root user `$ sudo stow --ignore='.config' --ignore='.gitconfig' -t /root utils`
