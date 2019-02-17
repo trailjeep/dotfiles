@@ -1,5 +1,5 @@
 [PlasmaRunnerManager]
-LaunchCounts=1 services_kcm_fonts.desktop,3 services_org.kde.kcharselect.desktop,1 services_fontinst.desktop,1 services_desktop-webmail-config.desktop
+LaunchCounts=1 services_kcm_fonts.desktop,1 services_fontinst.desktop,3 services_org.kde.kcharselect.desktop,1 services_streamtuner2.desktop,1 services_desktop-webmail-config.desktop
 pluginWhiteList=services,bookmarks,baloosearch
 
 [ScreenConnectors]
