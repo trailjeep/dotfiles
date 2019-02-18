@@ -231,6 +231,9 @@ alias more='less'
 
 alias vi='vim'
  
+alias cava='/bin/konsole --nofork --profile cava --hide-menubar --hide-tabbar -qwindowtitle cava &'
+alias tunes='/bin/konsole --nofork --profile tunes --hide-menubar --hide-tabbar -qwindowtitle tunes &'
+
 # clear screen
 alias cls='clear;uname -a;echo;lsb_release -ds;echo;date "+[ %F %A %r %Z ]";echo;fortune;echo'
 

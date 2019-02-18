@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Linux
+ColorScheme=Maia
 Font=Hack,8,-1,5,50,0,0,0,0,0,Regular
 
 [General]
