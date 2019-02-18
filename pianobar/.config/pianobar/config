@@ -41,7 +41,7 @@ password_command = tail -1 ~/.creds/pandora
 #act_volreset = ^
 
 # Misc
-#audio_quality = low
+audio_quality = medium
 #autostart_station = 123456
 #event_command = /home/user/.config/pianobar/eventcmd
 #fifo = /tmp/pianobar
