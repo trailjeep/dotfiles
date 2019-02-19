@@ -1,0 +1,22 @@
+[KDEGame]
+ActualSpeed=10
+ControlMode=3
+GamePrefix=blb
+LastGamePrefix=blb
+LastLevel=1
+Level_blb=1
+Level_tute=3
+Sound=true
+SpeedLevel=7
+StartingDemo=false
+StepSounds=true
+
+[KgTheme]
+Theme=themes/egypt.desktop
+
+[MainWindow]
+Height 1080=733
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAAtAAAAJCAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAGUAZABpAHQAVABvAG8AbABiAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1095

@@ -1,0 +1,20 @@
+[blb001]
+Content=135,75,234,129,34,130,24,129,191,131,70,130,113,134,128,39,129,8,134,128,12,129,7,134,128,95,129,9,134,128,63,129,10,134,128,31,133,128,93,130,21,255,0
+DateTime=2019-02-19T15:23:12Z
+DigWhileFalling=false
+Draws=86,68,37,4,68,8,58,58,94,73,33,4,0
+GameName=Beginner's Luck
+Height=20
+Hint=
+KeyOption=5
+Layout=\s                                                      Z                     N   N Z  N  E  N       HMMMMMMMMMMHMMMMMMMMMMMMMMMMH          H                H          H                H          H        E       H   N  N   HMMMMMMMMMMMM    HMMMMMMMMM HMMMMMMMMMMMM    H         NHMMMMMMMMMMMM    H         MMMMMMNNNNMMMM    H           MMMMMMMMMMMM    H N    N                    HMMMMMMMMMMH                H          H   N  N   E  N  H  N       HMMMMMMMMMHMMMMMMMMMMMM     H         H                 HN     N  HR    N         N HMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+Level=1
+Lives=5
+Mode=3
+Name=
+Owner=0
+Prefix=blb
+Rules=84
+Score=0
+Speed=10
+Width=28
