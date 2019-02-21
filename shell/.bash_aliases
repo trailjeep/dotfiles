@@ -9,29 +9,82 @@
 # Shell Options
 # http://www.gnu.org/software/bash/manual/bashref.html#The-Shopt-Builtin
 #=================================================
+
+# Assume "cd" if the command matches a directory name
 shopt -s autocd
-shopt -s cdable_vars
+
+# Assume arguments to "cd" which don't match a directory refer to a variable
+#shopt -s cdable_vars
+
+# Autocorrect typos when changing path with "cd"
 shopt -s cdspell
+
+# Check if hashed commands exist before executing
+shopt -s checkhash
+
+# Check for stopped or running jobs before exiting
+shopt -s checkjobs
+
+# Update the window size after every command
 shopt -s checkwinsize
+
+# Try and save multi-line commands as a single entry
+shopt -s cmdhist
+
+# Replace directory names with results of word expansion
+shopt -s direxpand
+
+# Try to autocorrect typos during directory completion
 shopt -s dirspell
+
+# Include hidden files and directories in expansion
 shopt -s dotglob
+
+# Enable extended pattern matching features
 shopt -s extglob
-shopt -s gnu_errfmt
-shopt -s histappend
-shopt -s nocaseglob
-shopt -s nullglob
-shopt -s expand_aliases
+
+# Enable support for recursive globbing via "**"
 shopt -s globstar
+
+# Append to the history file instead of overwriting
+shopt -s histappend
+
+# Allow filename patterns matching no files to expand to a null string
+#shopt -s nullglob
+
+shopt -s gnu_errfmt
+shopt -s expand_aliases
 
 #=================================================
 # Variables
 #=================================================
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE=10000
-export HISTFILESIZE=10000
-export HISTCONTROL="ignorespace:erasedups"
-export HISTIGNORE="&:ls:bg:fg"
+
+# Colon-separated list of directories used as a search path for "cd"
+#CDPATH="."
+
+# Maximum number of commands to retain in the history
+HISTSIZE=250000
+
+# Maximum number of lines to retain in the history
+HISTFILESIZE=5000
+
+# Save the time each command was issued & display in this format
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+
+# Don't insert duplicate commands or lines with a leading space
+HISTCONTROL="ignoredups:ignorespace"
+
+# Patterns matched against commands to be excluded from saving
+HISTIGNORE="bg:clear:exit:fg:history"
+
+# Save each command to the history before displaying the subsequent prompt
+PROMPT_COMMAND="history -a"
+
+# Number of trailing directories to retain (subject to the prompt string)
+#PROMPT_DIRTRIM=2
+
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export PAGER="/usr/bin/less"
@@ -350,3 +403,27 @@ extract () {
      xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $id
    done
  fi
+
+ ####################
+### Window Setup ###
+####################
+
+# Set the window title to "user@host:dir" if this is an xterm or rxvt terminal
+case "$TERM" in
+    xterm*|rxvt*) PS1="\[\e]0;\u@\h: \w\a\]$PS1" ;;
+esac
+
+
+##########################
+### Command Completion ###
+##########################
+
+# Enable more powerful command completion if available
+if [[ -f /etc/bash_completion ]] && ! shopt -oq posix; then
+    # shellcheck source=/dev/null
+    source /etc/bash_completion
+fi
+
+# Typing "!!<space>" will replace "!!" with the previous command
+bind Space:magic-space
+
