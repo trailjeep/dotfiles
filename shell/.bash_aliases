@@ -47,19 +47,20 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export PATH="$HOME/bin/:/usr/lib/ccache/bin/:$PATH"
 export STOW_DIR="$HOME/dotfiles"
  
-# highlighting inside manpages and elsewhere
-export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
-export LESS_TERMCAP_me=$'\E[0m'           # end mode
-export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
-export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m'           # end underline
-export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+export LESS=-R
+export LESSOPEN='|pygmentize -g %s'
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 # cheat
 export CHEAT_EDITOR='/bin/vi'
-export CHEAT_USER_DIR='$HOME/.local/share/cheat'
-export CHEAT_PATH='$HOME/.local/share/cheat'
+export CHEAT_USER_DIR="$HOME/.local/share/cheat"
+export CHEAT_PATH="$HOME/.local/share/cheat:/usr/share/cheat"
 export CHEAT_COLORS='true' # requires python-pygments
 export CHEAT_COLORSCHEME='dark' # must be 'light' (default) or 'dark'
 export CHEAT_HIGHLIGHT='yellow' # requires termcolor
@@ -163,10 +164,13 @@ alias egrep='egrep -i --color=auto'
 alias fgrep='fgrep -i --color=auto'
 alias grep='grep -i --color=auto'
  
+alias diff='diff --color=auto'
+
+
 # ls
 alias l='ls -CF'
 alias la='ls -A'
-alias ll='ls -halF'
+alias ll='ls -halF --color=auto'
 alias ls='ls --color=auto'
 alias lm='ls -alF | more'
  
