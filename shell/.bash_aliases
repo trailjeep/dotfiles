@@ -56,6 +56,13 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
+# cheat
+export CHEAT_EDITOR='/bin/vi'
+export CHEAT_USER_DIR='$HOME/.local/share/cheat'
+export CHEAT_PATH='$HOME/.local/share/cheat'
+export CHEAT_COLORS='true' # requires python-pygments
+export CHEAT_COLORSCHEME='dark' # must be 'light' (default) or 'dark'
+export CHEAT_HIGHLIGHT='yellow' # requires termcolor
 
 # directories
 www='/var/www/html'
