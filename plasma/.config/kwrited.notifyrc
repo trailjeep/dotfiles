@@ -1,0 +1,6 @@
+[Event/NewMessage]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/message.wav
+TTS=

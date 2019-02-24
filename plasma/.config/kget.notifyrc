@@ -1,0 +1,13 @@
+[Event/error]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/dialog-error.wav
+TTS=
+
+[Event/notification]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/message.wav
+TTS=

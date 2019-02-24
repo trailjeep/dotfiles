@@ -1,0 +1,6 @@
+[Event/freespacenotif]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/dialog-error-critical.wav
+TTS=

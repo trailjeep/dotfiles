@@ -1,0 +1,13 @@
+[Event/locked]
+Action=Sound
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/suspend-resume.wav
+TTS=
+
+[Event/unlocked]
+Action=Sound
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/suspend-resume.wav
+TTS=

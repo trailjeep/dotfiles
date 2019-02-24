@@ -1,0 +1,13 @@
+[Event/BellInvisible]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/dialog-error-serious.wav
+TTS=
+
+[Event/BellVisible]
+Action=Sound
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/dialog-error-serious.wav
+TTS=

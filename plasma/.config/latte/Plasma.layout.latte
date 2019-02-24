@@ -26,7 +26,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=56
+PreloadWeight=100
 SystrayContainmentId=6
 
 [Containments][1][Applets][57]
@@ -47,8 +47,15 @@ plugin=org.kde.plasma.simplemenu
 [Containments][1][Applets][61][Configuration]
 PreloadWeight=0
 
+[Containments][1][Applets][61][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][1][Applets][61][Configuration][General]
+customButtonImage=start-here-manjaro
 favoritesPortedToKAstats=true
+switchCategoriesOnHover=false
+useCustomButtonImage=true
 
 [Containments][1][Applets][65]
 immutability=1
@@ -112,7 +119,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][6][Applets][11][Configuration]
-PreloadWeight=0
+PreloadWeight=30
 
 [Containments][6][Applets][11][Configuration][ConfigDialog]
 DialogHeight=540
@@ -176,12 +183,30 @@ DialogWidth=720
 immutability=1
 plugin=org.kde.plasma.battery
 
+[Containments][6][Applets][67]
+immutability=1
+plugin=org.kde.ktp-contactlist
+
+[Containments][6][Applets][67][Configuration]
+PreloadWeight=47
+
+[Containments][6][Applets][67][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][6][Applets][68]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][6][Applets][68][Configuration]
+PreloadWeight=42
+
 [Containments][6][Applets][7]
 immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][6][Applets][7][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][6][Applets][9]
 immutability=1

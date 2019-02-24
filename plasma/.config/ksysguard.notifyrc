@@ -1,0 +1,6 @@
+[Event/sensor_alarm]
+Action=Sound
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/dialog-error-critical.wav
+TTS=

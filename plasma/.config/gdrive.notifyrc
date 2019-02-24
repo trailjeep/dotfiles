@@ -1,0 +1,6 @@
+[Event/new-account-added]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/usr/share/sounds/deepin/stereo/device-added.wav
+TTS=
