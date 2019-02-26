@@ -27,11 +27,40 @@ wmclasscomplete=false
 wmclassmatch=1
 
 [2]
+Description=all transparent
+clientmachine[$d]
+clientmachinematch[$d]
+opacityactive=80
+opacityactiverule=2
+opacityinactive=40
+opacityinactiverule=2
+position[$d]
+positionrule[$d]
+size[$d]
+sizerule[$d]
+skippager[$d]
+skippagerrule[$d]
+skipswitcher[$d]
+skipswitcherrule[$d]
+skiptaskbar[$d]
+skiptaskbarrule[$d]
+title[$d]
+titlematch[$d]
+types=1
+wmclass=
+wmclasscomplete=false
+wmclassmatch=0
+
+[3]
 Description=konsole
 clientmachine=localhost
 clientmachinematch=0
+noborder[$d]
+noborderrule[$d]
 position[$d]
 positionrule[$d]
+screen[$d]
+screenrule[$d]
 size=827,474
 sizerule=2
 skippager[$d]
@@ -46,10 +75,14 @@ wmclass=konsole
 wmclasscomplete=false
 wmclassmatch=1
 
-[3]
+[4]
 Description=conky
 clientmachine=localhost
 clientmachinematch=0
+ignoregeometry[$d]
+ignoregeometryrule[$d]
+maxsize[$d]
+maxsizerule[$d]
 noborder[$d]
 noborderrule[$d]
 position=5,5
@@ -64,13 +97,15 @@ skipswitcher=true
 skipswitcherrule=2
 skiptaskbar=true
 skiptaskbarrule=2
+strictgeometry[$d]
+strictgeometryrule[$d]
 title=conky
 titlematch=1
 wmclass=conky
 wmclasscomplete=false
 wmclassmatch=1
 
-[4]
+[5]
 Description=tunes
 clientmachine=localhost
 clientmachinematch=0
@@ -105,7 +140,7 @@ dir_pixmap[$d]
 BrowserApplication[$d]
 ColorScheme[$d]
 Name[$d]
-count=4
+count=5
 fixed[$d]
 font[$d]
 menuFont[$d]
