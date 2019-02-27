@@ -1,0 +1,22 @@
+[General]
+  snippetfile = "/home/jeff/.config/pet/snippet.toml"
+  editor = "/usr/bin/vim"
+  column = 40
+  selectcmd = "fzf"
+  backend = "gist"
+  sortby = ""
+
+[Gist]
+  file_name = "pet-snippet.toml"
+  access_token = ""
+  gist_id = "9d94dac22c7524cc30347eac9f6a16c6"
+  public = true
+  auto_sync = true
+
+[GitLab]
+  file_name = "pet-snippet.toml"
+  access_token = ""
+  url = ""
+  id = ""
+  visibility = "private"
+  auto_sync = false

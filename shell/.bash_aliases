@@ -99,7 +99,7 @@ export LANGUAGE=en_US.UTF-8
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 export PATH="$HOME/.local/bin/:/usr/lib/ccache/bin/:$PATH"
 export STOW_DIR="$HOME/dotfiles"
- 
+export PET_GITHUB_ACCESS_TOKEN=`/bin/cat $HOME/.creds/pet` 
 export LESS=-R
 export LESSOPEN='|pygmentize -g %s'
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold

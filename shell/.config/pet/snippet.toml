@@ -1,0 +1,5 @@
+[[snippets]]
+  description = "Convert Unix timestamp to Date"
+  command = "date -d @1440359821"
+  tag = ["date", "epoch"]
+  output = "Sun Aug 23 15:57:01 EDT 2015"
