@@ -89,7 +89,7 @@ Color=101,101,101
 Color=255,255,255
 
 [General]
-Blur=true
+Blur=false
 Description=Linux Colors
 Opacity=0
 Wallpaper=

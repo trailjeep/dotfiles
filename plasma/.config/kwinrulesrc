@@ -44,8 +44,8 @@ skipswitcher[$d]
 skipswitcherrule[$d]
 skiptaskbar[$d]
 skiptaskbarrule[$d]
-title[$d]
-titlematch[$d]
+title=^(?!.*(conky|cava|Konsole|Yakuake|Latte)).*$
+titlematch=3
 types=1
 wmclass=
 wmclasscomplete=false
@@ -127,8 +127,8 @@ skiptaskbar=true
 skiptaskbarrule=2
 strictgeometry=true
 strictgeometryrule=2
-title=tunes \xe2\x80\x94 Konsole
-titlematch=1
+title=(?:.*tunes \xe2\x80\x94 Konsole|.*mocp \xe2\x80\x94 Konsole|.*pyradio \xe2\x80\x94 Konsole|.*mpsyt \xe2\x80\x94 Konsole|.*pianobar \xe2\x80\x94 Konsole)
+titlematch=3
 wmclass=konsole
 wmclasscomplete=false
 wmclassmatch=1

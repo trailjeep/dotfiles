@@ -4,6 +4,7 @@ Font=Hack,8,-1,5,50,0,0,0,0,0,Regular
 
 [General]
 Command=/bin/bash
+LocalTabTitleFormat=tunes
 Name=tunes
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
