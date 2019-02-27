@@ -1,0 +1,17 @@
+Input = {
+	source = "PULSE"
+	f_sample = 44100L; // 44.1kHz sampling rate
+}
+
+duration = 50; //buffer lenght in ms
+fft_size = 2048L
+
+Osc = {
+	//default line color
+	color = "FFFFFF"
+	width = 0.01;
+	scale = 1.3;
+	sigma = 3.; // sigma of line smoothing function
+}
+
+Osc1 = {}
