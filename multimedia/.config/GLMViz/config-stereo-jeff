@@ -16,14 +16,14 @@ Input = {
 	device = ""
 
 	f_sample = 44100L // 44.1kHz sampling rate
-	//stereo = true
+	stereo = true
 }
 
 fps = 60;
 duration = 50; // buffer length in ms
 
 //fft_size = 8192L; // 2^13
-fft_size = 4096L; // 2^12
+fft_size = 2048L; // 2^12
 
 bg_color = "00000000"
 
@@ -35,27 +35,27 @@ Spectrum = {
 
 	// Specifies the start and stop frequency of the spectrum
 	f_start = 0
-	f_stop = 1500
+	f_stop = 1200
 
 	// Logarithmic frequency scaling
-	//log_enabled = 1.
+	log_enabled = 0.
 	// Log start index
 	log_start = 5.
 
 	top_color = "E66C2C" //"D3262E"
 	//top_color = "FFFFFF"
-	bot_color = "E66C2C" //"D3262E"
+	bot_color = "E66C2c" //"D3262E"
 	//bot_color = "000000"
-	line_color = "504A4B" //"46484B"
-	dB_lines = true
+	line_color = "46484B"
+	dB_lines = false
 
-	bar_width = 0.5
+	bar_width = 0.33
 	gravity = 8.0
 
 	// gradient = 0 - each bar has the full gradient
 	// gradient = 1 - bar color changes with the height of the bar (0db = top_color)
 	// Values in-between 0 and 1 are possible
-	gradient = 0 //1.0
+	gradient = 1.0
 
 	// Rainbow attributes
 	rainbow = {
@@ -78,7 +78,20 @@ Spectrum = {
 }
 
 // Standard Spectrum
-Spectrum1 = {}
+Spectrum1 = {
+	channel = 0
+	pos = {
+		ymin = -3.
+		ymax = 1.
+	}
+}
+Spectrum2 = {
+	channel = 1 
+	pos = {
+		ymax = -3.
+		ymin = 1.
+	}
+}
 
 // Spectrum rendered in the upper half of the window
 /*Spectrum2 = {
@@ -96,6 +109,8 @@ Osc = {
 
 	// Line width
 	width = 0.01;
+	sigma = 2.0
+	scale = 0.7
 }
 
 // Standard Oscilloscope
@@ -107,3 +122,4 @@ Osc = {
 		ymin = -3.0; ymax = 1.0;	
 	}
 }*/
+// vim: set ft=cfg:
