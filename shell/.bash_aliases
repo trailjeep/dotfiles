@@ -330,9 +330,6 @@ alias fix='`!!:$`'
 # calc plasmoid
 alias calc='plasmawindowed org.kde.plasma.calculator >/dev/null 2>&1 &'
 
-# spotify downloader
-alias spotdl='/usr/bin/python ~/src/spotify-downloader/spotdl.py'
-
 #=================================================
 # Unused
 #=================================================

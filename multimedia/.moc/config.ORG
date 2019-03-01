@@ -523,7 +523,7 @@ FollowPlayedFile = yes
 # Examples:   ExecCommand1 = "cp %f /mnt/usb_drive"
 #             ExecCommand2 = "/home/joe/now_playing %I"
 #
-ExecCommand1 = "/home/jeff/.moc/moc-lyrics"
+#ExecCommand1 =
 #ExecCommand2 =
 #ExecCommand3 =
 #ExecCommand4 =

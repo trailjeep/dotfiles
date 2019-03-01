@@ -1,5 +1,77 @@
 [[snippets]]
-  description = "Convert Unix timestamp to Date"
+  description = "Convert seconds since the epoch (1970-01-01 UTC) to a date"
   command = "date -d @1440359821"
-  tag = ["date", "epoch"]
+  tag = ["epoch"]
   output = "Sun Aug 23 15:57:01 EDT 2015"
+
+[[snippets]]
+  description = "Date / timestamp as seconds since epoch"
+  command = "date -d `date +%FT%TZ` +%s"
+  tag = ["timestamp", "epoch"]
+  output = "1551295966"
+
+[[snippets]]
+  description = "Recursively grep for string <pattern> in folder and print matching files"
+  command = "grep -Rl pattern folder"
+  tag = ["recurse"]
+  output = ""
+
+[[snippets]]
+  description = "Find lines NOT containing pattern"
+  command = "grep -v pattern file"
+  tag = ["not"]
+  output = ""
+
+[[snippets]]
+  description = "Date / timestamp human readable"
+  command = "date +\"%Y%m%d_%H%M%S\""
+  tag = ["timestamp"]
+  output = "20190228_120344"
+
+[[snippets]]
+  description = "Alias to restart Plasma"
+  command = "alias r='echo \"Restarting Plasma...\"; kquitapp5 plasmashell && kstart5 plasmashell > /dev/null 2>&1'"
+  tag = ["plasma", "restart"]
+  output = ""
+
+[[snippets]]
+  description = "Encrypt string with OpenSSL"
+  command = "echo string | openssl aes-256-cbc -pbkdf2 -e | openssl base64 -e"
+  tag = ["encryption", "openssl", "aes-256"]
+  output = "U2FsdGVkX193oGHZmNNRtU/3oczNZNJpUUGad3vhKtg="
+
+[[snippets]]
+  description = "Decrypt string with OpenSSL"
+  command = "echo \"U2FsdGVkX193oGHZmNNRtU/3oczNZNJpUUGad3vhKtg=\" | openssl base64 -d | openssl aes-256-cbc -pbkdf2 -d"
+  tag = ["encryption", "openssl", "aes-256"]
+  output = "string"
+
+[[snippets]]
+  description = "Encrypt file with OpenSSL"
+  command = "openssl aes-256-cbc -pbkdf2 -e -in DECFILE -out ENCFILE"
+  tag = ["encryption", "openssl", "aes-256"]
+  output = ""
+
+[[snippets]]
+  description = "Decrypt file with OpenSSL"
+  command = "openssl aes-256-cbc -pbkdf2 -d -in ENCFILE -out DECFILE"
+  tag = ["encryption", "openssl", "aes-256"]
+  output = ""
+
+[[snippets]]
+  description = "Encrypt directory with OpenSSL"
+  command = "tar cz DIR | openssl aes-256-cbc -pbkdf2 -e -out ENCFILE"
+  tag = ["encryption", "openssl", "aes-256"]
+  output = ""
+
+[[snippets]]
+  description = "Decrypt directory with OpenSSL"
+  command = "openssl aes-256-cbc -pbkdf2 -d -in ENCFILE | tar xz"
+  tag = ["encryption", "openssl", "aes-256"]
+  output = ""
+
+[[snippets]]
+  description = "Write ISO image to USB drive"
+  command = "dd if=FILE.iso of=/dev/sdX bs=4M status=progress && sync"
+  tag = ["iso", "usb", "livecd"]
+  output = ""
