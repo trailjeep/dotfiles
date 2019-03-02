@@ -111,7 +111,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-export LS_OPTIONS='--color=auto -A -F -X -B -h -v -b -T 0 --group-directories-first --quoting-style=shell-escape'
+export LS_OPTIONS='--color=auto -A -F -X -B -h -v -b -T 0 --group-directories-first --quoting-style=shell-escape --time-style=iso'
 
 # cheat
 export CHEAT_EDITOR='/bin/vi'
