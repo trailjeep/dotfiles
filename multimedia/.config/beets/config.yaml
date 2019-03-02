@@ -1,0 +1,30 @@
+directory: /home/jeff/Downloads/BEETS/
+library: /home/jeff/.config/beets/library.db
+
+plugins: the fetchart embedart lyrics scrub
+
+import:
+    move: no
+
+ui:
+    color: yes
+
+per_disc_numbering: yes
+threaded: yes
+
+paths:
+    default: %the{$albumartist}/$original_year-$original_month-$original_day - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title
+    singleton: "#Non-Album/$artist/$title"
+    comp: "#Compilations/%the{$albumartist}/$original_year-$original_month - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title"
+
+fetchart:
+    midwidth: 400
+    enforce_ratio: 10px
+    sources: filesystem itunes amazon albumart coverart
+
+embedart:
+    auto: yes
+
+lyrics:
+    auto: yes
+
