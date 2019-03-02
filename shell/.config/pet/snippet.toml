@@ -75,3 +75,21 @@
   command = "dd if=FILE.iso of=/dev/sdX bs=4M status=progress && sync"
   tag = ["iso", "usb", "livecd"]
   output = ""
+
+[[snippets]]
+  description = "dconf write string"
+  command = "dconf write /com/deepin/wrap/gnome/desktop/wm/preferences/focus-mode \"string 'sloppy'\""
+  tag = ["dconf", "string"]
+  output = ""
+
+[[snippets]]
+  description = "dconf write boolean or integer"
+  command = "dconf write /com/deepin/wrap/gnome/desktop/wm/preferences/auto-raise false"
+  tag = ["dconf", "boolean", "integer"]
+  output = ""
+
+[[snippets]]
+  description = "Screenshot website"
+  command = "/bin/google-chrome-unstable --headless --hide-scrollbars --screenshot=\"$HOME/Downloads/FILE\" \"URL\" # --window-size=1024,2550"
+  tag = ["chrome", "screenshot"]
+  output = ""
