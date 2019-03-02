@@ -93,9 +93,11 @@ export PS2="continue-> "
 export PS3="select-> "
 export PS4='$0.$LINENO+ '
 export INPUTRC="$HOME/.inputrc"
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+# export LC_COLLATE="C"
+# export LC_TIME=en_DK.UTF-8
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
+# export LANGUAGE=en_US.UTF-8
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 export PATH="$HOME/.local/bin/:/usr/lib/ccache/bin/:$PATH"
 export STOW_DIR="$HOME/dotfiles"
@@ -109,6 +111,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+export LS_OPTIONS='--color=auto -A -F -X -B -h -v -b -T 0 --group-directories-first --quoting-style=shell-escape'
 
 # cheat
 export CHEAT_EDITOR='/bin/vi'
@@ -223,8 +226,10 @@ alias diff='diff --color=auto'
 # ls
 alias l='ls -CF'
 alias la='ls -A'
-alias ll='ls -halF --color=auto'
-alias ls='ls --color=auto'
+# alias ll='LC_COLLATE=C ls -halF --color=auto'
+alias ll='ls -l $LS_OPTIONS'
+alias ls='ls $LS_OPTIONS'
+# alias ls='ls --color=auto'
 alias lm='ls -alF | more'
  
 # nav
