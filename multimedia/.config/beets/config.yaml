@@ -1,30 +1,136 @@
-directory: /home/jeff/Downloads/BEETS/
-library: /home/jeff/.config/beets/library.db
-
-plugins: the fetchart embedart lyrics scrub
-
-import:
-    move: no
-
+library:        /home/jeff/.config/beets/library.db
+directory:      /home/jeff/Downloads/BEETS/
+plugins:        the fetchart embedart lyrics scrub lastgenre
+#include:        
+#pluginpath:     
+ignore:         '.*, *~, System Volume Information, lost+found'
+ignore_hidden:  yes
+#replace:    
+asciify_paths:  yes
+art_filename:   cover
+threaded:       yes
+format_item:    $artist - $album - $title
+format_album:   $albumartist - $album
+sort_item:      artist+ album+ disc+ track+
+sort_album:     albumartist+ album+
+sort_case_insensitive:  yes
+original_date:  yes
+#artist_credit:  
+per_disc_numbering:     yes
+#terminal_encoding:      
+#clutter:        
+#max_filename_length:    
+id3v23:         no
+va_name:        'Various Artists'
 ui:
     color: yes
+    colors:
+        text_success:           green
+        text_warning:           yellow
+        text_error:             red
+        text_highlight:         red
+        text_highlight_minor:   lightgray
+        action_default:         turquoise
+        action:                 blue
+import:
+    write:          yes
+    copy:           yes
+    move:           no
+    link:           no
+    hardlink:       no
+    #resume:        yes
+    #incremental:    
+    #incremental_skip_later:
+    from_scratch:   yes
+    #quiet_fallback: 
+    none_rec_action:    ask
+    timid:          no
+    #log:
+    default_action:    apply
+    languages:      en
+    detail:         no
+    group_albums:   yes
+    autotag:        yes
+    duplicate_action:   ask
+    bell:           yes
+    #set_fields:
+        #genre: 'To Listen'
+        #collection: 'Unordered'
+musicbrainz:
+    #host: localhost:5000
+    #ratelimit: 100
+    searchlimit:    5
+match:
+    strong_rec_thresh: 0.10
+    #medium_rec_thresh:
+    #rec_gap_thresh:
+    max_rec:
+        missing_tracks: medium
+        unmatched_tracks: medium
+    preferred:
+        countries:      ['US', 'GB|UK']
+        media:          ['CD', 'Digital Media|File']
+        original_year:  yes
+    ignored: missing_tracks unmatched_tracks
+    #required:   year label catalognum country
+    #ignored_media:      ['Data CD', 'DVD', 'DVD-Video', 'Blu-ray', 'HD-DVD', 'VCD', 'SVCD', 'UMD', 'VHS']
+    ignore_video_tracks:    yes
 
-per_disc_numbering: yes
-threaded: yes
+
 
 paths:
-    default: %the{$albumartist}/$original_year-$original_month-$original_day - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title
-    singleton: "#Non-Album/$artist/$title"
-    comp: "#Compilations/%the{$albumartist}/$original_year-$original_month - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title"
+    default:    %the{$albumartist}/[$original_year] [%upper{$albumtype}] $album%aunique{}/$disc-$track - $title
+    singleton:  "#Non-Album/$artist/$title"
+    comp:       "#Compilations/%the{$albumartist}/$original_year-$original_month - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title"
+
+the:
+    a:                  yes
+    the:                yes
+    #patterns:           '[]'
+    strip:              no
+    #format:             '{0}, {1}'
 
 fetchart:
-    midwidth: 400
-    enforce_ratio: 10px
-    sources: filesystem itunes amazon albumart coverart
+    auto:               yes
+    cautious:           no
+    cover_names:        cover front art album folder
+    midwidth:           400
+    maxwidth:           500
+    enforce_ratio:      '0.5%'
+    sources:            filesystem coverart amazon albumart
+    google_key:         ''
+    google_engine:      ''
+    fanarttv_key:       ''
+    store_source:       no
 
 embedart:
-    auto: yes
+    auto:               yes
+    compare_threshold:  0
+    ifempty:            no
+    maxwidth:           0
+    remove_art_file:    no
+
 
 lyrics:
-    auto: yes
+    auto:               yes
+    bing_client_secret: ''
+    bing_lang_from:     ''
+    bing_lang_to:       ''
+    fallback:           ''
+    force:              no
+    google_API_key:     ''
+    google_engine_ID:   ''
+    sources:            '*'
+
+lastgenre:
+    auto:               yes
+    canonical:          /home/jeff/.config/beets/lastgenre_canonical
+    count:              2
+    fallback:           ''
+    force:              yes
+    min-weight:         20
+    prefer-specific:    no
+    source:             album
+    seperator:          ', '
+    whitelist:          /home/jeff/.config/beets/lastgenre_whitelist
 
