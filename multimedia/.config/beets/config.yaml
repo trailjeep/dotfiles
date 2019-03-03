@@ -1,6 +1,6 @@
 library:        /home/jeff/.config/beets/library.db
-directory:      /home/jeff/Downloads/BEETS/
-plugins:        the fetchart embedart lyrics scrub lastgenre
+directory:      /home/jeff/Downloads/TUNES/BEETS/
+plugins:        the fetchart embedart lyrics scrub lastgenre inline
 #include:        
 #pluginpath:     
 ignore:         '.*, *~, System Volume Information, lost+found'
@@ -75,21 +75,20 @@ match:
     #required:   year label catalognum country
     #ignored_media:      ['Data CD', 'DVD', 'DVD-Video', 'Blu-ray', 'HD-DVD', 'VCD', 'SVCD', 'UMD', 'VHS']
     ignore_video_tracks:    yes
-
-
-
 paths:
-    default:    %the{$albumartist}/[$original_year] [%upper{$albumtype}] $album%aunique{}/$disc-$track - $title
+    default:    %the{$albumartist}/[$original_year] [%upper{$albumtype}] $album%aunique{}/%if{$multiDisc,$padDisc-}$padTrack - $title
     singleton:  "#Non-Album/$artist/$title"
     comp:       "#Compilations/%the{$albumartist}/$original_year-$original_month - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title"
-
+item_fields:
+    multiDisc:  "1 if disctotal > 1 else 0"
+    padTrack:   "'{:03n}'.format(track) if tracktotal > 99 else '{:02n}'.format(track) if tracktotal > 9 else '{:01n}'.format(track)"
+    padDisc:    "'{:03n}'.format(disc) if disctotal > 99 else '{:02n}'.format(disc) if disctotal > 9 else '{:01n}'.format(disc)"
 the:
     a:                  yes
     the:                yes
-    #patterns:           '[]'
+    #patterns:          
     strip:              no
-    #format:             '{0}, {1}'
-
+    #format:            
 fetchart:
     auto:               yes
     cautious:           no
@@ -102,15 +101,12 @@ fetchart:
     google_engine:      ''
     fanarttv_key:       ''
     store_source:       no
-
 embedart:
     auto:               yes
     compare_threshold:  0
     ifempty:            no
     maxwidth:           0
     remove_art_file:    no
-
-
 lyrics:
     auto:               yes
     bing_client_secret: ''
@@ -121,7 +117,6 @@ lyrics:
     google_API_key:     ''
     google_engine_ID:   ''
     sources:            '*'
-
 lastgenre:
     auto:               yes
     canonical:          /home/jeff/.config/beets/lastgenre_canonical
