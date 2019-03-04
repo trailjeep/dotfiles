@@ -129,7 +129,7 @@ lastgenre:
     seperator:          ', '
     whitelist:          /home/jeff/.config/beets/lastgenre_whitelist
 replaygain:
-    auto:               no
+    auto:               yes
     backend:            gstreamer
     overwrite:          no
     targetlevel:        89

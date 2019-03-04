@@ -3,7 +3,7 @@ spotify-downloader:
   download-only-metadata: false
   dry-run: false
   file-format: '{album_artist}/{year} - {album}/{track_number} - {artist} - {track_name}'
-  folder: /home/jeff/Downloads/TUNES
+  folder: /home/jeff/Downloads/TUNES/INCOMING
   input-ext: .m4a
   log-level: INFO
   manual: false
