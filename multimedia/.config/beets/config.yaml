@@ -35,7 +35,7 @@ ui:
 import:
     write:          yes
     copy:           yes
-    move:           no
+    move:           yes
     link:           no
     hardlink:       no
     #resume:        yes
