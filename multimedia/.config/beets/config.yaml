@@ -134,4 +134,6 @@ replaygain:
     overwrite:          no
     targetlevel:        89
     #r128:
+scrub:
+    auto:               yes
 
