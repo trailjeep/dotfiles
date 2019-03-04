@@ -99,7 +99,7 @@ export INPUTRC="$HOME/.inputrc"
 # export LANG=en_US.UTF-8
 # export LANGUAGE=en_US.UTF-8
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-export PATH="$HOME/.local/bin/:/usr/lib/ccache/bin/:$PATH"
+export PATH="/usr/lib/ccache/bin/:$PATH"
 export STOW_DIR="$HOME/dotfiles"
 export PET_GITHUB_ACCESS_TOKEN=`/bin/cat $HOME/.creds/pet` 
 export LESS=-R
@@ -302,6 +302,10 @@ alias vi='vim'
  
 alias cava='/bin/konsole --nofork --profile cava --hide-menubar --hide-tabbar -qwindowtitle cava &'
 alias tunes='/bin/konsole --nofork --profile tunes --hide-menubar --hide-tabbar -qwindowtitle tunes &'
+alias glmviz='glmviz config-stereo-jeff &'
+alias vis1='glmviz'
+alias vis2='cava'
+
 
 # clear screen
 alias cls='clear;uname -a;echo;lsb_release -ds;echo;date "+[ %F %A %r %Z ]";echo;fortune;echo'
@@ -324,8 +328,8 @@ alias pytivo-stop='ssh root@MAISIE "pkill -SIGINT -f ~/bin/pytivo/pyTivo.py"'
 alias wx='curl "http://wttr.in/06437"'
 alias moon='curl "http://wttr.in/moon"'
 
-# restart plasma
-alias r='echo "Restarting Plasma..."; kquitapp5 plasmashell && kstart5 plasmashell > /dev/null 2>&1'
+# restart plasma moved to script 'r' in ~/.local/bin/ so i could use w/krunner
+# alias r='echo "Restarting Plasma..."; kquitapp5 plasmashell && kstart5 plasmashell > /dev/null 2>&1'
 # logout self
 alias lout='loginctl terminate-user `whoami`'
 

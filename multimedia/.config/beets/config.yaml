@@ -1,9 +1,9 @@
 library:        /home/jeff/.config/beets/library.db
 directory:      /home/jeff/Downloads/TUNES/BEETS/
-plugins:        the fetchart embedart lyrics scrub lastgenre inline
+plugins:        the fetchart embedart lyrics scrub lastgenre inline replaygain
 #include:        
 #pluginpath:     
-ignore:         '.*, *~, System Volume Information, lost+found'
+#ignore:        
 ignore_hidden:  yes
 #replace:    
 asciify_paths:  yes
@@ -128,4 +128,10 @@ lastgenre:
     source:             album
     seperator:          ', '
     whitelist:          /home/jeff/.config/beets/lastgenre_whitelist
+replaygain:
+    auto:               no
+    backend:            gstreamer
+    overwrite:          no
+    targetlevel:        89
+    #r128:
 

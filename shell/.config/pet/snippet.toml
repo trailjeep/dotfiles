@@ -91,5 +91,11 @@
 [[snippets]]
   description = "Screenshot website"
   command = "/bin/google-chrome-unstable --headless --hide-scrollbars --screenshot=\"$HOME/Downloads/FILE\" \"URL\" # --window-size=1024,2550"
-  tag = ["chrome", "screenshot"]
+  tag = ["chrome", "screenshot", "website"]
+  output = ""
+
+[[snippets]]
+  description = "Display A/V File Tags"
+  command = "ffprobe FILE"
+  tag = ["ffmpeg", "ffprobe", "tags", "audio", "video"]
   output = ""
