@@ -2,12 +2,16 @@
 Height 1080=480
 Width 1920=723
 
+[KFileDialog Settings]
+Recent Files[$e]=start-here-symbolic.svg,file:///usr/share/icons/breeze-dark/places/symbolic/start-here-symbolic.svg
+Recent URLs[$e]=file:///usr/share/icons/breeze-dark/places/symbolic/
+
 [KPropertiesDialog]
-Height 1080=449
-Width 1920=433
+Height 1080=453
+Width 1920=457
 
 [PlasmaRunnerManager]
-LaunchCounts=2 services_org.kde.konsole.desktop,3 services_com.github.wwmm.pulseeffects.desktop,1 services_org.kde.kgoldrunner.desktop,1 services_desktop-webmail-config.desktop,1 services_kcm_fonts.desktop,3 services_org.kde.kcharselect.desktop,1 services_fontinst.desktop,1 services_streamtuner2.desktop,1 services_org.musicbrainz.Picard.desktop
+LaunchCounts=3 services_org.kde.kcharselect.desktop,1 services_breezedecorationconfig.desktop,1 services_desktop-webmail-config.desktop,2 services_pamac-updater.desktop,1 services_streamtuner2.desktop,1 services_org.kde.kgoldrunner.desktop,1 services_org.musicbrainz.Picard.desktop,1 services_breezestyleconfig.desktop,1 services_kcm_fonts.desktop,2 services_pamac-manager.desktop,3 services_pamac-qt.desktop,3 services_com.github.wwmm.pulseeffects.desktop,2 services_org.kde.konsole.desktop,2 services_brave.desktop,1 services_fontinst.desktop
 pluginWhiteList=services,bookmarks,baloosearch
 
 [ScreenConnectors]

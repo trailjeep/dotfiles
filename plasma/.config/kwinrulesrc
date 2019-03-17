@@ -20,7 +20,7 @@ skipswitcher=true
 skipswitcherrule=2
 skiptaskbar=true
 skiptaskbarrule=2
-title=cava \xe2\x80\x94 Konsole
+title=cava — Konsole
 titlematch=1
 wmclass=konsole
 wmclasscomplete=false
@@ -112,7 +112,7 @@ skiptaskbar[$d]
 skiptaskbarrule[$d]
 strictgeometry[$d]
 strictgeometryrule[$d]
-title=bash \xe2\x80\x94 Konsole
+title=bash — Konsole
 titlematch=2
 wmclass=konsole
 wmclasscomplete=false
@@ -170,7 +170,7 @@ skiptaskbar=true
 skiptaskbarrule=2
 strictgeometry=true
 strictgeometryrule=2
-title=(?:.*tunes \xe2\x80\x94 Konsole|.*mocp \xe2\x80\x94 Konsole|.*pyradio \xe2\x80\x94 Konsole|.*mpsyt \xe2\x80\x94 Konsole|.*pianobar \xe2\x80\x94 Konsole)
+title=(?:.*tunes — Konsole|.*mocp — Konsole|.*pyradio — Konsole|.*mpsyt — Konsole|.*pianobar — Konsole)
 titlematch=3
 wmclass=konsole
 wmclasscomplete=false
