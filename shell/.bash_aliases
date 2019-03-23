@@ -263,11 +263,14 @@ alias pmql='pacman -Ql'  # query pkg files
 alias pmi='sudo pacman -S'    # install pkg
 alias pmr='sudo pacman -Rns'  # remove pkg + unneeded deps + conf
 alias pmy='sudo pacman -Syy'  # force sync repos
-alias pmu='sudo pacman -Syyu' # full system upgrade
+alias pmu='sudo pacman -Syyuu' # full system upgrade / enable downgrade
+alias pmd='sudo pacman -Syyuuw --noconfirm' # just download updates
+alias pmid='sudo pacman -Suu' # install downloaded
 alias pmo='pacman -Qdt'  # list orphans
 alias pmor='sudo pacman -Rns $(pacman -Qtdq)' # recursively remove orphans
 alias pmfy='sudo pacman -Fy'  # sync file db
 alias pmfs='pacman -Fs'  # find pkg providing file
+alias rl3='systemctl isolate multi-user.target' # systemd multi-user mode with networking - no x
 
 # yay
 alias yay='yay --sudoloop' # chrome always times out
