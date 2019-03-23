@@ -99,3 +99,39 @@
   command = "ffprobe FILE"
   tag = ["ffmpeg", "ffprobe", "tags", "audio", "video"]
   output = ""
+
+[[snippets]]
+  description = "Create & checkout new branch"
+  command = "git checkout -b <BRANCH>"
+  tag = ["git", "branch"]
+  output = ""
+
+[[snippets]]
+  description = "Delete local branch"
+  command = "git branch -d <LOCAL_BRANCH>"
+  tag = ["git", "branch"]
+  output = ""
+
+[[snippets]]
+  description = "Delete remote branch"
+  command = "git push origin --delete <REMOTE_BRANCH>"
+  tag = ["git", "branch"]
+  output = ""
+
+[[snippets]]
+  description = "Copy files from another branch into current"
+  command = "git checkout <BRANCH> <PATHS>..."
+  tag = ["git", "branch", "copy", "files"]
+  output = ""
+
+[[snippets]]
+  description = "Optimize png images and strip all metadata"
+  command = "optipng -strip all image.png"
+  tag = ["images", "png", "optimize"]
+  output = ""
+
+[[snippets]]
+  description = "Resize images while preserving aspect ratio (200x100! will force size)"
+  command = "convert example.png -resize 200x100 example.png"
+  tag = ["imagemagick", "images", "resize"]
+  output = ""
