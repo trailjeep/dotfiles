@@ -25,6 +25,9 @@
     # Automatically correct and execute mistyped commands
     autocorrect = 1
 [alias]
+	# print git aliases
+	alias = config --get-regexp alias
+
 	# Clone a repository including all submodules
 	c = clone --recursive
 
