@@ -26,7 +26,7 @@
     autocorrect = 1
 [alias]
 	# print git aliases
-	alias = config --get-regexp alias
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | sort
 
 	# Clone a repository including all submodules
 	c = clone --recursive
@@ -53,5 +53,3 @@
 	# Remove branches that have already been merged with master
     # a.k.a. ‘delete merged’
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
-
