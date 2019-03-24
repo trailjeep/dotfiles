@@ -34,7 +34,7 @@
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
     # View the current working tree status using the short format
-    s = status -s
+	s = !echo -ne "On: " && git symbolic-ref --short HEAD && git status -s
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
