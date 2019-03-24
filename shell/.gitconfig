@@ -26,7 +26,7 @@
     autocorrect = 1
 [alias]
 	# print git aliases
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | sort
+	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | sort
 
 	# Clone a repository including all submodules
 	c = clone --recursive
