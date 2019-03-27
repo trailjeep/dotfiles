@@ -1,8 +1,13 @@
 [user]
 	email = trailjeep@gmail.com
 	name = trailjeep
+[credential]
+     helper = store --file ~/.creds/git
 [color]
 	ui = auto
+	diff = auto
+	branch = auto
+	status = auto
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -16,11 +21,18 @@
     added = yellow
     changed = green
     untracked = cyan
+[branch]
+	autosetupmerge = true
+[push]
+	default = current
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = fix
 [core]
 	editor = vim
+	excludesfile = .gitignore
+[diff]
+	renames = true
 [help]
     # Automatically correct and execute mistyped commands
     autocorrect = 1
@@ -32,9 +44,13 @@
 	c = clone --recursive
 
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 
     # View the current working tree status using the short format
 	s = !echo -ne "On: " && git symbolic-ref --short HEAD && git status -s
+
+	# no execute fast-forward if current HEAD is ancestor of commit to be merged. 
+	m = merge --no-ff
 
 	# Commit all changes
 	ca = !git add -A && git commit -av

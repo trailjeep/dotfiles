@@ -135,3 +135,15 @@
   command = "convert example.png -resize 200x100 example.png"
   tag = ["imagemagick", "images", "resize"]
   output = ""
+
+[[snippets]]
+  description = "parse XML file (stdin = -) for tag value (beware XMLNS)"
+  command = "echo \"<dewpoint_f>26.1</dewpoint_f>\" |  xmllint --xpath \"string(//dewpoint_f)\" -"
+  tag = ["xml", "parse"]
+  output = "26.1"
+
+[[snippets]]
+  description = "ImageMagick convert BG to transparent (PNG or GIF support transparency)"
+  command = "convert IMAGE.{gif|png} -transparent white IMAGE.{gif|png}"
+  tag = ["imagemagick", "transparent", "background"]
+  output = ""
