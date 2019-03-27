@@ -121,16 +121,20 @@ export CHEAT_COLORS='true' # requires python-pygments
 export CHEAT_COLORSCHEME='dark' # must be 'light' (default) or 'dark'
 export CHEAT_HIGHLIGHT='yellow' # requires termcolor
 
+# git
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWBRANCHREMOTE=1
+export GIT_PS1_SHOWUPSTREAM="verbose"
+
 # directories
 www='/var/www/html'
-wiki='/var/www/html/wiki.sacco.me/dokuwiki'
-news='/var/www/html/news.sacco.me/FreshRSS'
 dls='~/Downloads'
 docs='~/Documents'
 pics='~/Pictures'
 pub='~/Public'
 tunes='~/Music'
-movies='~/Videos'
+movs='~/Videos'
  
 # ANSI colors
 BLK='\e[0;30m'
@@ -171,7 +175,7 @@ PS_DATM="\D{%F %r}"
 prompt() {
   if [ "$UID" -eq "0" ];
     then PS1="\n\[$LTRED\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$YEL\]${PS_DATM}\n\[$LTRED\]#\[$NON\] "
-    else PS1="\n\[$LTGRN\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$YEL\]${PS_DATM}\n\[$LTGRN\]$\[$NON\] "
+    else PS1="\n\[$LTGRN\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$GRN\]`__git_ps1` \[$YEL\]${PS_DATM}\n\[$LTGRN\]$\[$NON\] "
   fi
 }
  
@@ -271,6 +275,9 @@ alias pmor='sudo pacman -Rns $(pacman -Qtdq)' # recursively remove orphans
 alias pmfy='sudo pacman -Fy'  # sync file db
 alias pmfs='pacman -Fs'  # find pkg providing file
 alias rl3='systemctl isolate multi-user.target' # systemd multi-user mode with networking - no x
+
+# git
+alias g='git'
 
 # yay
 alias yay='yay --sudoloop' # chrome always times out
