@@ -176,6 +176,17 @@ wmclass=konsole
 wmclasscomplete=false
 wmclassmatch=1
 
+[7]
+Description=qmmp
+skipswitcher=true
+skipswitcherrule=2
+type=5
+typerule=2
+types=256
+wmclass=qmmp
+wmclasscomplete=false
+wmclassmatch=1
+
 [Directories]
 dir_pixmap[$d]
 
@@ -183,7 +194,7 @@ dir_pixmap[$d]
 BrowserApplication[$d]
 ColorScheme[$d]
 Name[$d]
-count=6
+count=7
 fixed[$d]
 font[$d]
 menuFont[$d]

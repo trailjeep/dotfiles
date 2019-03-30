@@ -1,0 +1,390 @@
+[Analyzer]
+analyzer_falloff=2.2
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2\x16\0\0\x2\x13\0\0\x4W\0\0\x2\x9c\0\0\x2\x1a\0\0\x2\x30\0\0\x4S\0\0\x2\x98\0\0\0\0\0\0\0\0\a\x80\0\0\x2\x1a\0\0\x2\x30\0\0\x4S\0\0\x2\x98)
+peak_falloff=0.2
+refresh_rate=25
+show_peaks=true
+
+[ConfigDialog]
+splitter_sizes=177, 510
+window_size=@Size(700 525)
+
+[Cover]
+depth=0
+exclude=*back*
+include=*.jpg, *.png
+use_files=true
+
+[Equalizer_10]
+band_0=-2
+band_1=5
+band_2=7
+band_3=8
+band_4=5
+band_5=-1
+band_6=-3
+band_7=-3
+band_8=-2
+band_9=-2
+enabled=false
+preamp=0
+
+[Equalizer_15]
+band_0=0
+band_1=0
+band_10=0
+band_11=0
+band_12=0
+band_13=0
+band_14=0
+band_2=0
+band_3=0
+band_4=0
+band_5=0
+band_6=0
+band_7=0
+band_8=0
+band_9=0
+enabled=false
+preamp=0
+
+[%General]
+default_pl_name=Playlist
+enabled_plugins=mpris, lyrics, kdenotify_icon
+exclude_filters=@Invalid()
+last_dir=/home/jeff/Downloads/TUNES/BEETS/Riley Green/[2018] [EP] In a Truck Right Now
+locale=auto
+restrict_filters=@Invalid()
+resume_on_startup=false
+resume_playback=false
+resume_playback_time=323
+use_default_pl=false
+
+[Goom]
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2\x13\0\0\0\xe8\0\0\x3\xe7\0\0\x2\xca\0\0\x2\x17\0\0\x1\x5\0\0\x3\xe3\0\0\x2\xc6\0\0\0\0\0\0\0\0\a\x80\0\0\x2\x17\0\0\x1\x5\0\0\x3\xe3\0\0\x2\xc6)
+refresh_rate=25
+show_title=true
+
+[Misc]
+determine_file_by_content=false
+
+[Output]
+buffer_size=500
+dithering=true
+format=2
+software_volume=false
+volume_step=5
+
+[PlayList]
+autosave=true
+clear_previous=false
+convert_twenty=true
+convert_underscore=true
+group_format="%p%if(%p&%a, - %if(%y,[%y] ,),)%a"
+groups=false
+load_metadata=true
+no_advance=false
+read_metadata_for_playlist=true
+repeate_list=false
+repeate_track=false
+shuffle=true
+
+[PluginCache]
+usr\lib\qmmp-1.3\Effect\libcrossfade.so=crossfade, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Effect\libfilewriter.so=filewriter, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Effect\libladspa.so=ladspa, 1, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Effect\libmonotostereo.so=monotostereo, 1, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Effect\libsoxr.so=soxr, 2, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Effect\libsrconverter.so=SRC, 2, 2019-03-29T15:23:02
+usr\lib\qmmp-1.3\Effect\libstereo.so=stereo, 1, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Engines\libffvideo.so=ffvideo, 0, 2019-03-29T15:23:02
+usr\lib\qmmp-1.3\Engines\libmplayer.so=mplayer, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\FileDialogs\libqmmpfiledialog.so=qmmp_dialog, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\FileDialogs\libtwopanelfiledialog.so=twopanel_dialog, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libconverter.so=converter, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libcopypaste.so=copypaste, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libcovermanager.so=cover_manager, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libfileops.so=fileops, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libgnomehotkey.so=gnomehotkey, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libhistory.so=history, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libhotkey.so=hotkey, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libkdenotify.so=kdenotify_icon, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\liblyrics.so=lyrics, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libmpris.so=mpris, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libnotifier.so=notifier, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\librgscan.so=rgscan, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libscrobbler.so=scrobbler, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libstatusicon.so=status_icon, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libstreambrowser.so=streambrowser, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libtrackchange.so=trackchange, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\General\libudisks2.so=udisks2, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libaac.so=aac, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libarchive.so=archive, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libcdaudio.so=cdaudio, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libcue.so=cue, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libffap.so=ffap, 9, 2019-03-29T15:23:02
+usr\lib\qmmp-1.3\Input\libffmpeg.so=ffmpeg, 10, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libflac.so=flac, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libgme.so=gme, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libmodplug.so=modplug, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libmpc.so=mpc, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libmpeg.so=mpeg, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libsndfile.so=sndfile, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libvorbis.so=vorbis, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libwavpack.so=wavpack, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libwildmidi.so=wildmidi, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Input\libxmp.so=xmp, 10, 2019-03-29T15:23:02
+usr\lib\qmmp-1.3\Output\libalsa.so=alsa, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Output\libjack.so=jack, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Output\libnull.so=null, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Output\libpulseaudio.so=pulse, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Transports\libhttp.so=http, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Transports\libmms.so=mms, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Ui\libqsui.so=qsui, 0, 2019-02-25T03:48:02
+usr\lib\qmmp-1.3\Ui\libskinned.so=skinned, 0, 2019-02-25T03:48:02
+
+[ProjectM]
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x1\xbc\0\0\0\xc4\0\0\x4\x1b\0\0\x2t\0\0\x1\xc0\0\0\0\xe1\0\0\x4\x17\0\0\x2p\0\0\0\0\0\0\0\0\a\x80\0\0\x1\xc0\0\0\0\xe1\0\0\x4\x17\0\0\x2p)
+splitter_sizes="@ByteArray(\0\0\0\xff\0\0\0\x1\0\0\0\x2\0\0\x1,\0\0\x1,\x1\xff\xff\xff\xff\x1\0\0\0\x1\0)"
+
+[Proxy]
+authentication=false
+url=@Variant(\0\0\0\x11\0\0\0\x6//:@:0)
+use_proxy=false
+
+[ReplayGain]
+default_gain=0
+mode=2
+preamp=0
+prevent_clipping=true
+
+[Simple]
+always_on_top=false
+block_toolbars=false
+fsbrowser_current_dir=/home/jeff
+fsbrowser_quick_search=false
+hide_on_close=false
+mw_geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x3\0\0\0\0\xa2\0\0\x5m\0\0\x2\x9c\0\0\x3\x4\0\0\0\xbf\0\0\x5i\0\0\x2\x98\0\0\0\0\0\0\0\0\a\x80\0\0\x3\x4\0\0\0\xbf\0\0\x5i\0\0\x2\x98)
+mw_state=@ByteArray(\0\0\0\xff\0\0\0\0\xfd\0\0\0\x2\0\0\0\0\0\0\0\0\0\0\0\0\xfc\x2\0\0\0\x3\xfb\0\0\0(\0\x66\0i\0l\0\x65\0S\0y\0s\0t\0\x65\0m\0\x44\0o\0\x63\0k\0W\0i\0\x64\0g\0\x65\0t\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x8e\x1\0\0\x3\xfb\0\0\0\x1e\0\x63\0o\0v\0\x65\0r\0\x44\0o\0\x63\0k\0W\0i\0\x64\0g\0\x65\0t\0\0\0\0\0\xff\xff\xff\xff\0\0\0\"\x1\0\0\x3\xfb\0\0\0&\0p\0l\0\x61\0y\0l\0i\0s\0t\0s\0\x44\0o\0\x63\0k\0W\0i\0\x64\0g\0\x65\0t\0\0\0\0\0\xff\xff\xff\xff\0\0\0\x9c\x1\0\0\x3\0\0\0\x3\0\0\x2\x66\0\0\0\x86\xfc\x1\0\0\0\x1\xfb\0\0\0$\0\x61\0n\0\x61\0l\0y\0z\0\x65\0r\0\x44\0o\0\x63\0k\0W\0i\0\x64\0g\0\x65\0t\x1\0\0\0\0\0\0\x2\x66\0\0\0`\x1\0\0\x3\0\0\x2\x66\0\0\x1\x17\0\0\0\x4\0\0\0\x4\0\0\0\b\0\0\0\b\xfc\0\0\0\x1\0\0\0\x2\0\0\0\x1\0\0\0Z\0T\0o\0o\0l\0\x62\0\x61\0r\0{\0\x36\0\x38\0\x33\0\x36\0\x33\0\x61\0\x30\0\x62\0-\0\x66\0\x32\0\x63\0\x64\0-\0\x34\0\x36\0\x32\0\x61\0-\0\x38\0\x37\0\x63\0\x61\0-\0\x65\0\x33\0\x30\0\x38\0\x39\0\x64\0\x62\0\x32\0\x31\0\x35\0\x36\0\x31\0}\x1\0\0\0\0\xff\xff\xff\xff\0\0\0\0\0\0\0\0)
+pl_align_numbers=false
+pl_autoresize_column=-1
+pl_bg1_color=#232629
+pl_bg2_color=#31363b
+pl_column_alignment=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\0)
+pl_column_names=Artist - Title
+pl_column_patterns="%if(%p,%p - %t,%t)"
+pl_column_sizes=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x96)
+pl_current_text_color=#eff0f1
+pl_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+pl_group_bg=#232629
+pl_group_text=#eff0f1
+pl_header_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+pl_highlight_color=#3daee9
+pl_hl_text_color=#eff0f1
+pl_normal_text_color=#eff0f1
+pl_show_anchor=false
+pl_show_header=true
+pl_show_lengths=true
+pl_show_new_pl_button=false
+pl_show_numbers=true
+pl_show_popup=false
+pl_show_protocol=false
+pl_show_splitters=true
+pl_show_tab_list_menu=false
+pl_splitter_color=#eff0f1
+pl_system_colors=true
+pl_tabs_closable=false
+pl_tabs_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+pl_track_state_column=-1
+show_analyzer=false
+show_tabs=true
+show_titlebars=true
+start_hidden=false
+toolbar_icon_size=-1
+use_system_fonts=true
+vis_bg_color=Black
+vis_color1=#BECBFF
+vis_color2=#BECBFF
+vis_color3=#BECBFF
+vis_peak_color=#DDDDDD
+window_title_format="%if(%p,%p - %t,%t)"
+
+[SimpleUiShortcuts]
+about=
+about_qt=
+about_ui=
+add_dir=D
+add_file=F
+add_url=U
+always_on_top=
+analyzer=
+block_toolbars=
+clear_queue=Alt+Q
+clear_selection=
+close_pl=Ctrl+W
+cover=
+eject=E
+enqueue=Q
+equalizer=Ctrl+E
+exit=Ctrl+Q
+file_browser=Ctrl+0
+group_tracks=Ctrl+G
+invert_selection=
+jump=J
+load_pl=O
+new_pl=Ctrl+T
+next=B
+next_pl=Ctrl+PgDown
+no_playlist_advance=Ctrl+N
+pause=C
+pl_rename=F2
+play=X
+play_pause=Space
+playlist_browser=P
+position_slider=
+prev_pl=Ctrl+PgUp
+previous=Z
+quick_search=
+record=
+refresh=F5
+remove_all=
+remove_duplicates=
+remove_invalid=
+remove_selected=Del
+remove_unselected=
+repeate_playlist=R
+repeate_track=Ctrl+R
+save_pl=Shift+S
+select_all=Ctrl+A
+show_header=Ctrl+H
+show_info=Alt+I
+show_settings=Ctrl+P
+show_tabs=
+show_titlebars=
+shuffle=S
+sticky=
+stop=V
+stop_after_selected=Ctrl+S
+vol_dec=9
+vol_enc=0
+vol_mute=M
+volume_slider=
+
+[Skinned]
+always_on_top=false
+antialiasing=false
+autoscroll=true
+bitmap_font=false
+disp_elapsed=true
+disp_shaded=false
+double_size=false
+eq_auto=false
+eq_opacity=1
+eq_pos=@Point(1153 635)
+eq_shaded=false
+eq_visible=true
+hide_on_close=false
+mw_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+mw_opacity=1
+mw_pos=@Point(1153 519)
+pl_align_numbers=false
+pl_alt_splitter_color=false
+pl_autoresize_column=-1
+pl_column_alignment=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\0)
+pl_column_names=Artist - Title
+pl_column_patterns="%if(%p,%p - %t,%t)"
+pl_column_sizes=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x96)
+pl_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+pl_header_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+pl_opacity=1
+pl_pos=@Point(1153 751)
+pl_separator=::
+pl_shaded=false
+pl_show_anchor=false
+pl_show_create_button=false
+pl_show_header=false
+pl_show_lengths=true
+pl_show_numbers=true
+pl_show_plalists=false
+pl_show_popup=false
+pl_show_protocol=false
+pl_show_splitters=true
+pl_size=@Size(275 290)
+pl_track_state_column=-1
+pl_visible=true
+scroller_transparency=true
+show_on_all_desktops=false
+skin_cursors=false
+skin_name=glare
+skin_path=:/glare
+start_hidden=false
+vis_analyzer_falloff=2.2
+vis_analyzer_mode=0
+vis_analyzer_type=1
+vis_peaks_falloff=0.2
+vis_rate=25
+vis_show_peaks=true
+vis_transparent_bg=false
+vis_type=Analyzer
+window_title_format="%if(%p,%p - %t,%t)"
+
+[SkinnedShortcuts]
+about=
+about_qt=
+add_dir=D
+add_file=F
+add_url=U
+always_on_top=
+anti_aliasing=
+clear_queue=Alt+Q
+clear_selection=
+close_pl=Ctrl+W
+double_size=Meta+D
+enqueue=Q
+exit=Ctrl+Q
+group_tracks=Ctrl+G
+invert_selection=
+jump=J
+load_pl=O
+new_pl=Ctrl+T
+next=B
+next_pl=Ctrl+PgDown
+no_playlist_advance=Ctrl+N
+pause=C
+pl_rename=F2
+play=X
+play_pause=Space
+prev_pl=Ctrl+PgUp
+previous=Z
+refresh=F5
+remove_all=
+remove_duplicates=
+remove_invalid=
+remove_selected=Del
+remove_unselected=
+repeate_playlist=R
+repeate_track=Ctrl+R
+save_pl=Shift+S
+select_all=Ctrl+A
+show_equalizer=Alt+G
+show_header=Ctrl+H
+show_info=Alt+I
+show_playlist=Alt+E
+show_playlists=P
+show_settings=Ctrl+P
+shuffle=S
+sticky=
+stop=V
+stop_after_selected=Ctrl+S
+vol_dec=9
+vol_enc=0
+vol_mute=M
+
+[URLDialog]
+use_clipboard=false
+
+[Ui]
+current_plugin=skinned
+
+[Visualization]
+enabled_plugins=@Invalid()
