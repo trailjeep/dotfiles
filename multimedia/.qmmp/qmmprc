@@ -15,6 +15,9 @@ exclude=*back*
 include=*.jpg, *.png
 use_files=true
 
+[CoverEditor]
+last_dir=/home/jeff/Pictures
+
 [Equalizer_10]
 band_0=-2
 band_1=5
@@ -52,12 +55,12 @@ preamp=0
 default_pl_name=Playlist
 enabled_plugins=mpris, lyrics, kdenotify_icon
 exclude_filters=@Invalid()
-last_dir=/home/jeff/Downloads/TUNES/BEETS/Riley Green/[2018] [EP] In a Truck Right Now
+last_dir=/home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash
 locale=auto
 restrict_filters=@Invalid()
 resume_on_startup=false
 resume_playback=false
-resume_playback_time=323
+resume_playback_time=59231
 use_default_pl=false
 
 [Goom]
@@ -280,13 +283,13 @@ disp_shaded=false
 double_size=false
 eq_auto=false
 eq_opacity=1
-eq_pos=@Point(1153 635)
+eq_pos=@Point(1195 838)
 eq_shaded=false
-eq_visible=true
+eq_visible=false
 hide_on_close=false
 mw_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
 mw_opacity=1
-mw_pos=@Point(1153 519)
+mw_pos=@Point(1195 722)
 pl_align_numbers=false
 pl_alt_splitter_color=false
 pl_autoresize_column=-1
@@ -297,7 +300,7 @@ pl_column_sizes=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x96)
 pl_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
 pl_header_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
 pl_opacity=1
-pl_pos=@Point(1153 751)
+pl_pos=@Point(1195 838)
 pl_separator=::
 pl_shaded=false
 pl_show_anchor=false
@@ -309,7 +312,7 @@ pl_show_plalists=false
 pl_show_popup=false
 pl_show_protocol=false
 pl_show_splitters=true
-pl_size=@Size(275 290)
+pl_size=@Size(275 145)
 pl_track_state_column=-1
 pl_visible=true
 scroller_transparency=true

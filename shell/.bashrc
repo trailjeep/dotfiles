@@ -143,3 +143,6 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.git_completion ]] && . ~/.git_completion
+[[ -f /usr/share/fzf/key-bindings.bash ]] && . /usr/share/fzf/key-bindings.bash
+[[ -f /usr/share/fzf/completion.bash ]] && . /usr/share/fzf/completion.bash
+
