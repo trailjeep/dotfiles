@@ -147,3 +147,9 @@
   command = "convert IMAGE.{gif|png} -transparent white IMAGE.{gif|png}"
   tag = ["imagemagick", "transparent", "background"]
   output = ""
+
+[[snippets]]
+  description = "Add user to multiple groups"
+  command = "sudo usermod -aG GROUP1,GROUP2 USER"
+  tag = ["users", "groups"]
+  output = ""

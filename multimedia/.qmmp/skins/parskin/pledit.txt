@@ -1,0 +1,6 @@
+[Text]
+Normal=#fffbb5
+Current=#ffad33
+NormalBG=#977a53
+SelectedBG=#b7b07b
+Font=Tahoma Bold

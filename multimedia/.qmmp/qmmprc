@@ -1,3 +1,6 @@
+[General]
+FileDialog=twopanel_dialog
+
 [Analyzer]
 analyzer_falloff=2.2
 geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2\x16\0\0\x2\x13\0\0\x4W\0\0\x2\x9c\0\0\x2\x1a\0\0\x2\x30\0\0\x4S\0\0\x2\x98\0\0\0\0\0\0\0\0\a\x80\0\0\x2\x1a\0\0\x2\x30\0\0\x4S\0\0\x2\x98)
@@ -55,12 +58,12 @@ preamp=0
 default_pl_name=Playlist
 enabled_plugins=mpris, lyrics, kdenotify_icon
 exclude_filters=@Invalid()
-last_dir=/home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash
+last_dir=/home/jeff/Network/Music/Van Halen
 locale=auto
 restrict_filters=@Invalid()
 resume_on_startup=false
 resume_playback=false
-resume_playback_time=59231
+resume_playback_time=203263
 use_default_pl=false
 
 [Goom]
@@ -155,9 +158,15 @@ authentication=false
 url=@Variant(\0\0\0\x11\0\0\0\x6//:@:0)
 use_proxy=false
 
+[QMMPFileDialog]
+close_on_add=false
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2|\0\0\x1\x31\0\0\x4\xeb\0\0\x2\xc0\0\0\x2\x80\0\0\x1N\0\0\x4\xe7\0\0\x2\xbc\0\0\0\0\0\0\0\0\a\x80\0\0\x2\x80\0\0\x1N\0\0\x4\xe7\0\0\x2\xbc)
+history=@Invalid()
+splitter_state=@ByteArray(\0\0\0\xff\0\0\0\x1\0\0\0\x2\0\0\0\x96\0\0\x1\xd2\x1\xff\xff\xff\xff\x1\0\0\0\x1\0)
+
 [ReplayGain]
 default_gain=0
-mode=2
+mode=1
 preamp=0
 prevent_clipping=true
 
@@ -282,14 +291,14 @@ disp_elapsed=true
 disp_shaded=false
 double_size=false
 eq_auto=false
-eq_opacity=1
-eq_pos=@Point(1195 838)
+eq_opacity=0.5
+eq_pos=@Point(1063 880)
 eq_shaded=false
 eq_visible=false
 hide_on_close=false
 mw_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
-mw_opacity=1
-mw_pos=@Point(1195 722)
+mw_opacity=0.5
+mw_pos=@Point(1063 764)
 pl_align_numbers=false
 pl_alt_splitter_color=false
 pl_autoresize_column=-1
@@ -297,29 +306,34 @@ pl_column_alignment=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\0)
 pl_column_names=Artist - Title
 pl_column_patterns="%if(%p,%p - %t,%t)"
 pl_column_sizes=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x96)
-pl_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
+pl_font="Hack,8,-1,5,50,0,0,0,0,0,Regular"
 pl_header_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
-pl_opacity=1
-pl_pos=@Point(1195 838)
+pl_opacity=0.5
+pl_pos=@Point(1063 880)
 pl_separator=::
 pl_shaded=false
 pl_show_anchor=false
 pl_show_create_button=false
 pl_show_header=false
 pl_show_lengths=true
-pl_show_numbers=true
+pl_show_numbers=false
 pl_show_plalists=false
-pl_show_popup=false
+pl_show_popup=true
 pl_show_protocol=false
 pl_show_splitters=true
 pl_size=@Size(275 145)
 pl_track_state_column=-1
 pl_visible=true
+popup_cover_size=48
+popup_delay=2500
+popup_opacity=1
+popup_show_cover=true
+popup_template="<b>%if(%t,%t,%f)</b>\n%if(%p,<br>%p,)\n%if(%a,<br>%a,)"
 scroller_transparency=true
 show_on_all_desktops=false
-skin_cursors=false
-skin_name=glare
-skin_path=:/glare
+skin_cursors=true
+skin_name=qmmp_black
+skin_path=/home/jeff/dotfiles/multimedia/.qmmp/skins/qmmp_black
 start_hidden=false
 vis_analyzer_falloff=2.2
 vis_analyzer_mode=0
@@ -327,7 +341,7 @@ vis_analyzer_type=1
 vis_peaks_falloff=0.2
 vis_rate=25
 vis_show_peaks=true
-vis_transparent_bg=false
+vis_transparent_bg=true
 vis_type=Analyzer
 window_title_format="%if(%p,%p - %t,%t)"
 
@@ -382,6 +396,10 @@ stop_after_selected=Ctrl+S
 vol_dec=9
 vol_enc=0
 vol_mute=M
+
+[TwoPanelFileDialog]
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2\x1f\0\0\x1\x9b\0\0\x4\xeb\0\0\x3K\0\0\x2#\0\0\x1\xb8\0\0\x4\xe7\0\0\x3G\0\0\0\0\0\0\0\0\a\x80\0\0\x2#\0\0\x1\xb8\0\0\x4\xe7\0\0\x3G)
+history=/home/jeff/Network/Music/Van Halen, /home/jeff/Network/Music/Van Halen/Van Halen-2004-The Best of Both Worlds-CD 1, /home/jeff/Network/Music/Riley Green, /home/jeff/Network/Music/Riley Green/[2018] [EP] In a Truck Right Now, /home/jeff/Network/Music/O.A.R_/O.A.R.-2007-Live From Madison Square Garden-CD 2, /home/jeff/Network/Music/Riley Green/[2018] [EP] County Line, /home/jeff/Network/Music/Riley Green/[2018] [SINGLE] Runnin' With an Angel, /home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash
 
 [URLDialog]
 use_clipboard=false
