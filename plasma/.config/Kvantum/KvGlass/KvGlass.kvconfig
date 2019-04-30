@@ -59,6 +59,12 @@ submenu_overlap=0
 tooltip_delay=-1
 transient_groove=false
 tree_branch_line=false
+contrast=1.00
+dialog_button_layout=0
+intensity=1.00
+no_inactiveness=false
+reduce_menu_opacity=0
+saturation=1.00
 
 [GeneralColors]
 window.color=#3D3D3E
@@ -99,6 +105,9 @@ normal_default_pushbutton=false
 single_top_toolbar=false
 tint_on_mouseover=0
 transparent_pcmanfm_view=false
+middle_click_scroll=false
+opaque_colors=false
+scroll_jump_workaround=false
 
 [PanelButtonCommand]
 frame.element=button

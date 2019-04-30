@@ -29,12 +29,6 @@
   output = "20190228_120344"
 
 [[snippets]]
-  description = "Alias to restart Plasma"
-  command = "alias r='echo \"Restarting Plasma...\"; kquitapp5 plasmashell && kstart5 plasmashell > /dev/null 2>&1'"
-  tag = ["plasma", "restart"]
-  output = ""
-
-[[snippets]]
   description = "Encrypt string with OpenSSL"
   command = "echo string | openssl aes-256-cbc -pbkdf2 -e | openssl base64 -e"
   tag = ["encryption", "openssl", "aes-256"]
@@ -152,4 +146,16 @@
   description = "Add user to multiple groups"
   command = "sudo usermod -aG GROUP1,GROUP2 USER"
   tag = ["users", "groups"]
+  output = ""
+
+[[snippets]]
+  description = "Remove package depended upon by another package"
+  command = "pacman -Rdd wpa_supplicant"
+  tag = ["pacman", "remove", "dependencies"]
+  output = ""
+
+[[snippets]]
+  description = "Restart Plasma"
+  command = "plasmashell --replace &"
+  tag = ["plasma", "restart"]
   output = ""
