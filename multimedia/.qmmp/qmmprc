@@ -101,9 +101,7 @@ usr\lib\qmmp-1.3\Effect\libfilewriter.so=filewriter, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Effect\libladspa.so=ladspa, 1, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Effect\libmonotostereo.so=monotostereo, 1, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Effect\libsoxr.so=soxr, 2, 2019-04-19T16:39:35
-usr\lib\qmmp-1.3\Effect\libsrconverter.so=SRC, 2, 2019-03-29T15:23:02
 usr\lib\qmmp-1.3\Effect\libstereo.so=stereo, 1, 2019-04-19T16:39:35
-usr\lib\qmmp-1.3\Engines\libffvideo.so=ffvideo, 0, 2019-03-29T15:23:02
 usr\lib\qmmp-1.3\Engines\libmplayer.so=mplayer, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\FileDialogs\libqmmpfiledialog.so=qmmp_dialog, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\FileDialogs\libtwopanelfiledialog.so=twopanel_dialog, 0, 2019-04-19T16:39:35
@@ -128,7 +126,6 @@ usr\lib\qmmp-1.3\Input\libaac.so=aac, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libarchive.so=archive, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libcdaudio.so=cdaudio, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libcue.so=cue, 0, 2019-04-19T16:39:35
-usr\lib\qmmp-1.3\Input\libffap.so=ffap, 9, 2019-03-29T15:23:02
 usr\lib\qmmp-1.3\Input\libffmpeg.so=ffmpeg, 10, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libflac.so=flac, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libgme.so=gme, 0, 2019-04-19T16:39:35
@@ -139,7 +136,6 @@ usr\lib\qmmp-1.3\Input\libsndfile.so=sndfile, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libvorbis.so=vorbis, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libwavpack.so=wavpack, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Input\libwildmidi.so=wildmidi, 0, 2019-04-19T16:39:35
-usr\lib\qmmp-1.3\Input\libxmp.so=xmp, 10, 2019-03-29T15:23:02
 usr\lib\qmmp-1.3\Output\libalsa.so=alsa, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Output\libjack.so=jack, 0, 2019-04-19T16:39:35
 usr\lib\qmmp-1.3\Output\libnull.so=null, 0, 2019-04-19T16:39:35
@@ -398,8 +394,8 @@ vol_enc=0
 vol_mute=M
 
 [TwoPanelFileDialog]
-geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2\x1f\0\0\x1\xa0\0\0\x4\xf4\0\0\x3K\0\0\x2#\0\0\x1\xb8\0\0\x4\xf0\0\0\x3G\0\0\0\0\0\0\0\0\a\x80\0\0\x2#\0\0\x1\xb8\0\0\x4\xf0\0\0\x3G)
-history=/home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash, /home/jeff/Network/Music/Janis Joplin/Janis Joplin-1995-18 Essential Songs-CD 1, /home/jeff/Network/Music/Van Halen, /home/jeff/Network/Music/Van Halen/Van Halen-2004-The Best of Both Worlds-CD 1, /home/jeff/Network/Music/Riley Green, /home/jeff/Network/Music/Riley Green/[2018] [EP] In a Truck Right Now, /home/jeff/Network/Music/O.A.R_/O.A.R.-2007-Live From Madison Square Garden-CD 2, /home/jeff/Network/Music/Riley Green/[2018] [EP] County Line
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x1\xd3\0\0\0j\0\0\x4\xa0\0\0\x2!\0\0\x1\xd3\0\0\0\x92\0\0\x4\xa0\0\0\x2!\0\0\0\0\0\0\0\0\a\x80\0\0\x1\xd3\0\0\0\x92\0\0\x4\xa0\0\0\x2!)
+history="/home/jeff/Network/Music/Geils, J., The, Band", /home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash, /home/jeff/Network/Music/Janis Joplin/Janis Joplin-1995-18 Essential Songs-CD 1, /home/jeff/Network/Music/Van Halen, /home/jeff/Network/Music/Van Halen/Van Halen-2004-The Best of Both Worlds-CD 1, /home/jeff/Network/Music/Riley Green, /home/jeff/Network/Music/Riley Green/[2018] [EP] In a Truck Right Now, /home/jeff/Network/Music/O.A.R_/O.A.R.-2007-Live From Madison Square Garden-CD 2
 
 [URLDialog]
 use_clipboard=false

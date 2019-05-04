@@ -8,7 +8,7 @@ conky.config = {
 	draw_outline=true,
 	draw_borders=false,
 	gap_x=20,
-	gap_y=20,
+	gap_y=50,
 	alignment="top_left",
 	minimum_height=250,
 	minimum_width=400,
@@ -44,9 +44,9 @@ ${color0}${font Digital\-7:weight=Normal:size=85}${alignc}${time %I:%M%P}
 ${voffset -105}
 ${color2}${font}${hr}
 ${voffset -12}
-${color1}${font FontAwesome:size=12}${color}${font} ${wireless_essid wlan0}${alignr}${upspeedf wlan0} KB/s ${alignr}${color1}${font FontAwesome:size=12}
+${color1}${font FontAwesome:size=12}${color}${font} ${wireless_essid wlp0s29u1u5}${alignr}${upspeedf wlp0s29u1u5} KB/s ${alignr}${color1}${font FontAwesome:size=12}
 ${voffset -12}
-${color1}${font FontAwesome:size=12}${color}${font} ${wireless_link_qual_perc wlan0}%${alignr}${font}${downspeedf wlan0} KB/s ${alignr}${color1}${font FontAwesome:size=12}
+${color1}${font FontAwesome:size=12}${color}${font} ${wireless_link_qual_perc wlp0s29u1u5}%${alignr}${font}${downspeedf wlp0s29u1u5} KB/s ${alignr}${color1}${font FontAwesome:size=12}
 ${voffset -12}
 ${color1}${font FontAwesome:size=12}${color}${font} Sacco.me${alignr}${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${color}${font}${execi 300 host -t A sacco.me | cut -d" " -f4} ${alignr}${color1}${font FontAwe some:size=12}${else}${color red}${font}Down ${alignr}${color1}${font FontAwesome:size=12}${endif}
 ]]
