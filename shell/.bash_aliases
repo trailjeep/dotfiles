@@ -181,6 +181,14 @@ prompt() {
  
 PROMPT_COMMAND="prompt"
  
+if [ -x $HOME/.local/bin/dogsay -a -x /usr/bin/fortune ]; then 
+        IFS=", " read -r -a dogs <<< `$HOME/.local/bin/dogsay -l | sed 's/Possible dogs are: //'`
+        dog=${dogs["$[RANDOM % ${#dogs[@]}]"]}
+        /usr/bin/fortune | $HOME/.local/bin/dogsay -d "$dog"
+fi
+
+
+
 #=================================================
 # Aliases
 #=================================================

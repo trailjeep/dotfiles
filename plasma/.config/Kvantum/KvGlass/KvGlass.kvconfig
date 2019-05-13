@@ -65,6 +65,7 @@ intensity=1.00
 no_inactiveness=false
 reduce_menu_opacity=0
 saturation=1.00
+shadowless_popup=false
 
 [GeneralColors]
 window.color=#3D3D3E
