@@ -10,7 +10,7 @@ back NULL
 use_back 0
 text NULL
 use_text 0
-fontname IBM Plex Mono Medium 11
+fontname SF Mono Light 9
 toolbar 0
 auto_hide_toolbar 1
 scrollbar 0
