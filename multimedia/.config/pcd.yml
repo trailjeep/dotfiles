@@ -1,0 +1,6 @@
+---
+podcasts:
+  - id: 1
+    name: scifri
+    path: /home/jeff/Podcasts/SciFri
+    feed: http://sciencefriday.com/feed/podcast/podcast-episode

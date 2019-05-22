@@ -184,7 +184,8 @@ PROMPT_COMMAND="prompt"
 if [ -x $HOME/.local/bin/dogsay -a -x /usr/bin/fortune ]; then 
         IFS=", " read -r -a dogs <<< `$HOME/.local/bin/dogsay -l | sed 's/Possible dogs are: //'`
         dog=${dogs["$[RANDOM % ${#dogs[@]}]"]}
-        /usr/bin/fortune -s | $HOME/.local/bin/dogsay -d "$dog"
+        #/usr/bin/fortune -ces art cookie definitions humorists law love magic medicine men-women miscellaneous news paradoxum people pets platitudes politics science songs-poems tao wisdom work | sed -e 's|/usr/share/fortune//||' -e 's/%//' | $HOME/.local/bin/dogsay -d "$dog"
+		/usr/bin/fortune -e "$HOME"/.local/share/fortune | "$HOME"/.local/bin/dogsay -d "$dog"
 fi
 
 
@@ -243,7 +244,8 @@ alias ll='ls -l $LS_OPTIONS'
 alias ls='ls $LS_OPTIONS'
 # alias ls='ls --color=auto'
 alias lm='ls -alF | more'
- 
+[ -x /usr/bin/lsd ] && alias ll='lsd -alF --date=date --group-dirs=first'
+
 # nav
 alias ..='cd ..'
 alias ..2='cd ../..'
@@ -356,6 +358,8 @@ alias fix='`!!:$`'
 
 # calc plasmoid
 alias calc='plasmawindowed org.kde.plasma.calculator >/dev/null 2>&1 &'
+
+alias cmatrix='cmatrix -ab'
 
 #=================================================
 # Unused
