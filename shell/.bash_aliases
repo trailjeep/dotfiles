@@ -362,7 +362,8 @@ alias fix='`!!:$`'
 alias calc='plasmawindowed org.kde.plasma.calculator >/dev/null 2>&1 &'
 
 # Rename files to UTF8, special chars to _, & lowercase
-alias detox='detox -s utf_8 -s lower'
+# deprecated configured in ~/.detoxrc
+# alias detox='detox -s utf_8 -s lower'
 
 
 alias cmatrix='cmatrix -ab'
