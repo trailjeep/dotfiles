@@ -63,7 +63,7 @@ locale=auto
 restrict_filters=@Invalid()
 resume_on_startup=false
 resume_playback=false
-resume_playback_time=59097
+resume_playback_time=1471819
 use_default_pl=false
 
 [Goom]
@@ -394,7 +394,7 @@ vol_enc=0
 vol_mute=M
 
 [TwoPanelFileDialog]
-geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x1\xd3\0\0\0\x92\0\0\x4\xa0\0\0\x2!\0\0\x1\xd3\0\0\0\x92\0\0\x4\xa0\0\0\x2!\0\0\0\0\0\0\0\0\a\x80\0\0\x1\xd3\0\0\0\x92\0\0\x4\xa0\0\0\x2!)
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2M\0\0\x1-\0\0\x5\x1c\0\0\x2\xd5\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4\0\0\0\0\0\0\0\0\a\x80\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4)
 history=/home/jeff/Network/Music, /home/jeff/Network/Music/Various Artists, /home/jeff/Network/Music/Kid Rock, /home/jeff/Network/Music/Lynyrd Skynyrd, /home/jeff/Network/Music/Tom Petty, "/home/jeff/Network/Music/Geils, J., The, Band", /home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash, /home/jeff/Network/Music/Janis Joplin/Janis Joplin-1995-18 Essential Songs-CD 1
 
 [URLDialog]

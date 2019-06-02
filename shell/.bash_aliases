@@ -326,6 +326,8 @@ alias glmviz='glmviz config-stereo-jeff &'
 alias vis1='glmviz'
 alias vis2='cava'
 
+# mplayer play podcasts @1.5x
+alias podplay='mplayer -af scaletempo -speed 1.5 '
 
 # clear screen
 alias cls='clear;uname -a;echo;lsb_release -ds;echo;date "+[ %F %A %r %Z ]";echo;fortune;echo'
@@ -358,6 +360,10 @@ alias fix='`!!:$`'
 
 # calc plasmoid
 alias calc='plasmawindowed org.kde.plasma.calculator >/dev/null 2>&1 &'
+
+# Rename files to UTF8, special chars to _, & lowercase
+alias detox='detox -s utf_8 -s lower'
+
 
 alias cmatrix='cmatrix -ab'
 

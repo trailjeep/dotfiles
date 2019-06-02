@@ -165,3 +165,27 @@
   command = "findmnt"
   tag = ["mount", "filesystems"]
   output = ""
+
+[[snippets]]
+  description = "Play podcast @ 1.5x speed without affecting pitch optimized for speech"
+  command = "play science-friday121418a.mp3 tempo -s 1.5"
+  tag = ["audio", "podcasts", "sox"]
+  output = ""
+
+[[snippets]]
+  description = "Convert podcast to 1.5x speed without affecting pitch optimized for speech & show progress"
+  command = "sox -S science-friday121418a.mp3 test.mp3 tempo -s 1.5"
+  tag = ["audio", "podcast", "sox", "convert"]
+  output = ""
+
+[[snippets]]
+  description = "Play podcast @ 1.5x speed without affecting pitch"
+  command = "mplayer -af scaletempo -speed 1.5 HSW9914000083.mp3"
+  tag = ["audio", "podcasts", "mplayer"]
+  output = ""
+
+[[snippets]]
+  description = "Rename files to UTF8, special chars to _, & lowercase"
+  command = "detox -s utf_8 -s lower *"
+  tag = ["rename", "detox", "filenames", "files"]
+  output = ""

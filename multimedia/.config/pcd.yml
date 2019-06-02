@@ -4,3 +4,15 @@ podcasts:
     name: scifri
     path: /home/jeff/Podcasts/SciFri
     feed: http://sciencefriday.com/feed/podcast/podcast-episode
+  - id: 2
+    name: sysk
+    path: /home/jeff/Podcasts/SYSK
+    feed: https://www.howstuffworks.com/podcasts/stuff-you-should-know.rss
+  - id: 3
+    name: sgu
+    path: /home/jeff/Podcasts/SGU
+    feed: https://feed.theskepticsguide.org/feed/rss.aspx?feed=sgu
+  - id: 4
+    name: the1
+    path: /home/jeff/Podcasts/The1
+    feed: http://feeds.feedburner.com/TheOneGreg
