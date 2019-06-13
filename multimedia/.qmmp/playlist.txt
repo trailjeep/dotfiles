@@ -1,17 +1,2 @@
 current_playlist=0
 playlist=Playlist
-current=0
-file=/home/jeff/Podcasts/SciFri/test.mp3
-album=Science Friday
-artist=Science Friday & WNYC Studios
-genre=Other
-title=Cancer Immunotherapy, Raccoons, Frog Calls. Dec 14, 2018, Part 1
-track=1
-year=2018
-bits_per_sample=32
-channels=2
-decoder=mpeg
-file_size=32266549
-format_name=MPEG-1 layer 3
-samplerate=44100
-duration=2016630
