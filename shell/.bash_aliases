@@ -279,12 +279,13 @@ alias pmr='sudo pacman -Rns'  # remove pkg + unneeded deps + conf
 alias pmy='sudo pacman -Syy'  # force sync repos
 alias pmu='sudo pacman -Syyuu' # full system upgrade / enable downgrade
 alias pmd='sudo pacman -Syyuuw --noconfirm' # just download updates
-alias pmid='sudo pacman -Suu' # install downloaded
+alias pmid='sudo pacman -Suu --noconfirm' # install downloaded
 alias pmo='pacman -Qdt'  # list orphans
 alias pmor='sudo pacman -Rns $(pacman -Qtdq)' # recursively remove orphans
 alias pmfy='sudo pacman -Fy'  # sync file db
 alias pmfs='pacman -Fs'  # find pkg providing file
-alias rl3='systemctl isolate multi-user.target' # systemd multi-user mode with networking - no x
+alias rl1='sudo systemctl isolate rescue.target' # systemd single user mode - no x
+alias rl3='sudo systemctl isolate multi-user.target' # systemd multi-user mode with networking - no x
 
 # git
 alias g='git'

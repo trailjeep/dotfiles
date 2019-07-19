@@ -26,7 +26,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=43
+PreloadWeight=92
 SystrayContainmentId=6
 
 [Containments][1][Applets][57]
@@ -81,6 +81,26 @@ customButtonImage=/home/jeff/start-here-kde.svg
 favoritesPortedToKAstats=true
 useCustomButtonImage=true
 
+[Containments][1][Applets][79]
+immutability=1
+plugin=org.kde.plasma.eventcalendar
+
+[Containments][1][Applets][79][Configuration]
+PreloadWeight=33
+
+[Containments][1][Applets][79][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][1][Applets][79][Configuration][General]
+clock_line_2_height_ratio=0.48
+
+[Containments][1][Applets][79][Configuration][Google Calendar]
+events_pollinterval=60
+
+[Containments][1][Applets][79][Configuration][Weather]
+weather_city_id=4835512
+
 [Containments][1][ConfigDialog]
 DialogHeight=663
 DialogWidth=571
@@ -90,7 +110,7 @@ PreloadWeight=0
 
 [Containments][1][General]
 advanced=true
-appletOrder=72;57;5;69;65
+appletOrder=72;57;5;79;69;65
 autoDecreaseIconSize=false
 disablePanelShadowForMaximized=true
 iconMargin=20
@@ -125,7 +145,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][6][Applets][10][Configuration]
-PreloadWeight=0
+PreloadWeight=22
 
 [Containments][6][Applets][10][Configuration][ConfigDialog]
 DialogHeight=540
@@ -136,7 +156,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][6][Applets][11][Configuration]
-PreloadWeight=10
+PreloadWeight=92
 
 [Containments][6][Applets][11][Configuration][ConfigDialog]
 DialogHeight=540
@@ -179,7 +199,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][6][Applets][7][Configuration]
-PreloadWeight=0
+PreloadWeight=2
 
 [Containments][6][Applets][71]
 immutability=1
@@ -207,7 +227,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][6][Applets][76][Configuration][General]
-lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1558733656069,"cache_7e9635ed65955a0bf034b13dd640dbb1":1560445666377}
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1558733656069,"cache_7e9635ed65955a0bf034b13dd640dbb1":1563566389096}
 places=[{"providerId":"owm","placeIdentifier":"4835512","placeAlias":"Guilford"}]
 
 [Containments][6][Applets][76][Configuration][Units]
@@ -215,11 +235,11 @@ pressureType=inHg
 temperatureType=fahrenheit
 windSpeedType=mph
 
-[Containments][6][Applets][77]
+[Containments][6][Applets][80]
 immutability=1
 plugin=org.kde.plasma.battery
 
-[Containments][6][Applets][78]
+[Containments][6][Applets][81]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
