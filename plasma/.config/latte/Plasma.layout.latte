@@ -6,18 +6,22 @@ popupPosition=2
 
 [Containments][1]
 activityId=
+byPassWM=false
 dockWindowBehavior=true
 enableKWinEdges=true
 formfactor=3
 immutability=1
+isPreferredForShortcuts=false
 lastScreen=10
 location=6
 onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
+settingsComplexity=4
 timerHide=700
 timerShow=200
+viewType=0
 visibility=2
 wallpaperplugin=org.kde.image
 
@@ -26,7 +30,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][5][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 SystrayContainmentId=6
 
 [Containments][1][Applets][57]
@@ -56,7 +60,7 @@ immutability=1
 plugin=org.kde.plasma.caffeine-plus
 
 [Containments][1][Applets][69][Configuration]
-PreloadWeight=0
+PreloadWeight=38
 
 [Containments][1][Applets][69][Configuration][ConfigDialog]
 DialogHeight=540
@@ -86,7 +90,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][1][Applets][79][Configuration]
-PreloadWeight=33
+PreloadWeight=0
 
 [Containments][1][Applets][79][Configuration][ConfigDialog]
 DialogHeight=540
@@ -102,8 +106,8 @@ events_pollinterval=60
 weather_city_id=4835512
 
 [Containments][1][ConfigDialog]
-DialogHeight=663
-DialogWidth=571
+DialogHeight=1044
+DialogWidth=509
 
 [Containments][1][Configuration]
 PreloadWeight=0
@@ -114,8 +118,8 @@ appletOrder=72;57;5;79;69;65
 autoDecreaseIconSize=false
 disablePanelShadowForMaximized=true
 iconMargin=20
-iconSize=48
-maxLength=88
+iconSize=42
+maxLength=80
 panelPosition=10
 panelShadows=false
 panelSize=100
@@ -128,7 +132,14 @@ shrinkThickMargins=true
 splitterPosition=2
 splitterPosition2=3
 useThemePanel=false
-zoomLevel=3
+zoomLevel=4
+
+[Containments][1][Indicator]
+customType=
+enabled=true
+enabledForApplets=true
+padding=0.07999999821186066
+type=org.kde.latte.default
 
 [Containments][6]
 PreloadWeight=0
@@ -145,7 +156,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][6][Applets][10][Configuration]
-PreloadWeight=22
+PreloadWeight=0
 
 [Containments][6][Applets][10][Configuration][ConfigDialog]
 DialogHeight=540
@@ -156,7 +167,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][6][Applets][11][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][6][Applets][11][Configuration][ConfigDialog]
 DialogHeight=540
@@ -199,7 +210,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][6][Applets][7][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][6][Applets][71]
 immutability=1
@@ -227,7 +238,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][6][Applets][76][Configuration][General]
-lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1558733656069,"cache_7e9635ed65955a0bf034b13dd640dbb1":1563566389096}
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1558733656069,"cache_7e9635ed65955a0bf034b13dd640dbb1":1566254199223}
 places=[{"providerId":"owm","placeIdentifier":"4835512","placeAlias":"Guilford"}]
 
 [Containments][6][Applets][76][Configuration][Units]
@@ -242,6 +253,9 @@ plugin=org.kde.plasma.battery
 [Containments][6][Applets][81]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
+
+[Containments][6][Applets][81][Configuration]
+PreloadWeight=34
 
 [Containments][6][Applets][9]
 immutability=1

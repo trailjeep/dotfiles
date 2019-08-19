@@ -286,6 +286,7 @@ alias pmfy='sudo pacman -Fy'  # sync file db
 alias pmfs='pacman -Fs'  # find pkg providing file
 alias rl1='sudo systemctl isolate rescue.target' # systemd single user mode - no x
 alias rl3='sudo systemctl isolate multi-user.target' # systemd multi-user mode with networking - no x
+alias rl5='sudo systemctl isolate default.target' # systemd multi-user mode+graphical+networking
 
 # git
 alias g='git'
@@ -391,8 +392,12 @@ bup() { cp -a "$1" "$1.`date +%s`.ORG"; }
 rsz-tmp() { sudo mount -o remount,size="$1",noatime /tmp; }
 
 # encrypt/decrypt strings compatible w/dokuwiki plugin encrypted passwords
-encrypt() { echo "$1" | openssl aes-256-cbc -pbkdf2 -e | openssl base64 -e; }
-decrypt() { echo "$1" | openssl base64 -d | openssl aes-256-cbc -pbkdf2 -d; }
+encstr() { echo "$1" | openssl aes-256-cbc -pbkdf2 -e -k "$2" | openssl base64 -e; }
+decstr() { echo "$1" | openssl base64 -d | openssl aes-256-cbc -pbkdf2 -d -k "$2"; }
+encfl() { openssl aes-256-cbc -pbkdf2 -e -k "$2" -in "$1" -out "$1".dat; }
+decfl() ( openssl aes-256-cbc -pbkdf2 -d -k "$2" -in "$1" -out ${1%.dat}; )
+encdir() ( tar cz "$1" | openssl aes-256-cbc -pbkdf2 -e -k "$2" -out ${1%/}.dat; )
+decdir() { openssl aes-256-cbc -pbkdf2 -d -k "$2" -in "$1" | tar xz; }
 
 # erase sensitive info fr/history
 rmhist() {
