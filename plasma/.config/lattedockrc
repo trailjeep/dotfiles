@@ -3,15 +3,20 @@ Height 1080=480
 Width 1920=723
 
 [KFileDialog Settings]
-Recent Files[$e]=start-here-symbolic.svg,file:$HOME/start-here-kde.svg,file:$HOME/dotfiles/face/start-here-kde.svg,file:///usr/share/icons/breeze-dark/places/symbolic/start-here-symbolic.svg
-Recent URLs[$e]=file:$HOME/dotfiles/face/
+Recent Files[$e]=start-here-symbolic.svg,file:///usr/bin/qemu-system-x86_64,file:$HOME/start-here-kde.svg,file:$HOME/dotfiles/face/start-here-kde.svg,file:///usr/share/icons/breeze-dark/places/symbolic/start-here-symbolic.svg
+Recent URLs[$e]=file:///usr/bin/
+detailViewIconSize=0
 
 [KPropertiesDialog]
-Height 1080=382
-Width 1920=808
+Height 1080=386
+Width 1920=376
+
+[Open-with settings]
+CompletionMode=1
+History=/usr/bin/qemu-system-x86_64,virt
 
 [PlasmaRunnerManager]
-LaunchCounts=1 services_vim.desktop,7 services_qmmp.desktop,1 services_org.kde.kgoldrunner.desktop,3 services_winetricks.desktop,1 services_org.kde.ksysguard.desktop,1 services_sdrsharp.desktop,1 services_redshift-qt.desktop,2 services_pamac-manager.desktop,1 services_org.kde.kate.desktop,1 services_gtk-lshw.desktop,3 services_xpad.desktop,3 services_com.github.wwmm.pulseeffects.desktop,1 services_breezedecorationconfig.desktop,4 services_gnuradio-grc.desktop,7 services_fritzing.desktop,1 services_wayland.desktop,8 services_pamac-qt.desktop,1 services_org.kde.partitionmanager.desktop,2 services_org.musicbrainz.Picard.desktop,3 services_arduino.desktop,2 services_org.kde.konsole.desktop,3 services_brave.desktop,12 services_kvantummanager.desktop,1 services_desktop-webmail-config.desktop,2 services_pamac-updater.desktop,2 services_hp-uiscan.desktop,1 services_org.kde.kmahjongg.desktop,7 services_virt-manager.desktop,2 services_wine-Programs-Lenovo-Lenovo Moto Smart Assistant.desktop,1 services_streamtuner2.desktop,9 services_gqrx.desktop,3 services_org.kde.kcharselect.desktop,1 services_kcm_fonts.desktop,1 services_wine-Programs-Lenovo-Uninstall Lenovo Moto Smart Assistant.desktop,1 services_org.kde.skanlite.desktop,4 services_simple-scan.desktop,1 services_breezestyleconfig.desktop,1 services_fontinst.desktop,2 services_mpv.desktop
+LaunchCounts=4 services_gnuradio-grc.desktop,1 services_fontinst.desktop,1 services_kcm_fonts.desktop,3 services_com.github.wwmm.pulseeffects.desktop,7 services_qmmp.desktop,5 services_pamac-manager.desktop,1 services_wine-Programs-Lenovo-Uninstall Lenovo Moto Smart Assistant.desktop,1 services_vim.desktop,1 services_org.kde.kgoldrunner.desktop,1 services_org.kde.ksysguard.desktop,1 services_breezedecorationconfig.desktop,3 services_brave.desktop,2 services_org.kde.konsole.desktop,1 services_gtk-lshw.desktop,9 services_gqrx.desktop,1 services_wayland.desktop,2 services_wine-Programs-Lenovo-Lenovo Moto Smart Assistant.desktop,2 services_pamac-updater.desktop,1 services_org.kde.kmahjongg.desktop,1 services_caffeine-preferences.desktop,4 services_simple-scan.desktop,1 services_redshift-qt.desktop,3 services_arduino.desktop,7 services_virt-manager.desktop,3 services_xpad.desktop,1 services_streamtuner2.desktop,1 services_desktop-webmail-config.desktop,1 services_sdrsharp.desktop,7 services_fritzing.desktop,1 services_org.kde.kate.desktop,3 services_winetricks.desktop,8 services_pamac-qt.desktop,1 services_org.kde.partitionmanager.desktop,2 services_hp-uiscan.desktop,3 services_org.kde.kcharselect.desktop,2 services_mpv.desktop,1 services_org.kde.skanlite.desktop,1 services_breezestyleconfig.desktop,2 services_org.musicbrainz.Picard.desktop,12 services_kvantummanager.desktop
 pluginWhiteList=services,bookmarks,baloosearch
 
 [PlasmaThemeExtended]

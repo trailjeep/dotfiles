@@ -1,52 +1,162 @@
 conky.config = {
-	background=true,
-	update_interval=5,
-	double_buffer=true,
-	no_buffers=true,
-	imlib_cache_size=10,
-	draw_shades=false,
-	draw_outline=true,
-	draw_borders=false,
-	gap_x=20,
-	gap_y=20,
-	alignment="top_left",
-	minimum_height=250,
-	minimum_width=400,
-	own_window=true,
-	own_window_type="dock",
-	own_window_transparent=true,
-	own_window_title="conky",
-	own_window_transparent=true,
-	own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
-	own_window_argb_visual=true,
-	own_window_argb_value=0,
-	use_xft=true,
-	xftalpha=1,
-	font="Hack:size=12",
-	text_buffer_size=256,
-	override_utf8_locale=true,
-	default_color='lightgrey',
-	default_outline_color='black',
-	-- time
-	color0='FFB000',
-	-- icons
-	color1='aqua',
-	-- hr was darkgrey
-	color2='aqua',
+
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=0,
+
+draw_shades=false,
+draw_outline=false,
+draw_borders=false,
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x=20,
+gap_y=20,
+
+alignment="top_left",
+
+minimum_height=400,
+minimum_width=400,
+maximum_width=400,
+
+own_window=true,
+own_window_type="dock",
+own_window_transparent=true,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+
+own_window_argb_visual=true,
+own_window_argb_value=0,
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+use_xft=true,
+xftalpha=1,
+font="Droid Sans:size=10",
+text_buffer_size=256,
+override_utf8_locale=true,
+
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color='CCCCCC',
+color0='FFB000', -- clock
+color1='CCCCCC', -- date
+color2='CCCCCC', -- current temperature
+color3='E18700', -- high tempratures
+color4='00FFFF', -- low tempratures
+color5='CCCCCC', -- days
+
+-------------------------------------
+-- font
+-------------------------------------
+
+font="Cascadia Code:size=12",
+
+-------------------------------------
+--  Icon Sources
+-------------------------------------
+template0='~/.conky-vision/#fff__32',  --  today
+template1='~/.conky-vision/#fff__32',  --  +1day
+template2='~/.conky-vision/#fff__32',  --  +2days
+template3='~/.conky-vision/#fff__32',  --  +3days
+template4='~/.conky-vision/#fff__32',  --  +4days
+
+-------------------------------------
+--  API Key
+-------------------------------------
+template6="1e0721f8b94d3ee49f351a75a4c7abc8",
+
+-------------------------------------
+--  City ID
+-------------------------------------
+template7="4835512",
+
+-------------------------------------
+--  Temp Unit (default, metric, imperial)
+-------------------------------------
+template8="imperial",
+
+-------------------------------------
+--  Locale (e.g. "es_ES.UTF-8")
+--  Leave empty for default
+-------------------------------------
+template9=""
+
 }
 
+---------------------------------------------------
+---------------------------------------------------
+
 conky.text = [[
-${color1}${font FontAwesome:size=12}${color}${font} ${time %A},${alignr}${time %F} ${alignr}${color1}${font FontAwesome:size=12}
-${voffset -15}
-${color2}${font}${hr}
-${voffset -15}
-${color0}${font Digital\-7:weight=Normal:size=85}${alignc -10}${time %l:%M}${font Digital\-7:weight=Normal:size=30}${voffset -50}${time %P}${font Digital\-7:weight=Normal:size=85}
-${voffset -115}
-${color2}${font}${hr}
-${voffset -12}
-${color1}${font FontAwesome:size=12}${color}${font} ${wireless_essid wlan0}${alignr}${upspeedf wlan0} KB/s ${alignr}${color1}${font FontAwesome:size=12}
-${voffset -12}
-${color1}${font FontAwesome:size=12}${color}${font} ${wireless_link_qual_perc wlan0}%${alignr}${font}${downspeedf wlan0} KB/s ${alignr}${color1}${font FontAwesome:size=12}
-${voffset -12}
-${color1}${font FontAwesome:size=12}${color}${font} Sacco.me${alignr}${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${color}${font}${execi 300 host -t A sacco.me | cut -d" " -f4} ${alignr}${color1}${font FontAwe some:size=12}${else}${color red}${font}Down ${alignr}${color1}${font FontAwesome:size=12}${endif}
+\
+${execi 300 ~/.conky-vision/get_weather ${template6} ${template7} ${template8} ${template9}}\
+\
+${font Cascadia Code:weight=Light:size=16}${color1}\
+${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A,"}\
+${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%F"}\
+${font}${color}
+\
+${font Cascadia Code}${color1}\
+${voffset -5}\
+${hr}
+\
+${font Digital\-7:weight=Light:size=80}${color0}\
+${voffset 0}\
+${alignc}${time %l:%M}\
+${voffset -35}\
+${font Digital\-7:weight=Light:size=40}${color0}\
+${alignc}${time %P}\
+${font}${color}
+\
+${font Cascadia Code}${color1}\
+${voffset 32}\
+${hr}
+\
+${font Cascadia Code:size=12:bold}${color2}\
+${voffset 5}\
+${goto 58}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${font Cascadia Code:size=12}${color3}\
+${goto 158}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${goto 258}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${goto 358}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '3'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${font}${color}\
+\
+${font Cascadia Code:size=12}${color4}\
+${voffset 20}\
+${goto 158}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${goto 258}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${goto 358}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '3'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
+${font}${color}
+\
+${font Cascadia Code:size=14}${color5}\
+${voffset 2}\
+${goto 35}${execi 300 LANG=${template9} LC_TIME=${template9} date +%a | gawk '{print toupper($0);}'}\
+${goto 135}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
+${goto 235}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%a | gawk '{print toupper($0);}'}\
+${goto 335}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3days +%a | gawk '{print toupper($0);}'}\
+${font}${color}
+\
+${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 5,145 -s 40x40}\
+${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 105,145 -s 40x40}\
+${execi 300 cp -f ${template2}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/conky-vision/forecast-2.png}${image ~/.cache/conky-vision/forecast-2.png -p 205,145 -s 40x40}\
+${execi 300 cp -f ${template3}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '3').png ~/.cache/conky-vision/forecast-3.png}${image ~/.cache/conky-vision/forecast-3.png -p 305,145 -s 40x40}\
+\
+${font Cascadia Code}${color1}\
+${voffset -5}\
+${hr}
+\
+${goto 0}${color1}${font FontAwesome:size=12}${color}${font} ${wireless_essid wlan0}\
+${goto 100}${color1}${font FontAwesome:size=12}${color}${font} ${wireless_link_qual_perc wlan0}%\
+${goto 180}${font FontAwesome:size=12}${font} ${upspeedf wlan0} KB/s\
+${alignr}${font FontAwesome:size=12}${font} ${downspeedf wlan0} KB/s
+${color1}${font FontAwesome:size=12}${color}${font} Sacco.me\
+${alignr}${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${alignr}${color1}${font FontAwesome:size=12}${else}${color red}${font} Down${alignr}${color1}${font FontAwesome:size=12}${endif}${color}${font} ${execi 300 host -t A sacco.me | cut -d" " -f4}
+\
 ]]

@@ -435,17 +435,7 @@ extract () {
   fi
 }
 
-# yakuake b/g blur
- if [ "$DISPLAY"x != x -a -x /usr/bin/xdotool ]; then
-   yakuake=$(xdotool search --class yakuake)
-#   konsole=$(xdotool search --class konsole)
-   terms="$yakuake"
-   for id in $terms; do
-     xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $id
-   done
- fi
-
- ####################
+####################
 ### Window Setup ###
 ####################
 
@@ -453,7 +443,6 @@ extract () {
 case "$TERM" in
     xterm*|rxvt*) PS1="\[\e]0;\u@\h: \w\a\]$PS1" ;;
 esac
-
 
 ##########################
 ### Command Completion ###
@@ -467,4 +456,25 @@ fi
 
 # Typing "!!<space>" will replace "!!" with the previous command
 bind Space:magic-space
+
+# yakuake b/g blur
+#if [ "$DISPLAY"x != x -a -x /usr/bin/xdotool ]; then
+#	sleep 2
+#	yakuake=$(xdotool search --class yakuake)
+#	#konsole=$(xdotool search --class konsole)
+#	terms="$yakuake"
+#	for id in $terms; do
+#		xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $id
+#	done
+#fi
+
+#if [[ $(ps --no-header -p $PPID -o comm | grep -Ev '^(yakuake|konsole)$' ) ]]; then
+#        for wid in $(xdotool search --pid $PPID); do
+#            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+#fi
+sleep 1
+if [[ $(ps --no-header -p $PPID -o comm) =~ ^yakuake$ ]]; then
+        for wid in $(xdotool search --pid $PPID); do
+            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+fi
 
