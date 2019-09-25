@@ -10,48 +10,20 @@
 # http://www.gnu.org/software/bash/manual/bashref.html#The-Shopt-Builtin
 #=================================================
 
-# Assume "cd" if the command matches a directory name
-shopt -s autocd
-
-# Assume arguments to "cd" which don't match a directory refer to a variable
-#shopt -s cdable_vars
-
-# Autocorrect typos when changing path with "cd"
-shopt -s cdspell
-
-# Check if hashed commands exist before executing
-shopt -s checkhash
-
-# Check for stopped or running jobs before exiting
-shopt -s checkjobs
-
-# Update the window size after every command
-shopt -s checkwinsize
-
-# Try and save multi-line commands as a single entry
-shopt -s cmdhist
-
-# Replace directory names with results of word expansion
-shopt -s direxpand
-
-# Try to autocorrect typos during directory completion
-shopt -s dirspell
-
-# Include hidden files and directories in expansion
-shopt -s dotglob
-
-# Enable extended pattern matching features
-shopt -s extglob
-
-# Enable support for recursive globbing via "**"
-shopt -s globstar
-
-# Append to the history file instead of overwriting
-shopt -s histappend
-
-# Allow filename patterns matching no files to expand to a null string
-#shopt -s nullglob
-
+shopt -s autocd			# Assume "cd" if cmd matches dir name
+#shopt -s cdable_vars	# Assume args to "cd" which don't match dir refer to var
+shopt -s cdspell		# Autocorrect typos with "cd"
+shopt -s checkhash		# Check if hashed cmds exist before exec
+shopt -s checkjobs		# Check stopped/running jobs before exit
+shopt -s checkwinsize	# Update win size after every cmd
+shopt -s cmdhist		# Try and save multi-line cmds as single entry
+shopt -s direxpand		# Use word expansion for dir names
+shopt -s dirspell		# Try to autocorrect typos during dir completion
+shopt -s dotglob		# Include hidden files and dirs in expansion
+shopt -s extglob		# Enable extended pattern matching features
+shopt -s globstar		# Enable support for recursive globbing via "**"
+shopt -s histappend		# Append to history file instead of overwriting
+#shopt -s nullglob		# Allow filename patterns matching no files to expand to null string
 shopt -s gnu_errfmt
 shopt -s expand_aliases
 
@@ -61,29 +33,14 @@ shopt -s expand_aliases
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
-# Colon-separated list of directories used as a search path for "cd"
-#CDPATH="."
-
-# Maximum number of commands to retain in the history
-HISTSIZE=250000
-
-# Maximum number of lines to retain in the history
-HISTFILESIZE=5000
-
-# Save the time each command was issued & display in this format
-HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
-
-# Don't insert duplicate commands or lines with a leading space
-HISTCONTROL="ignoredups:ignorespace"
-
-# Patterns matched against commands to be excluded from saving
-HISTIGNORE="bg:clear:exit:fg:history"
-
-# Save each command to the history before displaying the subsequent prompt
-PROMPT_COMMAND="history -a"
-
-# Number of trailing directories to retain (subject to the prompt string)
-#PROMPT_DIRTRIM=2
+#CDPATH="."				# : sep list of dirs for "cd" search path
+HISTSIZE=250000			# Max cmds to retain in history
+HISTFILESIZE=5000		# Max lines to retain in history
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "		# Save time & display format
+HISTCONTROL="ignoredups:ignorespace"	# Don't insert dup cmds or lines with a leading space
+HISTIGNORE="bg:clear:exit:fg:history"	# Exclude patterns from history
+PROMPT_COMMAND="history -a"	# Save cmd to history before next prompt
+#PROMPT_DIRTRIM=2		# Trailing dirs to retain (subject to prompt string)
 
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
@@ -112,6 +69,7 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export LS_OPTIONS='--color=auto -A -F -X -B -h -v -b -T 0 --group-directories-first --quoting-style=shell-escape --time-style=iso'
+export PIP_USER=true	# PIP install as user - should already be default
 
 # cheat
 export CHEAT_EDITOR='/bin/vi'
@@ -288,38 +246,17 @@ alias rl1='sudo systemctl isolate rescue.target' # systemd single user mode - no
 alias rl3='sudo systemctl isolate multi-user.target' # systemd multi-user mode with networking - no x
 alias rl5='sudo systemctl isolate default.target' # systemd multi-user mode+graphical+networking
 
-# git
-alias g='git'
-
-# yay
-alias yay='yay --sudoloop' # chrome always times out
-
-# search dconf values and keys
-alias dcs='dconf dump / | grep -i'
-alias gss='gsettings list-recursively | grep -i'
-
-# stow verbose
-alias stow='stow -v'
-
-# pip always install --user
-alias pip='echo "ALWAYS use: \"\pip install --user\""'
-
-# dd progress
-alias dd='dd status=progress'
-
-# rm interactive
-alias rm='rm -i'
-
-# ifconfig deprecated (net-tools) -> ip as reminder
+alias g='git'	# git
+# alias yay='yay --sudoloop' # deprecated no longer use yay
+alias dcs='dconf dump / | grep -i'					# search dconf values and keys
+alias gss='gsettings list-recursively | grep -i'	# search dconf values and keys
+alias stow='stow -v'	# stow verbose
+alias dd='dd status=progress'	# dd progress
+alias rm='rm -i'	# rm interactive
 alias ifconfig='echo -e "\n** Deprecated: use ip **\n"; ip a'
-
-# diskspace free/used human readable
-alias df='df -h'
-alias du='du -hx'
- 
-# more is less
-alias more='less'
-
+alias df='df -h'	# disk free human readable
+alias du='du -hx'	# disk usage human readable
+alias more='less'	# less is more
 alias vi='vim'
  
 alias cava='/bin/konsole --nofork --profile cava --hide-menubar --hide-tabbar -qwindowtitle cava &'
@@ -328,11 +265,9 @@ alias glmviz='glmviz config-stereo-jeff &'
 alias vis1='glmviz'
 alias vis2='cava'
 
-# mplayer play podcasts @1.5x
-alias podplay='mplayer -af scaletempo -speed 1.5 '
+alias podplay='mplayer -af scaletempo -speed 1.5 '	# mplayer play podcasts @1.5x
 
-# clear screen
-alias cls='clear;uname -a;echo;lsb_release -ds;echo;date "+[ %F %A %r %Z ]";echo;fortune;echo'
+alias cls='clear;uname -a;echo;lsb_release -ds;echo;date "+[ %F %A %r %Z ]";echo;fortune;echo' # clear screen
 
 # ANSI colors
 alias ansi-colors='for attr in $(seq 0 1); do for fg in $(seq 30 37); do for bg in $(seq 40 47); do printf "\033[$attr;${bg};${fg}m$attr;$fg;$bg\033[m "; done; echo; done; done'
