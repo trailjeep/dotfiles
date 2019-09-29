@@ -91,9 +91,6 @@ template9=""
 
 }
 
----------------------------------------------------
----------------------------------------------------
-
 conky.text = [[
 \
 ${execi 300 ~/.conky-vision/get_weather ${template6} ${template7} ${template8} ${template9}}\
@@ -109,7 +106,7 @@ ${hr}
 \
 ${font Digital\-7:weight=Light:size=80}${color0}\
 ${voffset 0}\
-${alignc}${time %l:%M}\
+${alignc}${time %I:%M}\
 ${voffset -35}\
 ${font Digital\-7:weight=Light:size=40}${color0}\
 ${alignc}${time %P}\

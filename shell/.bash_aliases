@@ -279,8 +279,10 @@ alias distro='lsb_release -a'
 alias extip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 # pyTivo (web interface :9032)
-alias pytivo-start='ssh root@MAISIE "/usr/bin/python ~/bin/pytivo/pyTivo.py &"'
-alias pytivo-stop='ssh root@MAISIE "pkill -SIGINT -f ~/bin/pytivo/pyTivo.py"'
+# alias pytivo-start='ssh root@MAISIE "/usr/bin/python ~/bin/pytivo/pyTivo.py &"'
+# alias pytivo-stop='ssh root@MAISIE "pkill -SIGINT -f ~/bin/pytivo/pyTivo.py"'
+
+alias minidlna-r='ssh root@MAISIE "minidlnad -R && systemctl force-reload minidlna"' # rescan minidlna media dirs (webstats=:8200)
 
 # weather & moon phase
 # https://github.com/chubin/wttr.in http://wttr.in/:help
