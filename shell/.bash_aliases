@@ -37,8 +37,8 @@ shopt -s expand_aliases
 HISTSIZE=250000			# Max cmds to retain in history
 HISTFILESIZE=5000		# Max lines to retain in history
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "		# Save time & display format
-HISTCONTROL="ignoredups:ignorespace"	# Don't insert dup cmds or lines with a leading space
-HISTIGNORE="bg:clear:exit:fg:history"	# Exclude patterns from history
+HISTCONTROL="ignoreboth"	# Don't insert dup cmds or lines with a leading space
+HISTIGNORE="bg:clear:exit:fg:history:enc*:dec*"	# Exclude patterns from history
 PROMPT_COMMAND="history -a"	# Save cmd to history before next prompt
 #PROMPT_DIRTRIM=2		# Trailing dirs to retain (subject to prompt string)
 
