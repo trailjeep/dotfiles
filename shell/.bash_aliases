@@ -40,7 +40,7 @@ HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "		# Save time & display format
 HISTCONTROL="ignoreboth"	# Don't insert dup cmds or lines with a leading space
 HISTIGNORE="bg:clear:exit:fg:history:enc*:dec*"	# Exclude patterns from history
 PROMPT_COMMAND="history -a"	# Save cmd to history before next prompt
-#PROMPT_DIRTRIM=2		# Trailing dirs to retain (subject to prompt string)
+#PROMPT_DIRTRIM=4		# Trailing dirs to retain (subject to prompt string)
 
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
