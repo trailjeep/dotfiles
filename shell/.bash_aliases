@@ -348,6 +348,7 @@ rmhist() {
     echo -n "$n "
     ((--i))
   done
+  history -w
 }
 
 # Uncompress the file passed as an argument (thanks stackoverflow)
