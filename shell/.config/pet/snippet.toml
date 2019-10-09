@@ -189,3 +189,15 @@
   command = "detox -s utf_8 -s lower *"
   tag = ["rename", "detox", "filenames", "files"]
   output = ""
+
+[[snippets]]
+  description = "List apps not in a registered repo or PPA"
+  command = "apt-show-versions | grep 'No available version'"
+  tag = ["apt", "packages", "repos"]
+  output = ""
+
+[[snippets]]
+  description = "List packages from a particular repo or PPA"
+  command = "awk '$1 == \"Package:\" { if (a[$2]++ == 0) print $2; }' /var/lib/apt/lists/*PARTOFREPONAME*Packages"
+  tag = ["apt", "packages", "repos"]
+  output = ""

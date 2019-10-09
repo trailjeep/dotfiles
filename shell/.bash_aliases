@@ -258,6 +258,7 @@ alias df='df -h'	# disk free human readable
 alias du='du -hx'	# disk usage human readable
 alias more='less'	# less is more
 alias vi='vim'
+alias diff='colordiff'
  
 alias cava='/bin/konsole --nofork --profile cava --hide-menubar --hide-tabbar -qwindowtitle cava &'
 alias tunes='/bin/konsole --nofork --profile tunes --hide-menubar --hide-tabbar -qwindowtitle tunes &'
