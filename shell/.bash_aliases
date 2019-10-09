@@ -225,7 +225,7 @@ alias bunzip2='bunzip2 -k'
 alias upd='apt update'
 alias upg='apt update && apt upgrade'
 alias upgd='apt update && apt full-upgrade'
-alias pkgcln='dpkg --configure -a && apt install -f && apt autoremove -y && apt autoclean -y && apt clean'
+alias pkgcln='dpkg --configure -a && dpkg -C && apt install -f && apt autoremove -y && apt autoclean -y && apt -y clean'
 
 # pacman
 alias pms='pacman -Ss'   # search for pkg
