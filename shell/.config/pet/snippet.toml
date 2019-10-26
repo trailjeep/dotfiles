@@ -201,3 +201,9 @@
   command = "awk '$1 == \"Package:\" { if (a[$2]++ == 0) print $2; }' /var/lib/apt/lists/*PARTOFREPONAME*Packages"
   tag = ["apt", "packages", "repos"]
   output = ""
+
+[[snippets]]
+  description = "Grep exclude by regex"
+  command = "grep -Ev \"^(PAT1|PAT2|PAT3)\""
+  tag = ["grep", "exclude", "not", "regex", "pattern"]
+  output = ""

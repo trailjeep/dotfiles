@@ -59,6 +59,7 @@ color5='CCCCCC', -- days
 
 font="Cascadia Code:size=12",
 font2="SF Mono:size=12",
+font3="FontAwesome:size=12",
 
 -------------------------------------
 --  Icon Sources
@@ -117,26 +118,24 @@ ${font Cascadia Code}${color1}\
 ${voffset 32}\
 ${hr}
 \
-${font Cascadia Code:size=12:bold}${color2}\
-${voffset 5}\
-${goto 58}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}${font2}°${font Cascadia Code:size=12}\
-${font Cascadia Code:size=12}${color3}\
-${goto 158}${color}${font FontAwesome:size=12}\
-${color3}${font} ${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}\
-${font SF Mono:size=12}°${font Cascadia Code:size=12}\
-${goto 258}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
-${goto 358}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '3'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
-${font}${color}\
+${font Cascadia Code:size=18:bold}${color2}${voffset 12}${goto 55}\
+${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°\
+${font}${voffset -15}${goto 158}${font FontAwesome:size=10} \
+${font}${color3}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}°\
+${voffset -4}${color2}${goto 258}${font FontAwesome:size=10} \
+${font}${color3}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}°\
+${voffset -4}${color2}${goto 358}${font FontAwesome:size=10} \
+${font}${color3}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '3'}°\
 \
-${font Cascadia Code:size=12}${color4}\
-${voffset 20}\
-${goto 158}${font FontAwesome:size=12}${font} ${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
-${goto 258}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
-${goto 358}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '3'}${font SF Mono:size=12}°${font Cascadia Code:size=12}\
-${font}${color}
+${color2}${voffset 15}\
+${goto 158}${font FontAwesome:size=10} \
+${font}${color4}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}°\
+${voffset -4}${color2}${goto 258}${font FontAwesome:size=10} \
+${font}${color4}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}°\
+${voffset -4}${color2}${goto 358}${font FontAwesome:size=10} \
+${font}${color4}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '3'}°\
 \
-${font Cascadia Code:size=14}${color5}\
-${voffset 2}\
+${font Cascadia Code:size=14}${color5}${voffset 15}\
 ${goto 35}${execi 300 LANG=${template9} LC_TIME=${template9} date +%a | gawk '{print toupper($0);}'}\
 ${goto 135}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
 ${goto 235}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%a | gawk '{print toupper($0);}'}\
