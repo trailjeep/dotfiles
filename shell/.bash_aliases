@@ -228,7 +228,8 @@ alias upgd='apt update && apt full-upgrade'
 alias pkgcln='dpkg --configure -a && dpkg -C && apt install -f && apt autoremove -y && apt autoclean -y && apt -y clean'
 
 # pacman
-alias pms='pacman -Ss'   # search for pkg
+#alias pms='pacman -Ss'   # search for pkg
+alias pms='function _pms(){ expac -Ss "%n|%v|%d" $1 | column -t -s"|" | sort; };_pms'
 alias pmq='pacman -Q'    # query pkg info
 alias pmqi='pacman -Qi'  # query detailed pkg info
 alias pmql='pacman -Ql'  # query pkg files
