@@ -128,16 +128,16 @@ NON='\e[0m'
 # Prompt
 #=================================================
  
-PS_DATM="\D{%F %r}"
+#PS_DATM="\D{%F %r}"
  
-prompt() {
-  if [ "$UID" -eq "0" ];
-    then PS1="\n\[$LTRED\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$YEL\]${PS_DATM}\n\[$LTRED\]#\[$NON\] "
-    else PS1="\n\[$LTGRN\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$GRN\]`__git_ps1` \[$YEL\]${PS_DATM}\n\[$LTGRN\]$\[$NON\] "
-  fi
-}
+#prompt() {
+#  if [ "$UID" -eq "0" ];
+#    then PS1="\n\[$LTRED\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$YEL\]${PS_DATM}\n\[$LTRED\]#\[$NON\] "
+#    else PS1="\n\[$LTGRN\]\u\[$WHT\]@\[$LTBLU\]\H\[$WHT\]:\[$LTCYN\]\w \[$GRN\]`__git_ps1` \[$YEL\]${PS_DATM}\n\[$LTGRN\]$\[$NON\] "
+#  fi
+#}
  
-PROMPT_COMMAND="prompt"
+#PROMPT_COMMAND="prompt"
  
 if [ -x $HOME/.local/bin/dogsay -a -x /usr/bin/fortune ]; then 
         IFS=", " read -r -a dogs <<< `$HOME/.local/bin/dogsay -l | sed 's/Possible dogs are: //'`
