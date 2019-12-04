@@ -1,6 +1,16 @@
+[ActionsWidget]
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAABGQAAAAEAAAAAAAAD6AAAAABk
+
+[ConfigDialog]
+Height 1080=463
+Width 1920=655
+
 [FileDialogSize]
 Height 1080=480
 Width 1920=723
+
+[General]
+Number of Actions=0
 
 [KFileDialog Settings]
 Recent Files[$e]=start-here-symbolic.svg,file:///usr/bin/qemu-system-x86_64,file:$HOME/start-here-kde.svg,file:$HOME/dotfiles/face/start-here-kde.svg,file:///usr/share/icons/breeze-dark/places/symbolic/start-here-symbolic.svg

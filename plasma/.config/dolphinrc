@@ -17,9 +17,12 @@ ViewPropsTimestamp=2019,2,8,21,16,20
 FontWeight=50
 PreviewSize=48
 
+[KFileDialog Settings]
+detailViewIconSize=0
+
 [KPropertiesDialog]
-Height 1080=380
-Width 1920=419
+Height 1080=453
+Width 1920=521
 
 [MainWindow]
 Height 1080=486
