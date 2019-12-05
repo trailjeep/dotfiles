@@ -9,30 +9,37 @@ double_buffer=true,
 no_buffers=true,
 imlib_cache_size=0,
 
-draw_shades=false,
-draw_outline=false,
-draw_borders=false,
-draw_graph_borders=false,
-
 -------------------------------------
 --  Window Specifications
 -------------------------------------
 gap_x=20,
-gap_y=0,
-
+gap_y=20,
 alignment="top_left",
-
+--minimum_size="x,y",
 minimum_height=600,
 minimum_width=220,
 maximum_width=220,
-
 own_window=true,
+own_window_class="conky",
 own_window_type="dock",
 own_window_transparent=true,
-own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
-
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
 own_window_argb_visual=true,
 own_window_argb_value=0,
+border_inner_margin=0,
+border_outer_margin=0,
+
+-------------------------------------
+--  Graphics Settings
+-------------------------------------
+draw_shades=false,
+default_shade_color="AAAAAA",
+draw_outline=false,
+default_outline_color="AAAAAA",
+draw_borders=false,
+draw_graph_borders=false,
+show_graph_scale=false,
+show_graph_range=false,
 
 -------------------------------------
 --  Text Settings
@@ -42,25 +49,31 @@ xftalpha=1,
 font="Droid Sans:size=10",
 text_buffer_size=256,
 override_utf8_locale=true,
+format_human_readable=true,
+
+-------------------------------------
+--  Useful shortenings
+-------------------------------------
+short_units=true,
+pad_percents=2,
+top_name_width=30,
 
 -------------------------------------
 --  Color Scheme
 -------------------------------------
 default_color='CCCCCC',
 color0='FFB000', -- clock
-color1='CCCCCC', -- date
-color2='CCCCCC', -- current temperature
-color3='E18700', -- high tempratures
-color4='00FFFF', -- low tempratures
-color5='CCCCCC', -- days
+color1='E18700', -- high tempratures
+color2='00FFFF', -- low tempratures
+color3='888888', -- graphs
 
 -------------------------------------
 -- font
 -------------------------------------
-
 font="Cascadia Code:size=10",
-font2="SF Mono:size=10",
-font3="FontAwesome:size=10",
+font0="FontAwesome:size=10",
+font1="Digital\\-7:weight=Light:size=58",
+font2="Digital\\-7:weight=Light:size=29",
 
 -------------------------------------
 --  Icon Sources
@@ -100,75 +113,71 @@ ${execi 300 ~/.conky-vision/get_weather ${template6} ${template7} ${template8} $
 \
 # Date
 \
-${font}${color1}${voffset 20}\
-${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A,"}\
+${font}${color}\
+${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"}\
 ${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%F"}
 \
 # Time
 \
-${font Digital\-7:weight=Light:size=58}${color0}\
+${font1}${color0}\
 ${time %I}${blink :}${time %M}\
-${font Digital\-7:weight=Light:size=29}${color0}\
-${alignr}${voffset -23}${time %P}
+${font2}${color0}\
+${alignr}${voffset 0}${time %P}
 \
 # Wx
 \
-${font}${color5}${voffset 35}\
+${font}${color}${voffset 10}\
 ${goto 25}${execi 300 LANG=${template9} LC_TIME=${template9} date +%a | gawk '{print toupper($0);}'}\
-${goto 104}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
-${goto 175}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%a | gawk '{print toupper($0);}'}\
+${goto 102}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
+${goto 171}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%a | gawk '{print toupper($0);}'}\
 ${color}
 \
-${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 12,130 -s 40x40}\
-${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 92,130  -s 40x40}\
-${execi 300 cp -f ${template2}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/conky-vision/forecast-2.png}${image ~/.cache/conky-vision/forecast-2.png -p 162,130  -s 40x40}
+${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 12,110 -s 40x40}\
+${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 92,110  -s 40x40}\
+${execi 300 cp -f ${template2}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/conky-vision/forecast-2.png}${image ~/.cache/conky-vision/forecast-2.png -p 162,110  -s 40x40}
 \
-${font Cascadia Code:size=14:bold}${color2}\
+${font Cascadia Code:size=14:bold}${color}\
 ${voffset 20}${goto 22}\
 ${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°\
-${font}${voffset -3}${goto 92}\
-${color4}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}°\
+${font}${voffset -3}${goto 87}\
+${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}°\
 ${color}|\
-${color3}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}°\
-${goto 162}\
-${color4}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}°\
+${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}°\
+${goto 157}\
+${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}°\
 ${color}|\
-${color3}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}°\
+${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}°\
 ${color}
 \
 # CPU
 \
 ${voffset 20}\
-${cpugraph 0 16,220 CCCCCC CCCCCC -l}
-${font}CPU:${alignr}${cpu cpu0}%
+${cpugraph 1 20,95 777777 777777 -l}${alignr}${cpugraph 2 20,95 777777 777777 -l}
+${cpu cpu1}%\
+${goto 70}CPU1\
+${goto 125}CPU2\
+${alignr}${cpu cpu2}%
 \
-# RAM
-\
-
-${memgraph 16,220 CCCCCC CCCCCC -l}
-RAM:${alignr}${memperc}%
-\
-# Disk
+# RAM / Disk I/O
 \
 
-${diskiograph 16,220 CCCCCC CCCCCC -l}
-Disk I/O:${alignr}${diskio}
+${memgraph 20,95 777777 777777 -l}${alignr}${diskiograph 20,95 777777 777777 -l}
+${memperc}%${goto 75}RAM${goto 125}Disk I/O${alignr}${diskio}
 \
 # Net
 \
 
-${upspeedgraph wlan0 16,90 CCCCCC CCCCCC}${alignr}${downspeedgraph wlan0 16,90 CCCCCC CCCCCC}
+${upspeedgraph wlan0 20,90 777777 777777}${alignr}${downspeedgraph wlan0 20,90 777777 777777}
 ${upspeed wlan0}\
-${goto 83}${font FontAwesome:size=10}${font} NET ${font FontAwesome:size=10}${font}\
+${goto 83}${font0}${font} NET ${font0}${font}\
 ${alignr}${downspeed wlan0}
 \
 # WiFi
 \
 
-${color1}${font FontAwesome:size=10}${color}${font} ${wireless_essid wlan0}\
-${alignr -5}${wireless_link_qual_perc wlan0}% ${color1}${font FontAwesome:size=10}${color}${font}
-
+${color}${font0}${color}${font} ${wireless_essid wlan0}\
+${alignr 0}${wireless_link_qual_perc wlan0}% ${color}${font0}${font}
 ${addr wlan0}\
-${alignr}${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${alignr}${color1}${else}${color red}${font} Down${alignr}${color1}${endif}${color}${font} ${execi 300 host -t A sacco.me | cut -d" " -f4}
+${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${alignr}${color}${else}${color red}${font} Down${alignr}${color}${endif}${color}${font} ${execi 300 host -t A sacco.me | cut -d" " -f4}
 \
 ]]
