@@ -61,8 +61,8 @@ top_name_width=30,
 -------------------------------------
 --  Color Scheme
 -------------------------------------
-default_color='CCCCCC',
-color0='FFB000', -- clock
+default_color='66ff66',
+color0='ffa500', -- clock
 color1='E18700', -- high tempratures
 color2='00FFFF', -- low tempratures
 color3='888888', -- graphs
@@ -113,7 +113,7 @@ ${execi 300 ~/.conky-vision/get_weather ${template6} ${template7} ${template8} $
 \
 # Date
 \
-${font}${color}\
+${font Cascadia Code:size=14}${color}\
 ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"}\
 ${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%F"}
 \
@@ -130,7 +130,7 @@ ${font}${color}${voffset 10}\
 ${goto 25}${execi 300 LANG=${template9} LC_TIME=${template9} date +%a | gawk '{print toupper($0);}'}\
 ${goto 102}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
 ${goto 171}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%a | gawk '{print toupper($0);}'}\
-${color}
+
 \
 ${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 12,110 -s 40x40}\
 ${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 92,110  -s 40x40}\
@@ -151,8 +151,9 @@ ${color}
 \
 # CPU
 \
-${voffset 20}\
-${cpugraph 1 20,95 777777 777777 -l}${alignr}${cpugraph 2 20,95 777777 777777 -l}
+${voffset 10}\
+${cpugraph 1 20,95 ffa500 ffa500 -l}${alignr}${cpugraph 2 20,95 ffa500 ffa500 -l}
+${voffset -7}\
 ${cpu cpu1}%\
 ${goto 70}CPU1\
 ${goto 125}CPU2\
@@ -160,14 +161,14 @@ ${alignr}${cpu cpu2}%
 \
 # RAM / Disk I/O
 \
-
-${memgraph 20,95 777777 777777 -l}${alignr}${diskiograph 20,95 777777 777777 -l}
-${memperc}%${goto 75}RAM${goto 125}Disk I/O${alignr}${diskio}
+${memgraph 20,95 ffa500 ffa500 -l}${alignr}${diskiograph 20,95 ffa500 ffa500 -l}
+${voffset -7}\
+${memperc}%${goto 75}RAM${goto 125}HD I/O${alignr}${diskio}
 \
 # Net
 \
-
-${upspeedgraph wlan0 20,90 777777 777777}${alignr}${downspeedgraph wlan0 20,90 777777 777777}
+${upspeedgraph wlan0 20,90 ffa500 ffa500}${alignr}${downspeedgraph wlan0 20,90 ffa500 ffa500}
+${voffset -7}\
 ${upspeed wlan0}\
 ${goto 83}${font0}${font} NET ${font0}${font}\
 ${alignr}${downspeed wlan0}
