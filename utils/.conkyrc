@@ -26,7 +26,7 @@ own_window_transparent=true,
 own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
 own_window_argb_visual=true,
 own_window_argb_value=0,
-border_inner_margin=0,
+border_inner_margin=6,
 border_outer_margin=0,
 
 -------------------------------------
@@ -40,6 +40,8 @@ draw_borders=false,
 draw_graph_borders=false,
 show_graph_scale=false,
 show_graph_range=false,
+default_bar_size="10 95",
+default_graph_size="20 95",
 
 -------------------------------------
 --  Text Settings
@@ -61,19 +63,21 @@ top_name_width=30,
 -------------------------------------
 --  Color Scheme
 -------------------------------------
-default_color='66ff66',
+default_color='34be5b', -- manjaro green
 color0='ffa500', -- clock
 color1='E18700', -- high tempratures
 color2='00FFFF', -- low tempratures
-color3='888888', -- graphs
+color3='0A95BE', -- graphs/glyphs
 
 -------------------------------------
 -- font
 -------------------------------------
 font="Cascadia Code:size=10",
-font0="FontAwesome:size=10",
-font1="Digital\\-7:weight=Light:size=58",
-font2="Digital\\-7:weight=Light:size=29",
+font0="Cascadia Code:size=14", -- date/curr temp
+font1="Cascadia Code:size=2.5", -- logo
+font2="FontAwesome:size=10", -- glyphs
+font3="Digital\\-7:weight=Light:size=58", -- clock
+font4="Digital\\-7:weight=Light:size=29", -- clock am/pm
 
 -------------------------------------
 --  Icon Sources
@@ -113,72 +117,106 @@ ${execi 300 ~/.conky-vision/get_weather ${template6} ${template7} ${template8} $
 \
 # Date
 \
-${font Cascadia Code:size=14}${color}\
+${font0}${color}\
 ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"}\
 ${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%F"}
 \
 # Time
 \
-${font1}${color0}\
+${font3}${color0}\
 ${time %I}${blink :}${time %M}\
-${font2}${color0}\
+${font4}${color0}\
 ${alignr}${voffset 0}${time %P}
 \
 # Wx
 \
 ${font}${color}${voffset 10}\
-${goto 25}${execi 300 LANG=${template9} LC_TIME=${template9} date +%a | gawk '{print toupper($0);}'}\
-${goto 102}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
-${goto 171}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2days +%a | gawk '{print toupper($0);}'}\
+${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 0,95 -s 56x56}\
+${voffset 10}$font0}${goto 75}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°${font}\
+${voffset -10}${alignr}${execi 300 jq -r .name ~/.cache/conky-vision/weather.json}
+${alignr}${execi 300 jq -r .weather[].main ~/.cache/conky-vision/weather.json}
+
+${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
+${goto 107}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2day +%a | gawk '{print toupper($0);}'}\
+${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3days +%a | gawk '{print toupper($0);}'}\
 
 \
-${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 12,110 -s 40x40}\
-${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 92,110  -s 40x40}\
-${execi 300 cp -f ${template2}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/conky-vision/forecast-2.png}${image ~/.cache/conky-vision/forecast-2.png -p 162,110  -s 40x40}
+${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 0,173   -s 40x40}\
+${execi 300 cp -f ${template2}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 92,173  -s 40x40}\
+${execi 300 cp -f ${template3}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '3').png ~/.cache/conky-vision/forecast-2.png}${image ~/.cache/conky-vision/forecast-2.png -p 180,173  -s 40x40}
 \
-${font Cascadia Code:size=14:bold}${color}\
-${voffset 20}${goto 22}\
-${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°\
-${font}${voffset -3}${goto 87}\
+${font}${color}\
+${voffset 20}\
 ${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}°\
 ${color}|\
 ${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}°\
-${goto 157}\
+${font}${goto 90}\
 ${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}°\
 ${color}|\
 ${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}°\
+${alignr}\
+${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '3'}°\
+${color}|\
+${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '3'}°\
 ${color}
 \
 # CPU
 \
 ${voffset 10}\
-${cpugraph 1 20,95 ffa500 ffa500 -l}${alignr}${cpugraph 2 20,95 ffa500 ffa500 -l}
+${cpugraph 1 20,95 0A95BE 0A95BE -l}${alignr}${cpugraph 2 20,95 0A95BE 0A95BE -l}
 ${voffset -7}\
 ${cpu cpu1}%\
 ${goto 70}CPU1\
 ${goto 125}CPU2\
 ${alignr}${cpu cpu2}%
 \
-# RAM / Disk I/O
-\
-${memgraph 20,95 ffa500 ffa500 -l}${alignr}${diskiograph 20,95 ffa500 ffa500 -l}
+${voffset 10}\
+${cpugraph 3 20,95 0A95BE 0A95BE -l}${alignr}${cpugraph 4 20,95 0A95BE 0A95BE -l}
 ${voffset -7}\
-${memperc}%${goto 75}RAM${goto 125}HD I/O${alignr}${diskio}
+${cpu cpu3}%\
+${goto 70}CPU3\
+${goto 125}CPU4\
+${alignr}${cpu cpu4}%
+\
+# RAM / SWAP
+\
+
+${color3}${membar 10,95}${alignr}${swapbar 10,95}${color}
+${voffset -2}\
+${memperc}%${goto 80}RAM${goto 130}SWAP${alignr}${swapperc}%
+\
+# Disk I/O / Usage
+\
+${voffset 5}\
+${diskiograph 20,95 0A95BE 0A95BE -l}${voffset 14}${alignr}${color3}${fs_bar 10,95 /}${color}
+${voffset -20}\
+${diskio}${goto 77}I/O HD ${fs_type /}${alignr}${fs_used_perc /}%
 \
 # Net
 \
-${upspeedgraph wlan0 20,90 ffa500 ffa500}${alignr}${downspeedgraph wlan0 20,90 ffa500 ffa500}
+${voffset 5}\
+${upspeedgraph wlan0 20,90 0A95BE 0A95BE}${alignr}${downspeedgraph wlan0 20,90 0A95BE 0A95BE}
 ${voffset -7}\
 ${upspeed wlan0}\
-${goto 83}${font0}${font} NET ${font0}${font}\
+${goto 83}${color3}${font2}${color}${font} NET ${color3}${font2}${color}${font}\
 ${alignr}${downspeed wlan0}
 \
 # WiFi
 \
 
-${color}${font0}${color}${font} ${wireless_essid wlan0}\
-${alignr 0}${wireless_link_qual_perc wlan0}% ${color}${font0}${font}
+${color3}${font2}${color}${font} ${wireless_essid wlan0}\
+${alignr 0}${wireless_link_qual_perc wlan0}% ${color3}${font2}${color}${font}
 ${addr wlan0}\
 ${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${alignr}${color}${else}${color red}${font} Down${alignr}${color}${endif}${color}${font} ${execi 300 host -t A sacco.me | cut -d" " -f4}
+\
+# Distro
+\
+${voffset 5}\
+${color}\
+${font1}${execi 10000 screenfetch -LN }\
+${voffset -72}${alignr}${font}${nodename}
+${voffset 2}${alignr}${font}${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'}
+${voffset 2}$alignr${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
+${voffset 2}$alignr${kernel}
 \
 ]]
