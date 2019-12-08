@@ -16,7 +16,7 @@ gap_x=20,
 gap_y=20,
 alignment="top_left",
 --minimum_size="x,y",
-minimum_height=600,
+minimum_height=650,
 minimum_width=220,
 maximum_width=220,
 own_window=true,
@@ -73,11 +73,12 @@ color3='0A95BE', -- graphs/glyphs
 -- font
 -------------------------------------
 font="Cascadia Code:size=10",
-font0="Cascadia Code:size=14", -- date/curr temp
+font0="Cascadia Code:size=14", -- date
 font1="Cascadia Code:size=2.5", -- logo
 font2="FontAwesome:size=10", -- glyphs
 font3="Digital\\-7:weight=Light:size=58", -- clock
 font4="Digital\\-7:weight=Light:size=29", -- clock am/pm
+font5="Cascadia Code:size=18:weight=bold",
 
 -------------------------------------
 --  Icon Sources
@@ -132,8 +133,8 @@ ${alignr}${voffset 0}${time %P}
 \
 ${font}${color}${voffset 10}\
 ${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 0,95 -s 56x56}\
-${voffset 10}$font0}${goto 75}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°${font}\
-${voffset -10}${alignr}${execi 300 jq -r .name ~/.cache/conky-vision/weather.json}
+${voffset 7}$font5}${goto 75}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°${font}\
+${voffset -12}${alignr}${execi 300 jq -r .name ~/.cache/conky-vision/weather.json}
 ${alignr}${execi 300 jq -r .weather[].main ~/.cache/conky-vision/weather.json}
 
 ${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
