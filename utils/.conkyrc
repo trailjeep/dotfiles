@@ -1,6 +1,13 @@
 conky.config = {
 
 -------------------------------------
+-- Notes
+--
+-- Requires internet https://wttr.in/
+-- Requires ansito pip install --user ansito
+-------------------------------------
+
+-------------------------------------
 --  Generic Settings
 -------------------------------------
 background=true,
@@ -15,7 +22,6 @@ imlib_cache_size=0,
 gap_x=20,
 gap_y=20,
 alignment="top_left",
---minimum_size="x,y",
 minimum_height=650,
 minimum_width=220,
 maximum_width=220,
@@ -154,7 +160,7 @@ ${color}\
 ${font1}${execi 10000 screenfetch -LN}${font}\
 ${voffset -103}${alignr}${execi 10000 echo $USER} @
 ${voffset 1}${alignr}${nodename}
-${voffset 1}${alignr}${uptime}
+${voffset 1}${alignr}up ${uptime}
 ${voffset 1}${alignr}${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'}
 ${voffset 1}$alignr${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
 ${voffset 1}$alignr${kernel}
