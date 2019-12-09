@@ -46,7 +46,6 @@ show_graph_range=false,
 -------------------------------------
 use_xft=true,
 xftalpha=1,
-font="Droid Sans:size=10",
 text_buffer_size=256,
 override_utf8_locale=true,
 format_human_readable=true,
@@ -70,49 +69,16 @@ color3='0A95BE', -- graphs/glyphs
 -------------------------------------
 -- font
 -------------------------------------
-font="Cascadia Code:size=10",
-font0="Cascadia Code:size=14", -- date
-font1="Cascadia Code:size=2.5", -- logo
+font="DejaVu Sans Mono:size=10",
+font0="DejaVu Sans Mono:size=14", -- date
+font1="xos4 Terminus:size=5", -- logo
 font2="FontAwesome:size=10", -- glyphs
 font3="Digital\\-7:weight=Light:size=58", -- clock
 font4="Digital\\-7:weight=Light:size=29", -- clock am/pm
-font5="Cascadia Code:size=18:weight=bold",
-
--------------------------------------
---  Icon Sources
--------------------------------------
-template0='~/.conky-vision/#bbb__56',  --  today
-template1='~/.conky-vision/#bbb__40',  --  +1day
-template2='~/.conky-vision/#bbb__40',  --  +2days
-template3='~/.conky-vision/#bbb__40',  --  +3days
-template4='~/.conky-vision/#bbb__40',  --  +4days
-
--------------------------------------
---  API Key
--------------------------------------
-template6="1e0721f8b94d3ee49f351a75a4c7abc8",
-
--------------------------------------
---  City ID
--------------------------------------
-template7="4835512",
-
--------------------------------------
---  Temp Unit (default, metric, imperial)
--------------------------------------
-template8="imperial",
-
--------------------------------------
---  Locale (e.g. "es_ES.UTF-8")
---  Leave empty for default
--------------------------------------
-template9=""
 
 }
 
 conky.text = [[
-\
-${execi 300 ~/.conky-vision/get_weather ${template6} ${template7} ${template8} ${template9}}\
 \
 # Date
 \
@@ -129,37 +95,8 @@ ${alignr}${voffset 0}${time %P}
 \
 # Wx
 \
-${font}${color}${voffset 10}\
-${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 0,95 -s 56x56}\
-${voffset 7}$font5}${goto 70}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°${font}\
-#${voffset -15}${alignr}${execi 300 jq -r .name ~/.cache/conky-vision/weather.json}
-${voffset -13}\
-${alignr}${execi 300 jq -r .weather[0].description ~/.cache/conky-vision/weather.json}
-${alignr}${execi 300 jq -r .weather[1].description ~/.cache/conky-vision/weather.json}
 
-${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
-${alignc -13}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2day +%a | gawk '{print toupper($0);}'}\
-${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3days +%a | gawk '{print toupper($0);}'}\
-
-\
-${execi 300 cp -f ${template1}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 0,173   -s 40x40}\
-${execi 300 cp -f ${template2}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/conky-vision/forecast-1.png}${image ~/.cache/conky-vision/forecast-1.png -p 92,173  -s 40x40}\
-${execi 300 cp -f ${template3}/$(~/.conky-vision/parse_weather 'first' '.weather[0].id' '3').png ~/.cache/conky-vision/forecast-2.png}${image ~/.cache/conky-vision/forecast-2.png -p 180,173  -s 40x40}
-\
-${font}${color}\
-${voffset 20}\
-${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}°\
-${color}|\
-${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}°\
-${font}${alignc -30}\
-${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}°\
-${color}|\
-${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}°\
-${alignr}\
-${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '3'}°\
-${color}|\
-${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '3'}°\
-${color}
+${font}${color}${execpi 300 curl -s "http://wttr.in/06437?0&Q" | ansito -}
 \
 # CPU
 \
@@ -212,12 +149,14 @@ ${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} 
 \
 # Distro
 \
-${voffset 5}\
+${voffset 15}\
 ${color}\
-${font1}${execi 10000 screenfetch -LN }\
-${voffset -72}${alignr}${font}${nodename}
-${voffset 2}${alignr}${font}${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'}
-${voffset 2}$alignr${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
-${voffset 2}$alignr${kernel}
+${font1}${execi 10000 screenfetch -LN}${font}\
+${voffset -103}${alignr}${execi 10000 echo $USER} @
+${voffset 1}${alignr}${nodename}
+${voffset 1}${alignr}${uptime}
+${voffset 1}${alignr}${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'}
+${voffset 1}$alignr${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
+${voffset 1}$alignr${kernel}
 \
 ]]

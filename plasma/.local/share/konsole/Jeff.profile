@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Maia
-Font=Cascadia Code PL,12,-1,5,50,0,0,0,0,0,Regular
+Font=Cascadia Mono PL,12,-1,5,50,0,0,0,0,0,Regular
 UseFontLineChararacters=true
 
 [Encoding Options]
