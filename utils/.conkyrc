@@ -40,8 +40,6 @@ draw_borders=false,
 draw_graph_borders=false,
 show_graph_scale=false,
 show_graph_range=false,
-default_bar_size="10 95",
-default_graph_size="20 95",
 
 -------------------------------------
 --  Text Settings
@@ -83,11 +81,11 @@ font5="Cascadia Code:size=18:weight=bold",
 -------------------------------------
 --  Icon Sources
 -------------------------------------
-template0='~/.conky-vision/#fff__32',  --  today
-template1='~/.conky-vision/#fff__32',  --  +1day
-template2='~/.conky-vision/#fff__32',  --  +2days
-template3='~/.conky-vision/#fff__32',  --  +3days
-template4='~/.conky-vision/#fff__32',  --  +4days
+template0='~/.conky-vision/#bbb__56',  --  today
+template1='~/.conky-vision/#bbb__40',  --  +1day
+template2='~/.conky-vision/#bbb__40',  --  +2days
+template3='~/.conky-vision/#bbb__40',  --  +3days
+template4='~/.conky-vision/#bbb__40',  --  +4days
 
 -------------------------------------
 --  API Key
@@ -133,12 +131,14 @@ ${alignr}${voffset 0}${time %P}
 \
 ${font}${color}${voffset 10}\
 ${execi 300 cp -f ${template0}/$(jq .weather[0].id ~/.cache/conky-vision/weather.json).png ~/.cache/conky-vision/current.png}${image ~/.cache/conky-vision/current.png -p 0,95 -s 56x56}\
-${voffset 7}$font5}${goto 75}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°${font}\
-${voffset -12}${alignr}${execi 300 jq -r .name ~/.cache/conky-vision/weather.json}
-${alignr}${execi 300 jq -r .weather[].main ~/.cache/conky-vision/weather.json}
+${voffset 7}$font5}${goto 70}${execi 300 jq .main.temp ~/.cache/conky-vision/weather.json | awk '{print int($1+0.5)}' # round num}°${font}\
+#${voffset -15}${alignr}${execi 300 jq -r .name ~/.cache/conky-vision/weather.json}
+${voffset -13}\
+${alignr}${execi 300 jq -r .weather[0].description ~/.cache/conky-vision/weather.json}
+${alignr}${execi 300 jq -r .weather[1].description ~/.cache/conky-vision/weather.json}
 
 ${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%a | gawk '{print toupper($0);}'}\
-${goto 107}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2day +%a | gawk '{print toupper($0);}'}\
+${alignc -13}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2day +%a | gawk '{print toupper($0);}'}\
 ${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3days +%a | gawk '{print toupper($0);}'}\
 
 \
@@ -151,7 +151,7 @@ ${voffset 20}\
 ${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '1'}°\
 ${color}|\
 ${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '1'}°\
-${font}${goto 90}\
+${font}${alignc -30}\
 ${color2}${execi 300 ~/.conky-vision/parse_weather 'min' '.main.temp' '2'}°\
 ${color}|\
 ${color1}${execi 300 ~/.conky-vision/parse_weather 'max' '.main.temp' '2'}°\
