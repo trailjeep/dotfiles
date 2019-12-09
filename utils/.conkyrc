@@ -84,6 +84,7 @@ font1="xos4 Terminus:size=5", -- logo
 font2="FontAwesome:size=10", -- glyphs
 font3="Digital\\-7:weight=Light:size=58", -- clock
 font4="Digital\\-7:weight=Light:size=29", -- clock am/pm
+font5="DejaVu Sans Mono:size=10:weight=bold", --weather
 
 }
 
@@ -105,12 +106,12 @@ ${alignr}${voffset 0}${time %P}
 # Wx
 \
 
-${font}${color}\
+${font5}${color}\
 ${execpi 300 curl -s "http://wttr.in/06437?0&Q" | ansito -}
 \
 # CPU
 \
-${voffset 10}\
+${font}${voffset 10}\
 ${cpugraph 1 20,95 0A95BE 0A95BE -l}${alignr}${cpugraph 2 20,95 0A95BE 0A95BE -l}
 ${voffset -7}\
 ${cpu cpu1}%\
