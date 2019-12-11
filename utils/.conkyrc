@@ -8,6 +8,7 @@ conky.config = {
 --   ansito pip install --user ansito
 --   screenfetch
 --     terminus font for nice logo
+--   rsync to copy album art
 -------------------------------------
 
 -------------------------------------

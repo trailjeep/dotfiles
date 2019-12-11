@@ -58,12 +58,12 @@ preamp=0
 default_pl_name=Playlist
 enabled_plugins=lyrics, kdenotify_icon, mpris
 exclude_filters=@Invalid()
-last_dir=/mnt/Music
+last_dir=/mnt/Music/Prince
 locale=auto
 restrict_filters=@Invalid()
 resume_on_startup=false
 resume_playback=false
-resume_playback_time=176883
+resume_playback_time=-1
 use_default_pl=false
 
 [Goom]
@@ -288,13 +288,13 @@ disp_shaded=false
 double_size=false
 eq_auto=false
 eq_opacity=0.5
-eq_pos=@Point(1041 907)
+eq_pos=@Point(1037 917)
 eq_shaded=false
 eq_visible=false
 hide_on_close=false
 mw_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
 mw_opacity=0.5
-mw_pos=@Point(1041 791)
+mw_pos=@Point(1037 801)
 pl_align_numbers=false
 pl_alt_splitter_color=false
 pl_autoresize_column=-1
@@ -305,7 +305,7 @@ pl_column_sizes=@Variant(\0\0\0\t\0\0\0\x1\0\0\0\x2\0\0\0\x96)
 pl_font="Hack,8,-1,5,50,0,0,0,0,0,Regular"
 pl_header_font="Hack,10,-1,5,50,0,0,0,0,0,Regular"
 pl_opacity=0.5
-pl_pos=@Point(1041 907)
+pl_pos=@Point(1037 917)
 pl_separator=::
 pl_shaded=false
 pl_show_anchor=false
@@ -394,8 +394,8 @@ vol_enc=0
 vol_mute=M
 
 [TwoPanelFileDialog]
-geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4\0\0\0\0\0\0\0\0\a\x80\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4)
-history=/mnt/Music, /home/jeff/Network/Music/Kid Rock, /home/jeff/Network/Music, /home/jeff/Network/Music/Various Artists, /home/jeff/Network/Music/Lynyrd Skynyrd, /home/jeff/Network/Music/Tom Petty, "/home/jeff/Network/Music/Geils, J., The, Band", /home/jeff/Network/Music/Johnny Cash/[2002] [COMPILATION] The Essential Johnny Cash
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x3\0\0\0\0\x2M\0\0\x1-\0\0\x5\x1c\0\0\x2\xd5\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4\0\0\0\0\0\0\0\0\a\x80\0\0\x2N\0\0\x1\x45\0\0\x5\x1b\0\0\x2\xd4)
+history=/mnt/Music/Prince, /mnt/Music, /home/jeff/Network/Music/Kid Rock, /home/jeff/Network/Music, /home/jeff/Network/Music/Various Artists, /home/jeff/Network/Music/Lynyrd Skynyrd, /home/jeff/Network/Music/Tom Petty, "/home/jeff/Network/Music/Geils, J., The, Band"
 
 [URLDialog]
 use_clipboard=false
