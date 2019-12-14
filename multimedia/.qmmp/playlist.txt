@@ -1,6 +1,6 @@
 current_playlist=0
 playlist=Playlist
-current=11
+current=10
 file=/mnt/Music/Prince/The Very Best of Prince/01 Prince - I Wanna Be Your Lover.m4a
 album=The Very Best of Prince
 artist=Prince
@@ -8,6 +8,7 @@ genre=Pop
 title=I Wanna Be Your Lover
 track=1/17
 year=2001-07-01
+bits_per_sample=32
 channels=2
 decoder=ffmpeg
 file_size=6238102

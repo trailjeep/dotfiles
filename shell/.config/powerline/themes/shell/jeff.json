@@ -11,7 +11,7 @@
 						"priority": 10,
 						"args": {
 							"exclude_domain": false,
-							"only_if_ssh": true
+							"only_if_ssh": false
 						}
 					},
 					{

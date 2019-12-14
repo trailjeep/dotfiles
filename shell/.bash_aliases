@@ -306,8 +306,7 @@ alias calc='plasmawindowed org.kde.plasma.calculator >/dev/null 2>&1 &'
 # deprecated configured in ~/.detoxrc
 # alias detox='detox -s utf_8 -s lower'
 
-
-alias cmatrix='cmatrix -ab'
+alias matrix='tmatrix -t `echo "$USER@$HOSTNAME"`'
 
 #=================================================
 # Unused

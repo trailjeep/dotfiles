@@ -63,7 +63,7 @@ locale=auto
 restrict_filters=@Invalid()
 resume_on_startup=false
 resume_playback=false
-resume_playback_time=-1
+resume_playback_time=0
 use_default_pl=false
 
 [Goom]
