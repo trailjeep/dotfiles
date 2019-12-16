@@ -219,3 +219,9 @@
   command = "mkvmerge -o COMBINED.mkv 1-1.mkv +1-2.mkv +1-3.mkv +..."
   tag = ["video", "concatenate", "mkv", "mkvmerge"]
   output = ""
+
+[[snippets]]
+  description = "Backup DVD main feature to hd"
+  command = "dvdbackup -i /dev/sr0 -o ~/Videos/ -F -p"
+  tag = ["dvd", "backup", "dvdbackup", "video"]
+  output = ""

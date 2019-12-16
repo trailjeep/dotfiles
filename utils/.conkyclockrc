@@ -1,0 +1,110 @@
+conky.config = {
+
+-------------------------------------
+-- Notes
+--
+-- Prerequisites
+--   internet https://wttr.in/
+--   ansito pip install --user ansito
+--   screenfetch
+--     terminus font for nice logo
+--   rsync to copy album art
+-------------------------------------
+
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=0,
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x=20,
+gap_y=20,
+alignment="top_left",
+minimum_height=200,
+--minimum_width=300,
+maximum_width=300,
+own_window=true,
+own_window_class="conky",
+own_window_type="dock",
+own_window_transparent=true,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
+own_window_argb_visual=true,
+own_window_argb_value=0,
+border_inner_margin=6,
+border_outer_margin=0,
+
+-------------------------------------
+--  Graphics Settings
+-------------------------------------
+draw_shades=false,
+default_shade_color="AAAAAA",
+draw_outline=true,
+default_outline_color="333333",
+draw_borders=false,
+draw_graph_borders=false,
+show_graph_scale=false,
+show_graph_range=false,
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+use_xft=true,
+xftalpha=1,
+text_buffer_size=256,
+override_utf8_locale=true,
+format_human_readable=true,
+
+-------------------------------------
+--  Useful shortenings
+-------------------------------------
+short_units=true,
+pad_percents=2,
+top_name_width=30,
+
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color='34be5b', -- manjaro green
+color0='ffa500', -- clock
+color1='E18700', -- high tempratures
+color2='00FFFF', -- low tempratures
+color3='0A95BE', -- graphs/glyphs
+
+-------------------------------------
+-- font
+-------------------------------------
+--font="DejaVu Sans Mono:size=24",
+font="Cascadia Mono:size=24",
+font0="Digital\\-7:weight=Light:size=24", -- date
+font1="xos4 Terminus:size=5", -- logo
+font2="FontAwesome:size=10", -- glyphs
+font3="Digital\\-7:weight=Light:size=72", -- clock
+font4="Digital\\-7:weight=Light:size=36", -- clock am/pm
+font5="DejaVu Sans Mono:size=10:weight=bold", --weather
+
+}
+
+conky.text = [[
+\
+# Time
+\
+${font3}${color0}\
+${time %I}${blink :}${time %M}\
+${font4}${color0}\
+${alignr}${voffset 0}${time %P}
+\
+${voffset -7}${color0}${hr 1}
+# Date
+\
+${voffset 0}\
+${font}${color0}\
+${execi 300 LANG=${template9} LC_TIME=${template9} date +"%a"}\
+${alignr}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%F"}
+\
+]]

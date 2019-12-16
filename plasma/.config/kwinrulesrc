@@ -77,14 +77,14 @@ wmclasscomplete=false
 wmclassmatch=1
 
 [2]
-Description=KRunner
+Description=Conky
 clientmachine=localhost
 clientmachinematch=0
-position=699,1044
-positionrule=3
-title=KRunner — krunner
+desktop=1
+desktoprule=2
+title=conky (DESKTOP-JEFF)
 titlematch=0
-wmclass=krunner
+wmclass=conky
 wmclasscomplete=false
 wmclassmatch=1
 

@@ -1,0 +1,105 @@
+conky.config = {
+
+-------------------------------------
+-- Notes
+--
+-- Prerequisites
+--   internet https://wttr.in/
+--   ansito pip install --user ansito
+--   screenfetch
+--     terminus font for nice logo
+--   rsync to copy album art
+-------------------------------------
+
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=0,
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x=20,
+gap_y=20,
+alignment="top_left",
+minimum_height=300,
+minimum_width=300,
+--maximum_width=220,
+own_window=true,
+own_window_class="conky",
+own_window_type="dock",
+own_window_transparent=true,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
+own_window_argb_visual=true,
+own_window_argb_value=0,
+border_inner_margin=6,
+border_outer_margin=0,
+
+-------------------------------------
+--  Graphics Settings
+-------------------------------------
+draw_shades=false,
+default_shade_color="AAAAAA",
+draw_outline=true,
+default_outline_color="333333",
+draw_borders=false,
+draw_graph_borders=false,
+show_graph_scale=false,
+show_graph_range=false,
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+use_xft=true,
+xftalpha=1,
+text_buffer_size=256,
+override_utf8_locale=true,
+format_human_readable=true,
+
+-------------------------------------
+--  Useful shortenings
+-------------------------------------
+short_units=true,
+pad_percents=2,
+top_name_width=30,
+
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color='34be5b', -- manjaro green
+color0='ffa500', -- clock
+color1='E18700', -- high tempratures
+color2='00FFFF', -- low tempratures
+color3='0A95BE', -- graphs/glyphs
+
+-------------------------------------
+-- font
+-------------------------------------
+font="DejaVu Sans Mono:size=12",
+font0="DejaVu Sans Mono:size=14:weight=bold", -- date
+font1="xos4 Terminus:size=5", -- logo
+font2="FontAwesome:size=10", -- glyphs
+font3="Digital\\-7:weight=Light:size=58", -- clock
+font4="Digital\\-7:weight=Light:size=29", -- clock am/pm
+font5="DejaVu Sans Mono:size=10:weight=bold", --weather
+
+}
+
+conky.text = [[
+\
+# Distro
+\
+${color}\
+${font1}${execi 10000 screenfetch -LN}${font}\
+${voffset -100}${goto 115}${execi 10000 echo $USER}@\
+${voffset 1}${nodename}
+${voffset 1}${goto 115}up ${uptime}
+${voffset 1}${goto 115}${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'}
+${voffset 1}${goto 115}${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
+${voffset 1}${goto 115}${kernel}
+\
+]]

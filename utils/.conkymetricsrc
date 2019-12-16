@@ -1,0 +1,153 @@
+conky.config = {
+
+-------------------------------------
+-- Notes
+--
+-- Prerequisites
+--   internet https://wttr.in/
+--   ansito pip install --user ansito
+--   screenfetch
+--     terminus font for nice logo
+--   rsync to copy album art
+-------------------------------------
+
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+background=true,
+update_interval=1,
+double_buffer=true,
+no_buffers=true,
+imlib_cache_size=0,
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x=20,
+gap_y=20,
+alignment="bottom_left",
+--minimum_height=200,
+minimum_width=220,
+maximum_width=220,
+own_window=true,
+own_window_class="conky",
+own_window_type="dock",
+own_window_transparent=true,
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
+own_window_argb_visual=true,
+own_window_argb_value=0,
+border_inner_margin=6,
+border_outer_margin=0,
+
+-------------------------------------
+--  Graphics Settings
+-------------------------------------
+draw_shades=false,
+default_shade_color="333333",
+draw_outline=false,
+default_outline_color="333333",
+draw_borders=false,
+draw_graph_borders=false,
+show_graph_scale=false,
+show_graph_range=false,
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+use_xft=true,
+xftalpha=1,
+text_buffer_size=256,
+override_utf8_locale=true,
+format_human_readable=true,
+
+-------------------------------------
+--  Useful shortenings
+-------------------------------------
+short_units=true,
+pad_percents=2,
+top_name_width=30,
+
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color='34be5b', -- manjaro green
+color0='ffa500', -- clock
+color1='E18700', -- high tempratures
+color2='00FFFF', -- low tempratures
+color3='0A95BE', -- graphs/glyphs
+
+-------------------------------------
+-- font
+-------------------------------------
+font="DejaVu Sans Mono:size=10",
+font0="DejaVu Sans Mono:size=14:weight=bold", -- date
+font1="xos4 Terminus:size=5", -- logo
+font2="FontAwesome:size=10", -- glyphs
+font3="Digital\\-7:weight=Light:size=58", -- clock
+font4="Digital\\-7:weight=Light:size=29", -- clock am/pm
+font5="DejaVu Sans Mono:size=10:weight=bold", --weather
+
+}
+
+conky.text = [[
+\
+# user / host
+\
+${font}\
+${execi 10000 echo $USER}\
+${alignc}@\
+${alignr}${nodename}
+\
+# CPU
+\
+${voffset 10}\
+${font}\
+${cpugraph 1 15,95 0A95BE 0A95BE -l}${alignr}${cpugraph 2 15,95 0A95BE 0A95BE -l}
+${cpu cpu1}%\
+${goto 70}CPU1\
+${goto 125}CPU2\
+${alignr}${cpu cpu2}%
+\
+${voffset 10}\
+${cpugraph 3 15,95 0A95BE 0A95BE -l}${alignr}${cpugraph 4 15,95 0A95BE 0A95BE -l}
+${cpu cpu3}%\
+${goto 70}CPU3\
+${goto 125}CPU4\
+${alignr}${cpu cpu4}%
+\
+# RAM / SWAP
+\
+
+${color3}${membar 15,95}\
+${alignr}${swapbar 15,95}${color}
+${memperc}%\
+${goto 80}RAM\
+${goto 130}SWAP\
+${alignr}${swapperc}%
+\
+# Disk I/O / Usage
+
+${diskiograph 15,95 0A95BE 0A95BE -l}\
+${alignr}${color3}${fs_bar 15,95 /}${color}
+${diskio}${goto 77}I/O HD ${fs_type /}${alignr}${fs_used_perc /}%
+\
+# Net
+
+${upspeedgraph wlan0 15,90 0A95BE 0A95BE}\
+${alignr}${downspeedgraph wlan0 15,90 0A95BE 0A95BE}
+${upspeed wlan0}\
+${goto 83}${color3}${font2}${color}${font} NET \
+${color3}${font2}${color}${font}\
+${alignr}${downspeed wlan0}
+\
+# WiFi
+\
+
+${color3}${font2}${color}${font} \
+${wireless_essid wlan0}\
+${alignr 0}${wireless_link_qual_perc wlan0}% \
+${color3}${font2}${color}${font}
+${addr wlan0}\
+${if_match ${execi 300 /usr/bin/ping -qc1 sacco.me > /dev/null 2>&1; echo "$?"} < 1}${alignr}${color}${else}${color red}${font} Down${alignr}${color}${endif}${color}${font} ${execi 300 host -t A sacco.me | cut -d" " -f4}
+\
+]]
