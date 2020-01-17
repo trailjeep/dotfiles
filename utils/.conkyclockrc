@@ -30,7 +30,7 @@ minimum_height=200,
 --minimum_width=300,
 maximum_width=300,
 own_window=true,
-own_window_class="conky",
+own_window_class="conky_clock",
 own_window_type="dock",
 own_window_transparent=true,
 own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
@@ -72,9 +72,7 @@ top_name_width=30,
 -------------------------------------
 default_color='34be5b', -- manjaro green
 color0='ffa500', -- clock
-color1='E18700', -- high tempratures
-color2='00FFFF', -- low tempratures
-color3='0A95BE', -- graphs/glyphs
+color1='888888', -- hr
 
 -------------------------------------
 -- font
@@ -99,7 +97,7 @@ ${time %I}${blink :}${time %M}\
 ${font4}${color0}\
 ${alignr}${voffset 0}${time %P}
 \
-${voffset -7}${color0}${hr 1}
+${voffset -7}${color}${hr 1}
 # Date
 \
 ${voffset 0}\

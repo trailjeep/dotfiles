@@ -283,6 +283,9 @@ alias extip='dig +short myip.opendns.com @resolver1.opendns.com'
 # pyTivo (web interface :9032)
 # alias pytivo-start='ssh root@MAISIE "/usr/bin/python ~/bin/pytivo/pyTivo.py &"'
 # alias pytivo-stop='ssh root@MAISIE "pkill -SIGINT -f ~/bin/pytivo/pyTivo.py"'
+# minidlna
+alias dlna-start='ssh root@NAILAH "/bin/systemctl start minidlna &"'
+alias dlna-stop='ssh root@NAILAH "/bin/systemctl stop minidlna &"'
 
 alias minidlna-r='ssh root@MAISIE "minidlnad -R && systemctl force-reload minidlna"' # rescan minidlna media dirs (webstats=:8200)
 
@@ -322,6 +325,15 @@ alias matrix='tmatrix -t `echo "$USER@$HOSTNAME"`'
 #=================================================
 # Functions
 #=================================================
+
+# cd = cd+ll
+function cd() {
+	new_directory="$*";
+	if [ $# -eq 0 ]; then 
+		new_directory=${HOME};
+	fi;
+	builtin cd "${new_directory}" && ll
+}
 
 # backup file
 bup() { cp -a "$1" "$1.`date +%s`.ORG"; }

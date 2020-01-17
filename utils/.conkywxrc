@@ -30,7 +30,7 @@ minimum_height=200,
 minimum_width=250,
 --maximum_width=220,
 own_window=true,
-own_window_class="conky",
+own_window_class="conky_wx",
 own_window_type="dock",
 own_window_transparent=true,
 own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager,below",
@@ -95,6 +95,7 @@ conky.text = [[
 \
 
 ${font5}${color}\
-${execpi 300 curl -s "http://wttr.in/06437?0&Q" | ansito -}
+# ${execpi 300 if grep -q "Sorry" <<< `curl -s "http://wttr.in/06437?0&Q"`; then echo "Weather info unavailable."; fi | ansito -}
+${execpi 300 wx=`curl -s "http://wttr.in/06437?0&Q"`; if grep -q -E "Sorry|html" <<< "$wx"; then echo "Weather info unavailable."; else echo "$wx"; fi | ansito -}
 \
 ]]

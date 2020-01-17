@@ -99,7 +99,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][83][Configuration]
-PreloadWeight=39
+PreloadWeight=24
 SystrayContainmentId=84
 
 [Containments][1][ConfigDialog]
@@ -161,24 +161,13 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][84][Applets][100][Configuration][General]
-lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1577032629124,"cache_7e9635ed65955a0bf034b13dd640dbb1":1579299028006}
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1577032629124,"cache_7e9635ed65955a0bf034b13dd640dbb1":1579046807139}
 places=[{"providerId":"owm","placeIdentifier":"4835512","placeAlias":"Guilford"}]
 
 [Containments][84][Applets][100][Configuration][Units]
 pressureType=inHg
 temperatureType=fahrenheit
 windSpeedType=mph
-
-[Containments][84][Applets][101]
-immutability=1
-plugin=org.kde.plasma.battery
-
-[Containments][84][Applets][102]
-immutability=1
-plugin=org.kde.plasma.mediacontroller
-
-[Containments][84][Applets][102][Configuration]
-PreloadWeight=0
 
 [Containments][84][Applets][85]
 immutability=1
@@ -224,7 +213,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][84][Applets][90][Configuration]
-PreloadWeight=22
+PreloadWeight=0
 
 [Containments][84][Applets][91]
 immutability=1

@@ -225,3 +225,9 @@
   command = "dvdbackup -i /dev/sr0 -o ~/Videos/ -F -p"
   tag = ["dvd", "backup", "dvdbackup", "video"]
   output = ""
+
+[[snippets]]
+  description = "Format whole HD as BTRFS"
+  command = "sudo mkfs.btrfs /dev/sdX"
+  tag = ["format", "btrfs", "filesystem", "hd"]
+  output = ""
