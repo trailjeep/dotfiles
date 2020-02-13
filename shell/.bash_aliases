@@ -238,7 +238,7 @@ alias pmr='sudo pacman -Rns'  # remove pkg + unneeded deps + conf
 alias pmy='sudo pacman -Syy'  # force sync repos
 alias pmu='sudo pacman -Syyuu' # full system upgrade / enable downgrade
 alias pmd='sudo pacman -Syyuuw --noconfirm' # just download updates
-alias pmid='sudo pacman -Suu --noconfirm' # install downloaded
+alias pmid='sudo pacman -Suu --noconfirm && pacdiff' # install downloaded
 alias pmo='pacman -Qdt'  # list orphans
 alias pmor='sudo pacman -Rns $(pacman -Qtdq)' # recursively remove orphans
 alias pmfy='sudo pacman -Fy'  # sync file db
@@ -286,8 +286,7 @@ alias extip='dig +short myip.opendns.com @resolver1.opendns.com'
 # minidlna
 alias dlna-start='ssh root@NAILAH "/bin/systemctl start minidlna &"'
 alias dlna-stop='ssh root@NAILAH "/bin/systemctl stop minidlna &"'
-
-alias minidlna-r='ssh root@MAISIE "minidlnad -R && systemctl force-reload minidlna"' # rescan minidlna media dirs (webstats=:8200)
+alias dlna-rescan='ssh root@MAISIE "minidlnad -R && systemctl force-reload minidlna"' # rescan minidlna media dirs (webstats=:8200)
 
 # weather & moon phase
 # https://github.com/chubin/wttr.in http://wttr.in/:help

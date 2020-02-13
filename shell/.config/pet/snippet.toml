@@ -231,3 +231,9 @@
   command = "sudo mkfs.btrfs /dev/sdX"
   tag = ["format", "btrfs", "filesystem", "hd"]
   output = ""
+
+[[snippets]]
+  description = "List Network connections (TCP/UDP/State/User/Program)"
+  command = "netstat -netulp"
+  tag = ["networking", "netstat", "connections", "tcp", "udp"]
+  output = ""

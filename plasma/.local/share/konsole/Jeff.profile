@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Maia
-Font=Cascadia Mono PL,12,-1,5,50,0,0,0,0,0,Regular
+Font=JetBrains Mono,12,-1,5,57,1,0,0,0,0,Medium Italic
 UseFontLineChararacters=true
 
 [Encoding Options]

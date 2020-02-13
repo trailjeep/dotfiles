@@ -22,7 +22,7 @@ settingsComplexity=4
 timerHide=700
 timerShow=200
 viewType=0
-visibility=2
+visibility=0
 wallpaperplugin=org.kde.image
 
 [Containments][1][Applets][57]
@@ -61,7 +61,9 @@ DialogWidth=720
 [Containments][1][Applets][72][Configuration][General]
 customButtonImage=/home/jeff/start-here-kde.svg
 favoritesPortedToKAstats=true
+switchCategoriesOnHover=false
 useCustomButtonImage=true
+useExtraRunners=false
 
 [Containments][1][Applets][79]
 immutability=1
@@ -99,7 +101,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][83][Configuration]
-PreloadWeight=39
+PreloadWeight=100
 SystrayContainmentId=84
 
 [Containments][1][ConfigDialog]
@@ -113,14 +115,12 @@ PreloadWeight=0
 advanced=true
 appletOrder=72;57;83;65;79
 autoDecreaseIconSize=false
-disablePanelShadowForMaximized=true
 hoverAction=PreviewAndHighlightWindows
 iconMargin=20
-iconSize=56
+iconSize=52
 inConfigureAppletsMode=true
 maxLength=80
-panelPosition=10
-panelSize=100
+panelSize=5
 reverseLinesPosition=true
 shadowOpacity=35
 shadowSize=45
@@ -129,7 +129,7 @@ showToolTips=true
 shrinkThickMargins=true
 splitterPosition=2
 splitterPosition2=3
-useThemePanel=false
+taskScrollAction=ScrollNone
 zoomLevel=4
 
 [Containments][1][Indicator]
@@ -161,7 +161,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][84][Applets][100][Configuration][General]
-lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1577032629124,"cache_7e9635ed65955a0bf034b13dd640dbb1":1579299028006}
+lastReloadedMsJson={"cache_5a5440a6c6026f3e61c6aee598cae8dc":1577032629124,"cache_7e9635ed65955a0bf034b13dd640dbb1":1581611381927}
 places=[{"providerId":"owm","placeIdentifier":"4835512","placeAlias":"Guilford"}]
 
 [Containments][84][Applets][100][Configuration][Units]
@@ -185,7 +185,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][84][Applets][85][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][84][Applets][85][Configuration][ConfigDialog]
 DialogHeight=540
@@ -196,7 +196,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][84][Applets][86][Configuration]
-PreloadWeight=0
+PreloadWeight=52
 
 [Containments][84][Applets][87]
 immutability=1
@@ -224,7 +224,11 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][84][Applets][90][Configuration]
-PreloadWeight=22
+PreloadWeight=28
+
+[Containments][84][Applets][90][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][84][Applets][91]
 immutability=1
@@ -252,8 +256,9 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][84][General]
-extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.kdeconnect,org.kde.plasma.printmanager,org.kde.weatherWidget
-knownItems=org.kde.plasma.mediacontroller_plus,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.ktp-contactlist
+extraItems=org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.kdeconnect,org.kde.plasma.printmanager,org.kde.weatherWidget,org.kde.plasma.nightcolorcontrol
+knownItems=org.kde.plasma.mediacontroller_plus,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.kdeconnect,org.kde.plasma.vault,org.kde.plasma.printmanager,org.kde.ktp-contactlist,org.kde.plasma.nightcolorcontrol
+pin=true
 
 [LayoutSettings]
 activities=
