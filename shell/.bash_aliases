@@ -238,7 +238,7 @@ alias pmr='sudo pacman -Rns'  # remove pkg + unneeded deps + conf
 alias pmy='sudo pacman -Syy'  # force sync repos
 alias pmu='sudo pacman -Syyuu' # full system upgrade / enable downgrade
 alias pmd='sudo pacman -Syyuuw --noconfirm' # just download updates
-alias pmid='sudo pacman -Suu --noconfirm && pacdiff' # install downloaded
+alias pmid='sudo pacman -Suu --noconfirm && sudo pacdiff' # install downloaded
 alias pmo='pacman -Qdt'  # list orphans
 alias pmor='sudo pacman -Rns $(pacman -Qtdq)' # recursively remove orphans
 alias pmfy='sudo pacman -Fy'  # sync file db
@@ -284,7 +284,9 @@ alias extip='dig +short myip.opendns.com @resolver1.opendns.com'
 # alias pytivo-start='ssh root@MAISIE "/usr/bin/python ~/bin/pytivo/pyTivo.py &"'
 # alias pytivo-stop='ssh root@MAISIE "pkill -SIGINT -f ~/bin/pytivo/pyTivo.py"'
 # minidlna
-alias dlna-start='ssh root@NAILAH "/bin/systemctl start minidlna &"'
+#alias dlna-start='ssh root@NAILAH "/bin/systemctl start minidlna &"'
+alias dlna-pr0n='ssh root@NAILAH "/bin/systemctl stop minidlna; /bin/sed -i -e \"s|db_dir=/var/cache/minidlna/Movies|db_dir=/var/cache/minidlna/pr0n|\" -e \"s|media_dir=V,/mnt/Movies|media_dir=V,/mnt/pr0n|\" /etc/minidlna.conf; /bin/systemctl start minidlna"'
+alias dlna-movies='ssh root@NAILAH "/bin/systemctl stop minidlna; /bin/sed -i -e \"s|db_dir=/var/cache/minidlna/pr0n|db_dir=/var/cache/minidlna/movies|\" -e \"s|media_dir=V,/mnt/pr0n|media_dir=V,/mnt/Movies|\" /etc/minidlna.conf; /bin/systemctl start minidlna"'
 alias dlna-stop='ssh root@NAILAH "/bin/systemctl stop minidlna &"'
 alias dlna-rescan='ssh root@MAISIE "minidlnad -R && systemctl force-reload minidlna"' # rescan minidlna media dirs (webstats=:8200)
 

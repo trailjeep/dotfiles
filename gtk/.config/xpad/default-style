@@ -10,7 +10,7 @@ back NULL
 use_back 0
 text NULL
 use_text 0
-fontname Cascadia Code 9
+fontname JetBrains Mono 9
 toolbar 0
 auto_hide_toolbar 1
 scrollbar 0
