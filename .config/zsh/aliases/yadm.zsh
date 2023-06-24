@@ -8,6 +8,7 @@ if $(command -v yadm >/dev/null 2>&1); then
 	alias yr='yadm rm --cached'
 	alias ys='yadm status'
 	alias yp='yadm push -u origin main'
+	alias ypl='yadm pull'
 	alias yd='yadm diff'
 	alias ydc='yadm diff --cached'
 	alias yalt='yadm alt'
