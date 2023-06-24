@@ -1,0 +1,25 @@
+[Appearance]
+BackgroundColor=170,0,255
+Blur=true
+Translucency=true
+
+[Behavior]
+FocusFollowsMouse=true
+
+[Desktop Entry]
+DefaultProfile=Jeff.profile
+
+[Dialogs]
+FirstRun=false
+
+[KFileDialog Settings]
+Recent Files[$e]=wp4615530-terminal-wallpapers.jpg,file:$HOME/Downloads/wp4615530-terminal-wallpapers.jpg
+Recent URLs[$e]=file:$HOME/Downloads/
+detailViewIconSize=16
+
+[Window]
+Screen=1
+ShowOnAllDesktops=false
+ShowTabBar=false
+ShowTitleBar=false
+ToggleToFocus=true
