@@ -14,4 +14,5 @@ if $(command -v yadm >/dev/null 2>&1); then
 	alias yrm='yadm remote -v'
 	alias ycb='yadm clone --bootstrap'
 	alias ycn='yadm clone --no-bootstrap'
+	alias ycl='yadm config --get-all local.class'
 fi
