@@ -1,0 +1,8 @@
+[FileDialogSize]
+2 screens: Height=562
+2 screens: Width=968
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/.local/src/simple-icons/icons/codepen.svg,file:$HOME/Downloads/auto-stg-backup-day-of-month-21@drive4ik.json,file:$HOME/Downloads/2022-rotator-cuff-and-shoulder-conditioning-program-handout.pdf,file:$HOME/Jeff@TAZ/Documents/JeffsPWs.kdbx
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Jeff@TAZ/Documents/,file:$HOME/.local/src/simple-icons/icons/
+detailViewIconSize=16
