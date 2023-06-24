@@ -1,0 +1,6 @@
+[Event/newScreenshotSaved]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/camera-shutter.oga
+TTS=
