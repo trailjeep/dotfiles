@@ -12,7 +12,7 @@ if $(command -v yadm >/dev/null 2>&1); then
 	alias yd='yadm diff'
 	alias ydc='yadm diff --cached'
 	alias yalt='yadm alt'
-	alias yrm='yadm remote -v'
+	alias yrmt='yadm remote -v'
 	alias ycb='yadm clone --bootstrap'
 	alias ycn='yadm clone --no-bootstrap'
 	alias ycl='yadm config --get-all local.class'
