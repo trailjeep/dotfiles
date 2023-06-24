@@ -1,0 +1,18 @@
+[KFileDialog Settings]
+Recent Files[$e]=conky_startup,file:$HOME/bin/firefox-delayed,file:///usr/bin/eos-update-notifier,file:$HOME/.config/conky/scripts/conky_startup
+Recent URLs[$e]=file:$HOME/.config/conky/scripts/,file:///usr/bin/,file:$HOME/bin/
+detailViewIconSize=16
+
+[KPropertiesDialog]
+2 screens: Height=450
+2 screens: Width=439
+
+[MainWindow]
+2 screens: Height=700
+2 screens: Width=1141
+2 screens: XPosition=677
+2 screens: YPosition=99
+HDMI-A-0 HDMI-A-1=HDMI-A-0
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABHUAAAK8AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
