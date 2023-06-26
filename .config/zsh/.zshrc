@@ -16,6 +16,24 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+setopt NO_CASE_GLOB
+setopt GLOB_COMPLETE
+setopt AUTO_CD
+setopt EXTENDED_HISTORY
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+SAVEHIST=5000
+HISTSIZE=2000
+setopt SHARE_HISTORY			# share history across zsh sessions
+setopt APPEND_HISTORY			# append to history
+#setopt INC_APPEND_HISTORY		# adds commands as they are typed # Either set inc_append_history or share_history but not both.
+setopt HIST_EXPIRE_DUPS_FIRST	# expire duplicates first
+setopt HIST_IGNORE_DUPS			# do not store duplications
+setopt HIST_FIND_NO_DUPS		#ignore duplicates when searching
+setopt HIST_REDUCE_BLANKS		# removes blank lines from history
+setopt CORRECT
+setopt CORRECT_ALL
+
+
 source ~/.zplug/init.zsh
 
 # Plugins
