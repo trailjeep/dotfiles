@@ -11,7 +11,7 @@ sudo pacman -S yadm
 ```
 ## Config
 ### Aliases
-```ini
+```sh
 alias ya='yadm add'
 alias yc='yadm commit --allow-empty-message --no-edit'
 alias yca='yadm commit --amend'
