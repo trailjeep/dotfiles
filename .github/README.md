@@ -35,7 +35,7 @@ alias yupd='yadm add -u && yadm commit -m $(date -u +%Y%m%dT%H%M%SZ) && yadm pus
 ## Usage
 ### Add README File
 Ref: [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#about-readmes)
-```shell
+```sh
 mkdir $HOME/.github
 vim $HOME/.github/README.md
 ```
