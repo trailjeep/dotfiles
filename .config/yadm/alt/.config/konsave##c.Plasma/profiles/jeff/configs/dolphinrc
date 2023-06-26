@@ -1,0 +1,46 @@
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+
+[General]
+EditableUrl=true
+GlobalViewProps=false
+HomeUrl=/home/jeff/Downloads
+RememberOpenedTabs=false
+UseTabForSwitchingSplitView=true
+Version=202
+ViewPropsTimestamp=2022,2,4,10,49,7.67
+
+[IconsMode]
+IconSize=48
+PreviewSize=80
+TextWidthIndex=0
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[KPropertiesDialog]
+2 screens: Height=508
+2 screens: Width=496
+HDMI-A-0 HDMI-A-1 Height 1920x1080 HDMI-A-0=423
+HDMI-A-0 HDMI-A-1 Width 1920x1080 HDMI-A-0=406
+VGA-1 HDMI-1 Height 1920x1080=559
+VGA-1 HDMI-1 Width 1920x1080=476
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+VGA-1 HDMI-1 Height 1920x1080=429
+VGA-1 HDMI-1 Width 1920x1080=1316
+VGA-1 HDMI-1 XPosition 1920x1080=378
+VGA-1 HDMI-1 YPosition 1920x1080=345
+
+[Notification Messages]
+ConfirmEmptyTrash=true
+
+[Open-with settings]
+CompletionMode=1
+History=ark,kate
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,ffmpegthumbs

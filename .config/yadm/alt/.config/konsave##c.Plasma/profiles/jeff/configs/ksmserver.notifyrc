@@ -1,0 +1,13 @@
+[Event/locked]
+Action=Sound
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/service-logout.ogg
+TTS=
+
+[Event/unlocked]
+Action=Sound
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/service-login.ogg
+TTS=

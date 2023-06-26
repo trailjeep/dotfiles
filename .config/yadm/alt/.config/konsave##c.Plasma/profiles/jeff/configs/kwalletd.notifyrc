@@ -1,0 +1,13 @@
+[Event/needsPassword]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/message.wav
+TTS=
+
+[Event/syncFailed]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/dialog-error.wav
+TTS=

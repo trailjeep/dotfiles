@@ -1,0 +1,5 @@
+[Event/safelyRemovable]
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/message.ogg
+TTS=

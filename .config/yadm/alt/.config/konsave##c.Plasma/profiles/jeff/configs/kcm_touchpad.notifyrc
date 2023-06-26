@@ -1,0 +1,12 @@
+[Event/TouchpadDisabled]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/device-removed.oga
+TTS=
+
+[Event/TouchpadEnabled]
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/device-added.oga
+TTS=

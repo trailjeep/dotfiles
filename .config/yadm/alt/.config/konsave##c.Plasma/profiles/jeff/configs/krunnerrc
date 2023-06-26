@@ -1,0 +1,16 @@
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+appstreamEnabled=false
+bookmarksEnabled=false
+browserhistoryEnabled=false
+browsertabsEnabled=false
+desktopsessionsEnabled=false
+katesessionsEnabled=false
+konsoleprofilesEnabled=false
+org.kde.activities2Enabled=false
+plasma-runner-browserhistoryEnabled=false
+plasma-runner-browsertabsEnabled=false
+plasma-runnners-activitiesEnabled=false
+recentdocumentsEnabled=false

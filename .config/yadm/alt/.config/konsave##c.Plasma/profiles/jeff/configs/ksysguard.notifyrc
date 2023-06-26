@@ -1,0 +1,13 @@
+[Event/pattern_match]
+Action=
+Execute=
+Logfile=
+Sound=
+TTS=
+
+[Event/sensor_alarm]
+Action=Sound
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/dialog-error.oga
+TTS=

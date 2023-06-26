@@ -1,0 +1,6 @@
+[Event/downloadfinished]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/success.ogg
+TTS=

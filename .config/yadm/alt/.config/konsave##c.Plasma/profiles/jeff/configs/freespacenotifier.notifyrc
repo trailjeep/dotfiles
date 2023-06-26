@@ -1,0 +1,6 @@
+[Event/freespacenotif]
+Action=Sound|Popup
+Execute=
+Logfile=
+Sound=/home/jeff/.local/share/sounds/zorin/stereo/suspend-error.wav
+TTS=

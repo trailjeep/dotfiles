@@ -1,0 +1,151 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=112,111,110
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+Enable=
+IntensityAmount=0.1
+IntensityEffect=0
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=112,111,110
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=62,62,62
+BackgroundNormal=73,73,73
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
+
+[Colors:Selection]
+BackgroundAlternate=115,115,115
+BackgroundNormal=115,115,115
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
+
+[Colors:Tooltip]
+BackgroundAlternate=0,0,0
+BackgroundNormal=0,0,0
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=225,225,225
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
+
+[Colors:View]
+BackgroundAlternate=56,56,56
+BackgroundNormal=46,46,46
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
+
+[Colors:Window]
+BackgroundAlternate=49,49,49
+BackgroundNormal=61,61,62
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
+
+[DirSelect Dialog]
+DirSelectDialog Size=852,572
+History Items[$e]=file:$HOME/Jeff@TAZ/Pictures/Slideshow,file:$HOME/Jeff@TAZ/Videos,file:$HOME/Jeff@TAZ/Pictures,file:///mnt/Music,file:$HOME/Jeff@TAZ/Documents,file:$HOME/Jeff@TAZ/Desktop,file:$HOME/Jeff@TAZ/Pictures/Slideshow,file:$HOME/Jeff@TAZ/Pictures/Slideshow,file:$HOME/Downloads,file:$HOME/Jeff@TAZ/Templates,file:///mnt/Public,file:$HOME/Jeff@TAZ/Pictures,file:$HOME/Pictures,file:$HOME/Jeff@TAZ/Videos,file:$HOME/Jeff@TAZ/Documents,file:$HOME/Jeff@TAZ/Desktop,file:///mnt/Jeff/Desktop,file:$HOME/bin,file:$HOME/Desktop,file:$HOME/Documents,file:///mnt/Jeff/Pictures/Slideshow
+
+[General]
+AccentColor=0,0,0,0
+BrowserApplication=firefox.desktop
+ColorSchemeHash=d6c2df0966578859e7aa68d5591d7e3f0cfa19bc
+TerminalApplication=yakuake
+TerminalService=org.kde.yakuake.desktop
+XftHintStyle=hintslight
+XftSubPixel=rgb
+font=JetBrains Mono,10,-1,5,50,0,0,0,0,0
+menuFont=JetBrains Mono,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=JetBrains Mono,8,-1,5,50,0,0,0,0,0
+toolBarFont=JetBrains Mono,10,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=BeautyLine
+
+[KDE]
+LookAndFeelPackage=Glassy
+ShowDeleteCommand=false
+widgetStyle=kvantum-dark
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=true
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=138
+View Style=DetailTree
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[WM]
+activeBackground=61,61,62
+activeBlend=61,61,62
+activeFont=JetBrains Mono,10,-1,5,50,0,0,0,0,0
+activeForeground=255,255,255
+inactiveBackground=61,61,62
+inactiveBlend=61,61,62
+inactiveForeground=155,155,155
