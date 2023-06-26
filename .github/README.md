@@ -1,6 +1,14 @@
 # Dotfiles Managed by yadm
 
 ## Install
+### Debian
+```
+sudo apt install yadm
+```
+### Arch
+```
+sudo pacman -S yadm
+```
 ## Config
 ### Aliases
 ```
