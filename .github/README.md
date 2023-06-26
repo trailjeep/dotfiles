@@ -2,11 +2,11 @@
 
 ## Install
 ### Debian
-```shell
+```sh
 sudo apt install yadm
 ```
 ### Arch
-```bash
+```sh
 sudo pacman -S yadm
 ```
 ## Config
