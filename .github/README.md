@@ -55,5 +55,5 @@ vim $HOME/.github/README.md
 ```
 
 ## References
-- [Dotfiles: Best Way to Store in a Bare Git Repository](https://www.atlassian.com/git/tutorials/dotfiles)
-- [Keep dotfiles where they belong and avoid symlinks entirely.](https://github.com/anandpiyer/.dotfiles/tree/master/.dotfiles#keep-dotfiles-where-they-belong-and-avoid-symlinks-entirely)
+- [yadm](https://yadm.io/)
+  - [man](https://github.com/TheLocehiliosan/yadm/blob/master/yadm.md)
