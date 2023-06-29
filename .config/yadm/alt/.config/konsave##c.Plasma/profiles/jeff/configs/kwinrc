@@ -32,11 +32,21 @@ desktopchangeosdEnabled=true
 forceblurEnabled=true
 kwin4_effect_scaleEnabled=false
 kwin4_effect_tv_glitchEnabled=true
+kzonesEnabled=true
 poloniumEnabled=true
 truely-maximizedEnabled=true
 
 [Script-forceblur]
 patterns=yakuake\nurxvt\nkeepassxc\nConky
+
+[Script-kzones]
+alwaysShowLayoutName=true
+filterList=xpad\ndolphin\nQmmp
+filterMode=1
+handleSize=98
+layoutsJson=[\n    {\n        "name": "Quarters",\n        "padding": 15,\n        "zones": [\n            {\n                "name": "TL",\n                "x": 0,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "name": "TR",\n                "x": 50,\n                "y": 0,\n                "height": 50,\n                "width": 50\n            },\n           {\n                "name": "BL",\n                "x": 0,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            },\n            {\n                "name": "BR",\n                "x": 50,\n                "y": 50,\n                "height": 50,\n                "width": 50\n            }\n        ]\n    }\n]
+osdTimeout=500
+targetMethod=2
 
 [Script-polonium]
 FilterProcessName=krunner, yakuake, kded, polkit, firefox, dolphin

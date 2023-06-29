@@ -40,6 +40,9 @@ wallpaperplugin=net.sub-pop.kdewallhavenwallpaper
 immutability=1
 plugin=org.kde.plasma.mediaframe
 
+[Containments][25][Applets][35][Configuration]
+PreloadWeight=18
+
 [Containments][25][Applets][35][Configuration][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
@@ -55,7 +58,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock-ng
 
 [Containments][25][Applets][59][Configuration]
-PreloadWeight=55
+PreloadWeight=23
 
 [Containments][25][Applets][59][Configuration][Appearance]
 blurbackground=false
@@ -85,6 +88,9 @@ DialogWidth=680
 DialogHeight=745
 DialogWidth=720
 
+[Containments][25][Configuration]
+PreloadWeight=18
+
 [Containments][25][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=367
@@ -94,16 +100,20 @@ ToolBoxButtonY=36
 vallpaper2={"deskNo":0\\,"timeslots":{"00:00":{"slot":"00:00"\\,"background":"#222222"\\,"borderTop":0\\,"borderBottom":0\\,"borderLeft":0\\,"borderRight":0\\,"fillMode":2\\,"desaturate":0\\,"blur":0\\,"colorize":0.12318840579710146\\,"colorizeColor":"#222222"\\,"colorizeValue":"#1f222222"\\,"interval":300\\,"random":0\\,"sources":["https://source.unsplash.com/featured/1920x1080?husky"]}}}
 
 [Containments][25][Wallpaper][net.sub-pop.kdewallhavenwallpaper][General]
+APIKey=eFvEJz6NZiNmUwQjI7vde1elIA4vLyDO
 CategoryAnime=false
 CategoryPeople=false
 FillMode=2
 PurityNSFW=true
 PuritySketchy=true
 Query=space time
+RefetchSignal=true
 Sorting=relevance
 WallpaperDelay=5
 
 [Containments][26]
+ItemGeometries-1920x1080=
+ItemGeometriesHorizontal=
 activityId=dfa1b987-1965-4555-8535-f20cca704c25
 formfactor=0
 immutability=1
@@ -115,6 +125,9 @@ wallpaperplugin=org.kde.image
 [Containments][26][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
+
+[Containments][26][Configuration]
+PreloadWeight=18
 
 [Containments][26][General]
 ToolBoxButtonState=topcenter
@@ -152,14 +165,14 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][3][Applets][19][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][3][Applets][37]
 immutability=1
 plugin=org.kde.plasma.lock_logout
 
 [Containments][3][Applets][37][Configuration]
-PreloadWeight=26
+PreloadWeight=0
 
 [Containments][3][Applets][37][Configuration][ConfigDialog]
 DialogHeight=510
@@ -174,28 +187,28 @@ immutability=1
 plugin=org.kde.latte.separator
 
 [Containments][3][Applets][38][Configuration]
-PreloadWeight=26
+PreloadWeight=0
 
 [Containments][3][Applets][39]
 immutability=1
 plugin=org.kde.latte.separator
 
 [Containments][3][Applets][39][Configuration]
-PreloadWeight=26
+PreloadWeight=0
 
 [Containments][3][Applets][40]
 immutability=1
 plugin=org.kde.latte.separator
 
 [Containments][3][Applets][40][Configuration]
-PreloadWeight=26
+PreloadWeight=0
 
 [Containments][3][Applets][51]
 immutability=1
 plugin=org.kde.plasma.simplemenu
 
 [Containments][3][Applets][51][Configuration]
-PreloadWeight=100
+PreloadWeight=68
 popupHeight=518
 popupWidth=679
 
@@ -225,6 +238,9 @@ global=Alt+F1
 immutability=1
 plugin=org.kde.plasma.icontasks
 
+[Containments][3][Applets][6][Configuration]
+PreloadWeight=18
+
 [Containments][3][Applets][6][Configuration][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
@@ -238,12 +254,15 @@ launchers=applications:firefox.desktop,preferred://filemanager,applications:org.
 immutability=1
 plugin=org.kde.latte.separator
 
+[Containments][3][Applets][64][Configuration]
+PreloadWeight=18
+
 [Containments][3][Applets][8]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][3][Applets][8][Configuration]
-PreloadWeight=100
+PreloadWeight=73
 SystrayContainmentId=9
 
 [Containments][3][ConfigDialog]
@@ -251,7 +270,7 @@ DialogHeight=1080
 DialogWidth=174
 
 [Containments][3][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][3][General]
 AppletOrder=51;40;6;39;8;19;38;64;37
@@ -269,6 +288,9 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=panon
 
+[Containments][49][Applets][50][Configuration]
+PreloadWeight=18
+
 [Containments][49][Applets][50][Configuration][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
@@ -284,6 +306,9 @@ fps=15
 [Containments][49][ConfigDialog]
 DialogHeight=82
 DialogWidth=1920
+
+[Containments][49][Configuration]
+PreloadWeight=18
 
 [Containments][49][General]
 AppletOrder=50
@@ -303,6 +328,9 @@ wallpaperplugin=org.kde.image
 DialogHeight=510
 DialogWidth=680
 
+[Containments][65][Configuration]
+PreloadWeight=18
+
 [Containments][65][Wallpaper][org.kde.image][General]
 Image=/home/jeff/.local/share/wallpapers/music_notes_left.jpg
 SlidePaths=/home/jeff/.local/share/wallpapers/,/usr/share/wallpapers/
@@ -319,6 +347,9 @@ wallpaperplugin=org.kde.image
 [Containments][66][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
+
+[Containments][66][Configuration]
+PreloadWeight=18
 
 [Containments][66][Wallpaper][org.kde.image][General]
 Image=/home/jeff/.local/share/wallpapers/music_notes_right.jpg
@@ -338,6 +369,9 @@ wallpaperplugin=org.kde.image
 [Containments][67][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
+
+[Containments][67][Configuration]
+PreloadWeight=18
 
 [Containments][67][General]
 ToolBoxButtonState=topcenter
@@ -361,12 +395,16 @@ wallpaperplugin=org.kde.image
 DialogHeight=510
 DialogWidth=680
 
+[Containments][68][Configuration]
+PreloadWeight=18
+
 [Containments][68][Wallpaper][org.kde.image][General]
 Image=/home/jeff/.local/share/wallpapers/VMs.png
 SlidePaths=/home/jeff/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][69]
 ItemGeometries-0x0=
+ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=8433e575-0292-43a3-9df7-5ed78e35a408
 formfactor=0
@@ -379,6 +417,9 @@ wallpaperplugin=org.kde.image
 [Containments][69][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
+
+[Containments][69][Configuration]
+PreloadWeight=18
 
 [Containments][69][Wallpaper][org.kde.image][General]
 Image=/home/jeff/.local/share/wallpapers/wolves_bw_left.jpg
@@ -397,6 +438,9 @@ wallpaperplugin=org.kde.image
 DialogHeight=510
 DialogWidth=680
 
+[Containments][70][Configuration]
+PreloadWeight=18
+
 [Containments][70][Wallpaper][org.kde.image][General]
 Image=/home/jeff/.local/share/wallpapers/wolves_bw_right.jpg
 SlidePaths=/home/jeff/.local/share/wallpapers/,/usr/share/wallpapers/
@@ -414,6 +458,9 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.windowappmenu
 
+[Containments][83][Applets][87][Configuration]
+PreloadWeight=18
+
 [Containments][83][Applets][87][Configuration][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
@@ -424,6 +471,9 @@ containmentType=Plasma
 [Containments][83][Applets][88]
 immutability=1
 plugin=org.kde.activeWindowControl
+
+[Containments][83][Applets][88][Configuration]
+PreloadWeight=18
 
 [Containments][83][Applets][88][Configuration][Appearance]
 horizontalScreenWidthPercent=0.039
@@ -439,6 +489,9 @@ DialogWidth=680
 immutability=1
 plugin=org.kde.windowbuttons
 
+[Containments][83][Applets][89][Configuration]
+PreloadWeight=18
+
 [Containments][83][Applets][89][Configuration][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
@@ -452,6 +505,9 @@ visibility=ActiveWindow
 [Containments][83][ConfigDialog]
 DialogHeight=82
 DialogWidth=1920
+
+[Containments][83][Configuration]
+PreloadWeight=18
 
 [Containments][83][General]
 AppletOrder=88;87;89
@@ -472,47 +528,56 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][9][Applets][10][Configuration]
-PreloadWeight=70
+PreloadWeight=38
 
 [Containments][9][Applets][11]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][9][Applets][11][Configuration]
-PreloadWeight=55
+PreloadWeight=23
 
 [Containments][9][Applets][12]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][9][Applets][12][Configuration]
-PreloadWeight=85
+PreloadWeight=53
 
 [Containments][9][Applets][13]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
+
+[Containments][9][Applets][13][Configuration]
+PreloadWeight=18
 
 [Containments][9][Applets][14]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][9][Applets][14][Configuration]
-PreloadWeight=65
+PreloadWeight=38
 
 [Containments][9][Applets][15]
 immutability=1
 plugin=org.kde.kscreen
 
+[Containments][9][Applets][15][Configuration]
+PreloadWeight=18
+
 [Containments][9][Applets][16]
 immutability=1
 plugin=org.kde.plasma.keyboardlayout
+
+[Containments][9][Applets][16][Configuration]
+PreloadWeight=18
 
 [Containments][9][Applets][17]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][9][Applets][17][Configuration]
-PreloadWeight=65
+PreloadWeight=33
 
 [Containments][9][Applets][17][Configuration][General]
 migrated=true
@@ -528,19 +593,22 @@ PreloadWeight=42
 immutability=1
 plugin=org.kde.plasma.battery
 
+[Containments][9][Applets][21][Configuration]
+PreloadWeight=18
+
 [Containments][9][Applets][22]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][9][Applets][22][Configuration]
-PreloadWeight=28
+PreloadWeight=0
 
 [Containments][9][Applets][23]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][9][Applets][23][Configuration]
-PreloadWeight=55
+PreloadWeight=23
 
 [Containments][9][Applets][24]
 immutability=1
@@ -553,19 +621,22 @@ PreloadWeight=0
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
+[Containments][9][Applets][33][Configuration]
+PreloadWeight=18
+
 [Containments][9][Applets][34]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
 
 [Containments][9][Applets][34][Configuration]
-PreloadWeight=18
+PreloadWeight=0
 
 [Containments][9][Applets][36]
 immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][9][Applets][36][Configuration]
-PreloadWeight=65
+PreloadWeight=33
 configMigrated=true
 
 [Containments][9][Applets][36][Configuration][Appearance]
@@ -591,6 +662,9 @@ source=wettercom|weather|Guilford, Connecticut, US|US0CT0090;Guilford
 [Containments][9][ConfigDialog]
 DialogHeight=510
 DialogWidth=680
+
+[Containments][9][Configuration]
+PreloadWeight=18
 
 [Containments][9][General]
 extraItems=org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol,org.kde.plasma.weather

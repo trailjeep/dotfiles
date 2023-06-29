@@ -9,6 +9,24 @@ sudo apt install yadm
 ```sh
 sudo pacman -S yadm
 ```
+### Systemd Timer
+```ini
+[Unit]
+Description=yadm add/commit/push
+[Timer]
+OnCalendar=*-*-* 01:00:00
+Persistent=true
+[Install]
+WantedBy=timers.target
+```
+### Systemd Service
+```ini
+[Unit]
+Description=yadm add/commit/push
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "/usr/bin/yadm add -u && /usr/bin/yadm commit -m $(date --iso-8601=seconds) && /usr/bin/yadm push"
+```
 ## Config
 ### Aliases
 ```sh
