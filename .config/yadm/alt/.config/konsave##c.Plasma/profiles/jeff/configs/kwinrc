@@ -32,23 +32,26 @@ desktopchangeosdEnabled=true
 forceblurEnabled=true
 kwin4_effect_scaleEnabled=false
 kwin4_effect_tv_glitchEnabled=true
+poloniumEnabled=true
 truely-maximizedEnabled=true
 
 [Script-forceblur]
 patterns=yakuake\nurxvt\nkeepassxc\nConky
 
+[Script-polonium]
+FilterProcessName=krunner, yakuake, kded, polkit, firefox, dolphin
+
 [Tiling]
 padding=4
 
 [Tiling][543f7fd2-a6b6-5f8b-a732-4620fe6b34b1]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][747c721b-e589-5197-b5d3-6971022c877b]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Windows]
-FocusPolicy=FocusFollowsMouse
-NextFocusPrefersMouse=true
+FocusPolicy=FocusUnderMouse
 
 [org.kde.kdecoration2]
 theme=__aurorae__svg__GlassyRounded
