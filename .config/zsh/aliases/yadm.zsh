@@ -16,5 +16,5 @@ if $(command -v yadm >/dev/null 2>&1); then
 	alias ycb='yadm clone --bootstrap'
 	alias ycn='yadm clone --no-bootstrap'
 	alias ycl='yadm config --get-all local.class'
-	alias yupd='yadm add -u && yadm commit -m $(date -u +%Y%m%dT%H%M%SZ) && yadm push'
+	alias yupd='yadm add -u && yadm commit -m $(date --iso-8601=seconds) && yadm push'
 fi
