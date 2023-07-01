@@ -2,6 +2,8 @@
 alias clip='xclip' # ->xclipboard
 alias clop='xclip -o' # xclipboard->
 
+alias cps='rsync -a --info=progress2 --no-i-r'
+
 # grep ignore case & color
 alias egrep='egrep -i --color=auto'
 alias fgrep='fgrep -i --color=auto'
