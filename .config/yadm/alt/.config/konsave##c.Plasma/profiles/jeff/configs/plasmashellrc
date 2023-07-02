@@ -1,11 +1,14 @@
 [KFileDialog Settings]
-Recent Files[$e]=maisie-head.png,file:$HOME/Jeff@TAZ/Pictures/off.svg,file:$HOME/Jeff@TAZ/Pictures/on.svg,file:$HOME/Jeff@TAZ/Pictures/maisie-head.png
-Recent URLs[$e]=file:$HOME/Jeff@TAZ/Pictures/,file:$HOME/
+Recent Files[$e]=maisie-head.png,file:$HOME/Jeff@TAZ/Pictures/off-slider.svg,file:$HOME/Jeff@TAZ/Pictures/on-slider.svg,file:$HOME/Jeff@TAZ/Pictures/off.svg,file:$HOME/Jeff@TAZ/Pictures/on.svg,file:$HOME/Jeff@TAZ/Pictures/maisie-head.png
+Recent URLs[$e]=file:$HOME/Jeff@TAZ/Pictures/,file:$HOME/,file:$HOME/Downloads/,file:$HOME/Jeff@TAZ/Documents/
 detailViewIconSize=16
 
 [KPropertiesDialog]
 2 screens: Height=450
 2 screens: Width=415
+
+[PlasmaTransientsConfig]
+PreloadWeight=10
 
 [PlasmaViews][Panel 28]
 alignment=1
@@ -38,7 +41,7 @@ alignment=132
 floating=0
 
 [PlasmaViews][Panel 49][Defaults]
-thickness=64
+thickness=48
 
 [PlasmaViews][Panel 71]
 alignment=2
@@ -69,6 +72,20 @@ thickness=36
 [PlasmaViews][Panel 83][Horizontal1920]
 maxLength=1086
 minLength=526
+
+[PlasmaViews][Panel 92][Defaults]
+maxLength=314
+minLength=314
+offset=0
+thickness=36
+
+[PlasmaViews][Panel 92][Horizontal1920]
+offset=0
+
+[PlasmaViews][Panel 92][Vertical1080]
+maxLength=314
+minLength=314
+offset=370
 
 [Updates]
 performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_migrate_font_settings.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_rename_timezonedisplay_key.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/keyboardlayout_migrateiconsetting.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/keyboardlayout_remove_shortcut.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/klipper_clear_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/mediaframe_migrate_useBackground_setting.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/no_middle_click_paste_on_panels.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js

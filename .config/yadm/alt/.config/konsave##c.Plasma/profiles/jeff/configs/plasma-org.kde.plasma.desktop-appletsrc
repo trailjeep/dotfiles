@@ -26,8 +26,8 @@ RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][25]
 ItemGeometries-0x0=Applet-35:0,720,336,240,0;Applet-59:1712,48,144,176,0;
-ItemGeometries-1920x1080=Applet-35:0,720,336,240,0;Applet-59:1712,48,144,176,0;
-ItemGeometriesHorizontal=Applet-35:0,720,336,240,0;Applet-59:1712,48,144,176,0;
+ItemGeometries-1920x1080=Applet-59:1712,48,144,176,0;Applet-35:0,784,320,208,0;
+ItemGeometriesHorizontal=Applet-59:1712,48,144,176,0;Applet-35:0,784,320,208,0;
 activityId=dfa1b987-1965-4555-8535-f20cca704c25
 formfactor=0
 immutability=1
@@ -41,7 +41,7 @@ immutability=1
 plugin=org.kde.plasma.mediaframe
 
 [Containments][25][Applets][35][Configuration]
-PreloadWeight=18
+PreloadWeight=23
 
 [Containments][25][Applets][35][Configuration][ConfigDialog]
 DialogHeight=510
@@ -107,6 +107,7 @@ FillMode=2
 PurityNSFW=true
 PuritySketchy=true
 Query=space time
+RefetchSignal=true
 Sorting=random
 WallpaperDelay=5
 
@@ -249,13 +250,6 @@ fill=false
 iconSpacing=0
 launchers=applications:firefox.desktop,preferred://filemanager,applications:org.keepassxc.KeePassXC.desktop,applications:qmmp.desktop
 
-[Containments][3][Applets][64]
-immutability=1
-plugin=org.kde.latte.separator
-
-[Containments][3][Applets][64][Configuration]
-PreloadWeight=18
-
 [Containments][3][Applets][8]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -272,7 +266,7 @@ DialogWidth=174
 PreloadWeight=0
 
 [Containments][3][General]
-AppletOrder=51;40;6;39;8;19;38;64;37
+AppletOrder=51;40;6;39;8;19;38;37
 
 [Containments][49]
 activityId=
@@ -670,6 +664,49 @@ extraItems=org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.battery,or
 hiddenItems=Yakuake,org.kde.plasma.nightcolorcontrol
 iconSpacing=1
 knownItems=org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.printmanager,org.kde.plasma.keyboardindicator,org.kde.plasma.nightcolorcontrol
+
+[Containments][92]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=3
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][92][Applets][93]
+immutability=1
+plugin=com.github.configurable_button
+
+[Containments][92][Applets][93][Configuration][ConfigDialog]
+DialogHeight=510
+DialogWidth=680
+
+[Containments][92][Applets][93][Configuration][General]
+iconOff=/home/jeff/Jeff@TAZ/Pictures/off-slider.svg
+iconOn=/home/jeff/Jeff@TAZ/Pictures/on-slider.svg
+interval=300
+offScript=~/bin/minidlna stop
+onScript=~/bin/minidlna pr0n
+runStatusOnStart=true
+statusScript=~/bin/minidlna status
+statusScriptEnabled=true
+updateInterval=5
+
+[Containments][92][Applets][96]
+immutability=1
+plugin=org.kde.latte.separator
+
+[Containments][92][Applets][97]
+immutability=1
+plugin=org.kde.latte.separator
+
+[Containments][92][ConfigDialog]
+DialogHeight=82
+DialogWidth=1920
+
+[Containments][92][General]
+AppletOrder=97;93;96
 
 [Containments28Appletsts][60][Configuration][General]
 iconOff=/home/jeff/Jeff@TAZ/Pictures/off.svg
