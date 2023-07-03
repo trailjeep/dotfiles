@@ -26,8 +26,8 @@ RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][25]
 ItemGeometries-0x0=Applet-35:0,720,336,240,0;Applet-59:1712,48,144,176,0;
-ItemGeometries-1920x1080=Applet-59:1712,48,144,176,0;Applet-35:0,784,320,208,0;
-ItemGeometriesHorizontal=Applet-59:1712,48,144,176,0;Applet-35:0,784,320,208,0;
+ItemGeometries-1920x1080=Applet-35:0,784,320,208,0;Applet-59:1712,48,144,176,0;
+ItemGeometriesHorizontal=Applet-35:0,784,320,208,0;Applet-59:1712,48,144,176,0;
 activityId=dfa1b987-1965-4555-8535-f20cca704c25
 formfactor=0
 immutability=1
@@ -107,7 +107,6 @@ FillMode=2
 PurityNSFW=true
 PuritySketchy=true
 Query=space time
-RefetchSignal=true
 Sorting=random
 WallpaperDelay=5
 
@@ -247,6 +246,7 @@ DialogWidth=680
 
 [Containments][3][Applets][6][Configuration][General]
 fill=false
+highlightWindows=false
 iconSpacing=0
 launchers=applications:firefox.desktop,preferred://filemanager,applications:org.keepassxc.KeePassXC.desktop,applications:qmmp.desktop
 
@@ -255,7 +255,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][3][Applets][8][Configuration]
-PreloadWeight=73
+PreloadWeight=100
 SystrayContainmentId=9
 
 [Containments][3][ConfigDialog]
@@ -570,7 +570,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][9][Applets][17][Configuration]
-PreloadWeight=33
+PreloadWeight=38
 
 [Containments][9][Applets][17][Configuration][General]
 migrated=true
@@ -601,7 +601,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][9][Applets][23][Configuration]
-PreloadWeight=23
+PreloadWeight=7
 
 [Containments][9][Applets][24]
 immutability=1

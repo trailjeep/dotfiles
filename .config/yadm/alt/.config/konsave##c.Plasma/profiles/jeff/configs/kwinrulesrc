@@ -299,10 +299,10 @@ desktops=ef5fbae1-1905-4c9e-b7c8-aa8b4fc362eb
 ignoregeometry=true
 opacityactive=80
 opacityinactive=40
-position=812,51
+position=830,51
 positionrule=4
 screenrule=4
-size=1046,824
+size=1013,700
 sizerule=4
 strictgeometry[$d]
 strictgeometryrule[$d]
