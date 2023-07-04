@@ -535,7 +535,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][9][Applets][12][Configuration]
-PreloadWeight=53
+PreloadWeight=63
 
 [Containments][9][Applets][13]
 immutability=1
@@ -549,7 +549,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][9][Applets][14][Configuration]
-PreloadWeight=38
+PreloadWeight=43
 
 [Containments][9][Applets][15]
 immutability=1
@@ -570,7 +570,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][9][Applets][17][Configuration]
-PreloadWeight=38
+PreloadWeight=43
 
 [Containments][9][Applets][17][Configuration][General]
 migrated=true
@@ -629,7 +629,7 @@ immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][9][Applets][36][Configuration]
-PreloadWeight=33
+PreloadWeight=48
 configMigrated=true
 
 [Containments][9][Applets][36][Configuration][Appearance]
