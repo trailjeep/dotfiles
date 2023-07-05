@@ -5,7 +5,7 @@ detailViewIconSize=16
 
 [KPropertiesDialog]
 2 screens: Height=450
-2 screens: Width=431
+2 screens: Width=439
 
 [PlasmaTransientsConfig]
 PreloadWeight=10
