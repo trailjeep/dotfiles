@@ -1,0 +1,82 @@
+[user]
+	email = trailjeep@gmail.com
+	name = trailjeep
+[credential]
+     helper = store --file ~/.creds/git
+[color]
+	ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold # line info
+    old = red # deletions
+    new = green # additions
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
+[branch]
+	autosetupmerge = true
+[push]
+	default = simple
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+[core]
+	editor = nvim
+	excludesfile = .gitignore
+	discoveryAcrossFilesystem = false
+[diff]
+	renames = true
+[merge]
+	log = true
+	ff = false
+[help]
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
+[alias]
+	# print git aliases
+	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | sort
+
+	# Clone a repository including all submodules
+	c = clone --recursive
+
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+	ls = ls-files --full-name
+    # View the current working tree status using the short format
+	s = !echo -ne "On: " && git symbolic-ref --short HEAD && git status -s
+
+	# no execute fast-forward if current HEAD is ancestor of commit to be merged. 
+	m = merge --no-ff
+
+	# Commit all changes
+	ca = !git add -A && git commit -av
+
+	# Amend the currently staged files to the latest commit
+	amend = commit --amend --reuse-message=HEAD
+	
+    # Switch to a branch, creating it if necessary
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+
+	# Remove branches that have already been merged with master
+    # a.k.a. ‘delete merged’
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+[init]
+	defaultBranch = main
+[status]
+	short = true
+
+[url "https://github.com/"]
+    insteadOf = gh:
+[url "https://gist.github.com/"]
+    insteadOf = gist:

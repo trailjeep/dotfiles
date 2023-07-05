@@ -107,6 +107,7 @@ FillMode=2
 PurityNSFW=true
 PuritySketchy=true
 Query=space time
+RefetchSignal=true
 Sorting=random
 WallpaperDelay=5
 
@@ -570,7 +571,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][9][Applets][17][Configuration]
-PreloadWeight=43
+PreloadWeight=48
 
 [Containments][9][Applets][17][Configuration][General]
 migrated=true
@@ -629,7 +630,7 @@ immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][9][Applets][36][Configuration]
-PreloadWeight=48
+PreloadWeight=53
 configMigrated=true
 
 [Containments][9][Applets][36][Configuration][Appearance]
