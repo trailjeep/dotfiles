@@ -107,7 +107,6 @@ FillMode=2
 PurityNSFW=true
 PuritySketchy=true
 Query=space time
-RefetchSignal=true
 Sorting=random
 WallpaperDelay=5
 
@@ -217,6 +216,7 @@ DialogHeight=508
 DialogWidth=680
 
 [Containments][3][Applets][51][Configuration][General]
+appNameFormat=2
 customButtonImage=endeavouros
 favoritesPortedToKAstats=true
 floating=true
@@ -702,12 +702,31 @@ plugin=org.kde.latte.separator
 immutability=1
 plugin=org.kde.latte.separator
 
+[Containments][92][Applets][98]
+immutability=1
+plugin=com.github.configurable_button
+
+[Containments][92][Applets][98][Configuration][ConfigDialog]
+DialogHeight=510
+DialogWidth=680
+
+[Containments][92][Applets][98][Configuration][General]
+iconOff=/home/jeff/Jeff@TAZ/Pictures/off-slider.svg
+iconOn=/home/jeff/Jeff@TAZ/Pictures/on-slider.svg
+interval=60
+offScriptEnabled=false
+onScriptEnabled=false
+runStatusOnStart=true
+statusScript=/usr/bin/ping -c1 sacco.me
+statusScriptEnabled=true
+updateInterval=1
+
 [Containments][92][ConfigDialog]
 DialogHeight=82
 DialogWidth=1920
 
 [Containments][92][General]
-AppletOrder=97;93;96
+AppletOrder=98;97;93;96
 
 [Containments28Appletsts][60][Configuration][General]
 iconOff=/home/jeff/Jeff@TAZ/Pictures/off.svg

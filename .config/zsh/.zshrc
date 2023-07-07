@@ -16,23 +16,43 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-setopt NO_CASE_GLOB
-setopt GLOB_COMPLETE
+########################################
+# https://zsh.sourceforge.io/Doc/Release/Options.html
+########################################
+# 16.2.1 Changing Directories
 setopt AUTO_CD
-setopt EXTENDED_HISTORY
-HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
-SAVEHIST=5000
-HISTSIZE=2000
-setopt SHARE_HISTORY			# share history across zsh sessions
-setopt APPEND_HISTORY			# append to history
-#setopt INC_APPEND_HISTORY		# adds commands as they are typed # Either set inc_append_history or share_history but not both.
-setopt HIST_EXPIRE_DUPS_FIRST	# expire duplicates first
-setopt HIST_IGNORE_DUPS			# do not store duplications
-setopt HIST_FIND_NO_DUPS		#ignore duplicates when searching
-setopt HIST_REDUCE_BLANKS		# removes blank lines from history
+setopt CDABLE_VARS
+setopt CD_SILENT
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
+setopt PUSHD_TO_HOME
+# 16.2.2 Completion
+setopt GLOB_COMPLETE
+setopt LIST_PACKED
+setopt LIST_TYPES
+# 16.2.3 Expansion and Globbing
+setopt NO_CASE_GLOB
+setopt EXTENDED_GLOB
+# 16.2.4 History
+setopt APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+# 16.2.5 Initialisation
+# 16.2.6 Input/Output
 setopt CORRECT
 setopt CORRECT_ALL
-
+setopt INTERACTIVE_COMMENTS
+# 16.2.7 Job Control
+# 16.2.8 Prompting
+# 16.2.9 Scripts and Functions
+# 16.2.10 Shell Emulation
+# 16.2.11 Shell State
+# 16.2.12 Zle
+########################################
 
 source ~/.zplug/init.zsh
 

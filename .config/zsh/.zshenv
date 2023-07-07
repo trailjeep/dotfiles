@@ -7,6 +7,11 @@ export PAGER="/usr/bin/less"
 export BROWSER="/usr/bin/firefox"
 export INPUTRC="$HOME/.inputrc"
 
+export HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+export SAVEHIST=5000                                                                   
+export HISTSIZE=2000                                                                   
+export HISTORY_IGNORE="(h3*mp|k0*d3)"
+
 # ls
 export LS_OPTIONS='--color=auto -A -F -X -B -h -v -b -T 0 --group-directories-first --quoting-style=shell-escape --time-style=iso'
 # git
