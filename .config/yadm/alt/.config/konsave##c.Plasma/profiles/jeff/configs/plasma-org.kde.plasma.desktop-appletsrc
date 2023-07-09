@@ -107,8 +107,9 @@ FillMode=2
 PurityNSFW=true
 PuritySketchy=true
 Query=space time
+RefetchSignal=true
 Sorting=random
-WallpaperDelay=5
+WallpaperDelay=3
 
 [Containments][26]
 ItemGeometries-1920x1080=
