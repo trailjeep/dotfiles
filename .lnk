@@ -15,6 +15,7 @@
 .config/mpd/mpd.conf
 .config/mpv/playlists
 .config/mpv/script-modules
+.config/mpv/script-opts
 .config/yazi
 .config/ytcc
 .config/zsh/.zshenv
