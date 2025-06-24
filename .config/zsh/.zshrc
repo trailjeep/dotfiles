@@ -43,8 +43,10 @@ setopt INTERACTIVE_COMMENTS
 # oh-my-posh init
 #eval "$(oh-my-posh init zsh --config ~/.prompt.omp.json)"
 
-find "$ZDOTDIR"/aliases -mindepth 1 -maxdepth 1 ! -name ".*" | while read file; do source "$file"; done
-find "$ZDOTDIR"/functions -mindepth 1 -maxdepth 1 ! -name ".*" | while read file; do source "$file"; done
+#find "$ZDOTDIR"/aliases -mindepth 1 -maxdepth 1 ! -name ".*" | while read file; do source "$file"; done
+#find "$ZDOTDIR"/functions -mindepth 1 -maxdepth 1 ! -name ".*" | while read file; do source "$file"; done
+for f in "$ZDOTDIR"/aliases/*; do source "$f"; done &>/dev/null
+for f in "$ZDOTDIR"/functions/*; do echo $f; done &>/dev/null
 
 # Load and initialise completion system
 autoload -Uz compinit
