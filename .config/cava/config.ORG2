@@ -1,0 +1,31 @@
+## vim: set fenc=utf-8 ts=4 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}}:
+
+[general]
+framerate           = 60
+bars                = 0 
+bar_width           = 2 
+bar_spacing         = 1 
+bar_height          = 32
+autosens            = 1
+sensitivity         = 100
+
+[input]
+method              = pulse
+
+[output]
+#method             = raw
+#raw_target         = /dev/stdout
+bit_format          = 16bit
+channels            = stereo
+
+[smoothing]
+monstercat          = 1
+noise_reduction     = 77
+
+[color]
+gradient            = 1
+gradient_count      = 2
+
+# pywal
+gradient_color_2   = '#1d99f3'
+gradient_color_1   = '#3daee9'
