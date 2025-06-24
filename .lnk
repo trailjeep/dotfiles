@@ -9,6 +9,7 @@
 .config/kew/kewrc
 .config/khal
 .config/khard
+.config/kitty
 .config/mc
 .config/yazi
 .config/ytcc
