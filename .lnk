@@ -6,6 +6,7 @@
 .config/fum
 .config/fuzzel
 .config/hyprpanel
+.config/kew/kewrc
 .config/mc
 .config/yazi
 .config/ytcc
