@@ -1,0 +1,201 @@
+# Allow user aliases w/sudo
+alias sudo='sudo '
+alias datm='date +"%F %r"'
+alias ..='cd ..'
+alias ports='ss -tulpn'
+
+alias pw='pwgen -sync1B 12'
+alias pws='for i in {1..5}; do echo -ne "$i. $(pw)\n"; done'
+#alias pw='openssl rand -base64 12'
+
+#flatpak
+alias fpl='flatpak list'
+alias fpla='flatpak list --app'
+alias fpi='flatpak install'
+alias fpr='flatpak remove'
+alias fps='flatpak search'
+alias fpu='flatpak update'
+
+cls() {
+	clear
+	if $(command -v fortune >/dev/null); then
+		echo "-------------------------------------------------------------------------------"
+		cols=$(tput cols)
+		fortune -e "$FORPATH/my-collected-quotes" | fold -s -w "$cols"
+		echo "-------------------------------------------------------------------------------"
+	fi
+	if $(command -v khal >/dev/null); then
+		#khal list today 2d --format "{blue}{start-end-time-style} {green}{title} {description}"
+		khal list today today --format "{blue}{start-end-time-style} {green}{title} {description}"
+		echo "-------------------------------------------------------------------------------"
+	fi
+}
+
+alias cal='khal calendar'
+alias events='khal list today 7d --format "{blue}{start-end-time-style} {green}{title} {description}"'
+alias card='khard'
+alias tasks='gtasks tasks view -l "ToDo"'
+
+#alias clip='xclip' # ->xclipboard
+#alias clop='xclip -o' # xclipboard->
+#clip() { cat "$1" | waycopy }
+#alias clop='waypaste'
+#clip() { cat "$1" | clipse -c &>/dev/null }
+#alias clop='clipse -p'
+clip() { wl-copy <"$1" }
+alias clop='wl-paste'
+
+# DL HLS M3U8 $1=m3u8 url $2=title
+hlsdl() { ffmpeg -i "$1" -codec copy "$2".mp4 }
+
+
+# cp/mv w/status
+alias rscp='rsync --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
+alias rsmv='rsync --remove-source-files --archive --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable'
+# rsmv doesn't remove dirs do: find ./ -type d -empty -delete
+
+# grep ignore case & color
+# FIXME
+#alias egrep='egrep -i --color=auto'
+#alias fgrep='fgrep -i --color=auto'
+alias grep='grep -i --color=auto'
+
+alias diff='diff --color=auto -u0'
+
+# ls
+#if ! (( $+commands[exa] )); then
+if $(command -v eza >/dev/null 2>&1); then
+	if eza --version | grep -q '+git'; then
+		alias ls='eza --group --links --icons --classify --color=auto --sort=name --group-directories-first --git'
+		alias ll='eza --long --group --links --icons --classify --color=auto --all --sort=name --group-directories-first --time=modified --time-style=long-iso --git'
+		alias tree='ll --tree --level=2'
+	else
+		alias ls='eza --group --links --icons --classify --color=auto --sort=name --group-directories-first'
+		alias ll='eza --long --group --links --icons --classify --color=auto --all --sort=name --group-directories-first --time=modified --time-style=long-iso'
+		alias tree='ll --tree --level=2'
+	fi
+else
+	alias ll='ls -Falth --group-directories-first'
+fi
+alias l='ll'
+
+alias wget='wget --continue --content-disposition'
+
+alias cat='bat'
+
+alias locate='locate -i'
+alias updatedb='updatedb -n ".cache .snapshots runtime"'
+
+alias lsblk='lsblk -o NAME,SIZE,RO,TYPE,LABEL,MOUNTPOINTS'
+
+#alias flatpak='flatpak --user'
+
+alias gunzip='gunzip -k'
+alias bunzip2='bunzip2 -k'
+alias xz='xz -k'
+
+alias stow='stow -v'	# stow verbose
+
+alias dd='dd status=progress'	# dd progress
+
+alias ifconfig='echo -e "\n** Deprecated: use ip **\n"; ip a'
+
+alias free='free -h'    # free human readable
+alias df='df -h'        # disk free human readable
+alias du='du -hx'       # disk usage human readable
+alias ncdu='ncdu -x --color=dark'    # do not cross fs boundaries & dark
+
+alias more='less'	# less is more
+alias less='bat' # search ignore case
+alias vim='nvim'
+#alias diff='colordiff'
+alias pgrep='pgrep -a'
+
+#alias taz='ssh taz'
+#alias nailah='TERM=xterm ssh root@nailah'
+#alias nailah='ssh root@nailah'
+#alias maisie='ssh maisie'
+#alias jax='ssh jax'
+alias taz='tailscale ssh ubuntu@taz'
+alias nailah='TERM=xterm-256color tailscale ssh root@nailah'
+
+alias irc='irssi -n trailjeep -c freenode'
+
+alias podplay='mplayer -af scaletempo -speed 1.5 '	# mplayer play podcasts @1.5x
+
+md() {
+	mkdir -p $1
+	cd $1
+}
+
+alias distro='lsb_release -a'
+
+alias gh='history|grep'
+alias gp='pacman -Q|grep'
+alias ga='alias|grep'
+
+alias cpv='rsync -ah --info=progress2'
+
+alias journalctl='journalctl -o short-iso'
+
+# [trash-cli](https://github.com/sindresorhus/trash-cli)
+# alias rm='trash'
+alias rm='echo "Use trash command or \\\rm to temporarily unalias."'
+alias trash='gtrash put'
+alias untrash='gtrash restore'
+
+alias conns='lsof -i +c0'
+alias ports='netstat -lp'
+
+# ANSI colors
+alias ansi-colors='for attr in $(seq 0 1); do for fg in $(seq 30 37); do for bg in $(seq 40 47); do printf "\033[$attr;${bg};${fg}m$attr;$fg;$bg\033[m "; done; echo; done; done'
+
+# external ip
+#if $(command -v dig >/dev/null 2>&1); then
+#    alias extip='dig +short myip.opendns.com @resolver1.opendns.com'
+#else
+#    alias extip=$'nslookup myip.opendns.com resolver1.opendns.com | tail -2 | awk \'{print $2}\''
+#fi
+alias extip="curl 'https://api.ipify.org?format=text'"
+
+# weather & moon phase
+alias wx='curl "http://wttr.in/06437"'
+alias wxc='curl "http://wttr.in/HVN?format=%c+%C+%f\n+%hH+%w+%P\n+%m+%l"'
+alias wx1='curl "http://wttr.in/HVN?format=2"'
+alias moon='curl "http://wttr.in/moon"'
+
+# logout self
+#alias lout='loginctl terminate-user `whoami`'
+alias lout='hyprctl dispatch exit'
+
+if $(command -v cht.sh >/dev/null 2>&1); then
+    alias cht='cht.sh'
+    kbd() {
+        cht.sh kbd:"$1"
+    }
+    alias kbdl='find $HOME/.cheat.sh/upstream/keyboard/ -name "*.md" -printf "%f\n" | sed "s/.md//" | grep -v README'
+elif $(command -v cheat >/dev/null 2>&1); then
+	alias cht='cheat'
+fi
+
+# calc plasmoid
+if [[ $XDG_CURRENT_DESKTOP == "KDE" ]]; then
+    alias calc='[[ $(pgrep -f calculator) ]] && pkill -f calculator || plasmawindowed org.kde.plasma.calculator &>/dev/null &'
+fi
+
+alias fontpreview='fontpreview-tui --font-size 48 --fg-color "#ccc" --bg-color "#333"'
+alias mpvpaper='mpvpaper --mpv-options "panscan=1.0 no-audio no-osc no-osd-bar no-input-default-bindings load-scripts=no loop-file=inf speed=0.5" "*"'
+
+#alias musikcube='/bin/konsole --nofork --profile tunes --hide-menubar --hide-tabbar -qwindowtitle musikcube -e musikcube &; disown'
+alias musikcube='/usr/bin/gnome-terminal --profile=Musikcube --title=Musikcube'
+alias pyradio='/bin/konsole --nofork --profile tunes --hide-menubar --hide-tabbar -qwindowtitle pyradio -e pyradio &; disown'
+
+alias dlytpl='yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "%(title)s.%(ext)s" --yes-playlist --embed-thumbnail --embed-metadata'
+
+# <https://github.com/mt-empty/shortcut-pages>
+alias sc='shortcut'
+
+# screensavers
+alias pipes='pipes-rs'
+alias matrix='tmatrix -c default'
+alias asciiquarium='asciiquarium -t'
