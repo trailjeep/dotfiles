@@ -12,6 +12,7 @@
 .config/khard
 .config/kitty
 .config/mc
+.config/mpd/mpd.conf
 .config/yazi
 .config/ytcc
 .config/zsh/.zshenv
