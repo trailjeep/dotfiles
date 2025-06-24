@@ -3,3 +3,4 @@
 .config/ytcc
 .config/zsh/.zshenv
 .config/zsh/.zshrc
+.config/zsh/prompt.omp.json.ORG
