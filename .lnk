@@ -1,4 +1,5 @@
 .config/mc
 .config/yazi
 .config/ytcc
+.config/zsh/.zshenv
 .config/zsh/.zshrc
