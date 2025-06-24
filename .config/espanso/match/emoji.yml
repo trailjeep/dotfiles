@@ -1,0 +1,45 @@
+matches:
+
+  - trigger: :shrug
+    replace: ¯\_(ツ)_/¯
+  - trigger: :emoji
+    form: |
+      [[emoji]]
+    form_fields:
+      emoji:
+        type: list
+        values:
+          # smileys
+          - 😂 # lol
+          - 😠 # angry
+          - 😉 # wink
+          - 🤣 # rofl
+          - 😱 # scream
+          - 😭 # cry
+          - 😜 # loco
+          - 😎 # cool
+          # animals
+          - 🐱 # cat
+          - 🐶 # dog
+          - 🐺 # wolf
+          # misc
+          - ☠️  # skull/crossbones
+          - 💩 # poo
+          - 🙏 # pray
+          - ✌ # peace
+          - 👍 # thumbs up / ok
+          - 👎 # thumbs down
+          - 👏 # clap
+          - 🎉 # party
+          - 🍺 # beer
+          - 🥂 # cheers
+          - ✨ # sparkles
+          - ❄ # snowflake
+          - ❤ # heart
+          - 🎆 # fireworks
+          - 🔥 # fire
+          - 🔫 # gun
+          - 🔪 # knife
+          - ⚡ # lightning
+          - 💣 # bomb
+

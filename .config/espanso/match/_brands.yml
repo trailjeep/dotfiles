@@ -1,0 +1,169 @@
+matches:
+
+  ########################################
+  - trigger: :tpl-b
+    replace: "- trigger: \nreplace: \npropagate_case: true\nword: true"
+  ########################################
+
+  - trigger: 1password
+    replace: 1Password
+    propagate_case: true
+    word: true
+
+  # airbnb = lower
+  # Apple = common
+
+  - trigger: android
+    replace: Android
+    propagate_case: true
+    word: true
+
+  - trigger: autocad
+    replace: AutoCAD
+    propagate_case: true
+    word: true
+
+  - trigger: autodesk
+    replace: Autodesk
+    propagate_case: true
+    word: true
+
+  - trigger: bitwarden
+    replace: Bitwarden
+    propagate_case: true
+    word: true
+
+  - trigger: chromebook
+    replace: Chromebook
+    propagate_case: true
+    word: true
+
+  - trigger: cloudflare
+    replace: Cloudflare
+    propagate_case: true
+    word: true
+
+  - trigger: codepen
+    replace: CodePen
+    propagate_case: true
+    word: true
+
+  - trigger: discord
+    replace: Discord
+    propagate_case: true
+    word: true
+
+  # docker = lower
+
+  - triggers: [:dw,dokuwiki]
+    replace: DokuWiki
+    propagate_case: true
+    word: true
+
+  - trigger: dropbox
+    replace: Dropbox
+    propagate_case: true
+    word: true
+
+  - trigger: ebay
+    replace: eBay
+    propagate_case: true
+    word: true
+
+  - trigger: evernote
+    replace: Evernote
+    propagate_case: true
+    word: true
+
+  - triggers: [:fb,facebook]
+    replace: Facebook
+    propagate_case: true
+    word: true
+
+  - triggers: [:gh,github]
+    replace: GitHub
+    propagate_case: true
+    word: true
+
+  - trigger: goodreads
+    replace: Goodreads
+    propagate_case: true
+    word: true
+
+    #  - trigger: google
+    #replace: Google
+    #propagate_case: true
+    #word: true
+
+  - trigger: instagram
+    replace: Instagram
+    propagate_case: true
+    word: true
+
+  - trigger: keepass
+    replace: KeePass
+    propagate_case: true
+    word: true
+
+  - trigger: keepassxc
+    replace: KeePassXC
+    propagate_case: true
+    word: true
+
+  - trigger: kickstarter
+    replace: Kickstarter
+    propagate_case: true
+    word: true
+
+  - trigger: lastpass
+    replace: LastPass
+    propagate_case: true
+    word: true
+
+  - trigger: linkedin
+    replace: LinkedIn
+    propagate_case: true
+    word: true
+
+  - triggers: [:ms,microsoft]
+    replace: Microsoft
+    propagate_case: true
+    word: true
+
+  - trigger: paypal
+    replace: PayPal
+    propagate_case: true
+    word: true
+
+  # shopify = lower
+
+  - trigger: slack
+    replace: Slack
+    propagate_case: true
+    word: true
+
+  # Stripe = common
+
+  - trigger: tiktok
+    replace: TikTok
+    propagate_case: true
+    word: true
+
+  - trigger: twitter
+    replace: X
+    propagate_case: true
+    word: true
+
+  # Windows = common
+
+  - trigger: wordpress
+    replace: WordPress
+    propagate_case: true
+    word: true
+
+  - trigger: youtube
+    replace: YouTube
+    propagate_case: true
+    word: true
+
+

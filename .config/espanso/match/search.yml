@@ -1,0 +1,98 @@
+name: search
+title: Search
+description: "Search engines"
+version: 1
+author: trailjeep
+tags: [search]
+homepage: "https://example.com/"
+parent: default
+
+global_vars:
+  - name: browser
+    type: echo
+    params:
+      echo: /usr/bin/xdg-open
+
+matches:
+
+  - regex: ":(cht|cheat)/(?P<term>\\w+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://cht.sh/$ESPANSO_TERM"'}}]
+  - triggers: [:chtc,:cheatc]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://cht.sh/{{clipboard}}"'}}]
+
+  - regex: ":man/(?P<term>\\w+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://man.cx/$ESPANSO_TERM"'}}]
+  - trigger: :manc
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://man.cx/{{clipboard}}"'}}]
+
+  - regex: ":(srch|search|searx)/(?P<term>.+)/" 
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://searx.be/search?q=$ESPANSO_TERM"'}}]
+  - triggers: [:srchc,:searchc,searxc]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://searx.be/search?q={{clipboard}}"'}}]
+
+  - regex: ":(ggl|google)/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://www.google.com/search?q=$ESPANSO_TERM"'}}]
+  - triggers: [:gglc,:googlec]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://www.google.com/search?q={{clipboard}}"'}}]
+
+  - regex: ":(ddg|duckduckgo)/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://duckduckgo.com/?q=$ESPANSO_TERM"'}}]
+  - triggers: [:ddgc,:duckduckgoc]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://duckduckgo.com/?q={{clipboard}}"'}}]
+
+  - regex: ":(aw|archwiki)/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://wiki.archlinux.org/index.php?title=Special:Search&search=$ESPANSO_TERM&go=Go"'}}]
+  - triggers: [:awc,:archwikic]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://wiki.archlinux.org/index.php?title=Special:Search&search={{clipboard}}&go=Go"'}}]
+
+  - regex: ":aur/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://aur.archlinux.org/packages?K=$ESPANSO_TERM"'}}]
+  - trigger: :aurc
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://aur.archlinux.org/packages?K={{clipboard}}"'}}]
+
+  - regex: ":(ap|archpkg)/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://archlinux.org/packages/?q=$ESPANSO_TERM"'}}]
+  - triggers: [:apc,:archpkgc]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://archlinux.org/packages/?q={{clipboard}}"'}}]
+
+  - regex: ":dock/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://hub.docker.com/search/?q=$ESPANSO_TERM"'}}]
+  - trigger: :dockc
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://hub.docker.com/search/?q={{clipboard}}"'}}]
+
+  - regex: ":gh/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://github.com/search?type=repositories&q=$ESPANSO_TERM"'}}]
+  - trigger: :ghc
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://github.com/search?type=repositories&q={{clipboard}}"'}}]
+
+  - regex: ":(wp|wikipedia)/(?P<term>.+)/"
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: '{{browser}} "https://en.wikipedia.org/w/index.php?title=Special:Search&search=$ESPANSO_TERM"'}}]
+  - triggers: [:wpc,wikipediac]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://en.wikipedia.org/w/index.php?title=Special:Search&search={{clipboard}}"'}}]
+
+  - triggers: [:ia,:archive,:wayback]
+    replace: "{{output}}"
+    vars: [{name: clipboard,type: clipboard},{name: output,type: shell,params: {cmd: '{{browser}} "https://web.archive.org/web/{{clipboard}}"'}}]
+

@@ -1,0 +1,35 @@
+parent: default
+
+matches:
+  - trigger: :code
+    replace: "```$|$\n\n```"
+  - triggers: [:dl,:deflist]
+    replace: "<dl>\n<dt>$|$</dt>\n<dd></dd>\n</dl>"
+  - triggers: [:kbd,:key]
+    replace: "<kbd>$|$</kbd>"
+  - triggers: [:dets,:details]
+    replace: "\n<details>\n\t<summary>$|$</summary>\n\t<p></p>\n</details>"
+  - trigger: :link
+    replace: "<a href=\"{{clipboard}}\" />$|$</a>"
+    vars: [{name: clipboard,type: clipboard}]
+  - trigger: :mdlink
+    replace: "[$|$]({{clipboard}})"
+    vars: [{name: clipboard,type: clipboard}]
+  - trigger: :call
+    replace: |
+      > [!TYPE]+ TITLE
+      > BODY
+      note
+      abstract|summary/tldr
+      info
+      todo
+      tip|hint|important
+      success|check|done
+      question|help|faq
+      warning|caution|attention
+      failure|fail|missing
+      danger|error
+      bug
+      example
+      quote|cite
+

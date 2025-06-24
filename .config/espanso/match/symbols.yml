@@ -1,0 +1,23 @@
+matches:
+  - trigger: ":bullet"
+    replace: "•"
+  - trigger: ":middot"
+    replace: "·"
+  - triggers: [":emdash",":mdash"]
+    replace: "—"
+  - triggers: [":endash",":ndash"]
+    replace: "–"
+  - trigger: ":zwsp"
+    replace: "​"
+  - trigger: ":check"
+    replace: "✓"
+  - triggers: [:lar,:larrow]
+    replace: "← "
+  - triggers: [:rar,:rarrow]
+    replace: "→ "
+  - triggers: [:uar,:uarrow]
+    replace: "↑ "
+  - triggers: [:dar,:darrow]
+    replace: "↓ "
+  - triggers: [:lrar,:lrarrow]
+    replace: "⟷ "

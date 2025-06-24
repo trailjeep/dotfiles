@@ -1,0 +1,75 @@
+matches:
+  - trigger: :jj
+    replace: jjsacco@gmail.com
+  - trigger: :tj
+    replace: trailjeep@gmail.com
+  - trigger: :js
+    replace: jeff@sacco.me
+  - trigger: :sig
+    replace: "Regards,\nJeff"
+  - trigger: :date
+    replace: "{{mydate}}"
+    vars: [{name: mydate,type: date,params: {format: "%F"}}]
+  - trigger: :time
+    replace: "{{mydate}}"
+    vars: [{name: mydate,type: date,params: {format: "%r"}}]
+  - trigger: :datm
+    replace: "{{mydate}}"
+    vars: [{name: mydate,type: date,params: {format: "%FT%R"}}]
+  - trigger: :epoch
+    replace: "{{mydate}}"
+    vars: [{name: mydate,type: date,params: {format: "%s"}}]
+  - trigger: :iso
+    replace: "{{mydate}}"
+    vars: [{name: mydate,type: date,params: {format: "%+"}}]
+  # dtstamp
+  - trigger: :extip
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: "curl 'https://api.ipify.org'"}}]
+  - trigger: :intip
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: "ip a | grep 'inet 192' | awk '{ print $2 }'",trim: true}}]
+  - trigger: :pw
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: "openssl rand -base64 14",trim: true}}]
+  - trigger: :wx
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: "curl 'http://wttr.in/06437?0&u&T&format=3'"}}]
+  - trigger: :wtfpl
+    replace: "© {{year}} WTFPL – Do What the Fuck You Want to Public License."
+    vars: [{name: year,type: date,params: {format: "%Y"}}]
+  - trigger: :twtfpl
+    replace: "{{output}}"
+    vars: [{name: output,type: shell,params: {cmd: "curl 'http://www.wtfpl.net/txt/copying/'"}}]
+  - trigger: :tpl-letter
+    replace: |
+      {Return Address}
+
+      {Date}
+
+      {Address}
+
+      {Salutation} Dear Customer Service Representative:
+
+      {Body}
+
+      {Closing} Regards,
+
+      {Signature}
+
+
+      {Typed Name}
+
+      {Abbreviation} Enc: 2
+  - trigger: :tpl-email
+    replace: |
+      {Subject} Re:
+
+      {Salutation} Dear ,
+
+      {Body}
+
+      {Closing} Regards,
+
+      {Email Signature}
+

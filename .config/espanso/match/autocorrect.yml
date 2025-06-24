@@ -1,0 +1,24 @@
+
+matches:
+  - trigger: irregardless
+    replace: regardless
+    propagate_case: true
+    word: true
+  - trigger: otherwise
+    replace: elsewise
+    propagate_case: true
+    word: true
+  - trigger: seperator
+    replace: separator
+    propagate_case: true
+    word: true
+  - trigger: lavendar
+    replace: lavender
+    propagate_case: true
+    word: true
+  - trigger: cahce
+    replace: cache
+    word: true
+  - trigger: palatte
+    replace: palette
+    word: true

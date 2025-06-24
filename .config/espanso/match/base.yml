@@ -1,0 +1,11 @@
+# espanso match file
+# https://espanso.org/docs/
+
+matches:
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from $SHELL"

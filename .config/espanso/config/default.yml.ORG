@@ -1,0 +1,15 @@
+# espanso configuration file
+# https://espanso.org/docs/
+keyboard_layout:
+  rules: "evdev"
+  model: "pc105"
+  layout: "us"
+search_trigger: ".srch"
+search_shortcut: CTRL+SPACE
+toggle_key: LEFT_CTRL
+show_icon: false
+show_notifications: false
+auto_restart: true
+backend: auto
+clipboard_threshold: 100
+undo_backspace: true
