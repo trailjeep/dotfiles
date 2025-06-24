@@ -7,6 +7,7 @@
 .config/fuzzel
 .config/hyprpanel
 .config/kew/kewrc
+.config/khal
 .config/mc
 .config/yazi
 .config/ytcc

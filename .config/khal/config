@@ -1,0 +1,19 @@
+[calendars]
+
+[[local_calendar]]
+path = ~/.local/share/calendars/*
+type = discover
+
+[[local_contacts]]
+path = ~/.local/share/contacts/*
+type = discover
+
+[locale]
+timeformat = %I:%M %p
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %I:%M %p
+longdatetimeformat = %Y-%m-%d %I:%M %p
+
+[default]
+default_calendar = jjsacco@gmail.com
